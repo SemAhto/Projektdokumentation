@@ -50,7 +50,7 @@ done
 #~ ${tex2pdf} ${wrapper}.tex && ${bib2tex} ${wrapper} && ${tex2pdf} ${wrapper}.tex && ${tex2pdf} ${wrapper}.tex
 ${tex2pdf} ${wrapper}.tex 
 #~ ${bib2tex} ${wrapper}
-#~ ${tex2pdf} ${wrapper}.tex 
+${tex2pdf} ${wrapper}.tex 
 #~ ${tex2pdf} ${wrapper}.tex
 
 datum=$( date +"%y%m%d-%H%M" )
@@ -58,6 +58,6 @@ mkdir -p ${pub}
 
 mv ${wrapper}.pdf ${pub}/00_${DOCNAME}-draft${datum}.pdf && xdg-open ${pub}/00_${DOCNAME}-draft${datum}.pdf
 
-#~ rm -f *.aux *.bbl *.bcf *.blg *.blg *.log *.mtc *.mtc0 *.xml *.toc
-#~ rm -f $(ls *.tex  |grep -v ${wrapper} )
+rm -f *.aux *.bbl *.bcf *.blg *.blg *.log *.mtc *.mtc0 *.xml *.toc
+rm -f $(ls *.tex  |grep -v ${wrapper} )
 #~ rm -f ${img}/*.pdf
