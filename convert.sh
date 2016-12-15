@@ -15,6 +15,7 @@ DOCNAME=Projektdokumentation
 export DOCNAME
 wrapper=00_Manteldokument
 inv=inventory
+mdext=md
 md2tex=pandoc
 sed=sed
 tex2pdf=pdflatex
@@ -37,9 +38,9 @@ pub=${doc}/pub
 #~ fi
 #~ x="PersonenAufgabenbereiche"
 #~ ${md2tex} -f markdown -t latex -o ./${x}.tex ${doc}/${x}.md
-for i in $(ls *.md); do
+for i in $(ls *.${mdext}); do
 	x=$(echo "${i}" | rev | cut -d"." -f2- | rev)
-	${md2tex} -f markdown -t latex -o ${x}.tex ${x}.md
+	${md2tex} -f markdown -t latex -o ${x}.tex ${x}.${mdext}
 	${sed} -i 's/\includegraphics/\scalegraphics/g' ${x}.tex
 	#~ ${sed} -i 's/\[htbp\]/\[\!H\]/g' ${x}.tex
 done
@@ -48,15 +49,15 @@ done
 
 #~ ${tex2pdf} ${wrapper}.tex && ${bib2tex} ${wrapper} && ${tex2pdf} ${wrapper}.tex && ${tex2pdf} ${wrapper}.tex
 ${tex2pdf} ${wrapper}.tex 
-${bib2tex} ${wrapper}
-${tex2pdf} ${wrapper}.tex 
-${tex2pdf} ${wrapper}.tex
+#~ ${bib2tex} ${wrapper}
+#~ ${tex2pdf} ${wrapper}.tex 
+#~ ${tex2pdf} ${wrapper}.tex
 
 datum=$( date +"%y%m%d-%H%M" )
 mkdir -p ${pub}
 
 mv ${wrapper}.pdf ${pub}/00_${DOCNAME}-draft${datum}.pdf && xdg-open ${pub}/00_${DOCNAME}-draft${datum}.pdf
 
-rm -f *.aux *.bbl *.bcf *.blg *.blg *.log *.mtc *.mtc0 *.xml *.toc
-rm -f $(ls *.tex  |grep -v ${wrapper} )
+#~ rm -f *.aux *.bbl *.bcf *.blg *.blg *.log *.mtc *.mtc0 *.xml *.toc
+#~ rm -f $(ls *.tex  |grep -v ${wrapper} )
 #~ rm -f ${img}/*.pdf

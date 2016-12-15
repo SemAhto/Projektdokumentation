@@ -1,26 +1,18 @@
-## Gliederung
 
-\tableofcontents
+\input{BeschreibungProjektauftrag}
 
-\newpage
+\input{StandDerTechnik}
 
+# Anforderungsanalyse
 
-### Beschreibung des Projektauftrags
+# Entwurf
 
-\input{BeschreibungProjektauftrag.md}
+# Implementierung
 
-### Stand der Technik
+# Test
 
-### Anforderungsanalyse
+# Fazit
 
-### Entwurf
+# Begriffserklärungen
 
-### Implementierung
-
-### Test
-
-### Fazit
-
-### Begriffserklärungen
-
-### Quellennachweis
+# Quellennachweis
