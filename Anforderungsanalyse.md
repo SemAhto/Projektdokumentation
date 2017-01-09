@@ -1,18 +1,23 @@
-# 3. Anforderungsanalyse
+<!-- ## Anforderungsanalyse -->
 
 Während den ersten zwei Gruppenmeetings wurden die Anwendungsfälle für Folksonomien, Social
 Tagging und Tag-Clouds im ERP-System von TecWare ausgearbeitet. Anhand dessen wurden folgende Prinzipsskizzen erstellt, wie auch Anforderungen schriftlich formuliert. Folgene Ergebnisse wurden dabei erzielt:
 
-##3.1 Prinzipskizzen:
+## Prinzipskizzen:
 
 1. Prinzipskizze 
-<pre><pre><pre> <img src="https://github.com/vardoo/terradbtag/blob/Dokumentation/Images/01Prinzipienskizze.png" width="200px" height="200px" /><br>
-2. Prinzipskizze 
-<pre><pre><pre>  <img src="https://github.com/vardoo/terradbtag/blob/Dokumentation/Images/02Prinzipienskizze.png" width="200px" height="200px" /><br>
-3. Prinzipskizze 
-<pre><pre><pre>  <img src="https://github.com/vardoo/terradbtag/blob/Dokumentation/Images/03Prinzipienskizze.png" width="200px" height="200px" />
 
-##3.2 Anforderungen:
+![01](img/01Prinzipienskizze.png)
+
+2. Prinzipskizze 
+
+![01](img/02Prinzipienskizze.png)
+
+3. Prinzipskizze 
+
+![03](img/03Prinzipienskizze.png)
+
+## Anforderungen:
 
 **Glossar**:
 
@@ -57,7 +62,7 @@ Der Nutzer muss in der Lage sein, durch eine Interaktion einen Tag auszublenden.
 Der Administrator muss in der Lage sein, Tags zu ändern / löschen.
 
 
-##3.3 Entwurf der GUIs zur Eingabe von Tags:
+## Entwurf der GUIs zur Eingabe von Tags:
 
 Um eine Vorstellung von der zukünftigen Oberfläche des ERP - Systems zu bekommen, wurden von den Studenten grafisch fünf GUIs entworfen. Diese sollten der Eingabe von Tags für sogenannte Datenobjekte dienen.
 Die Aufgabe der Studenten bestand darin, sich eine Form der Eingabemöglichkeit für Tags zu überlegen wobei auch neue
@@ -79,12 +84,4 @@ Dialoge entstehen können. Die Ergebnisse wurden im Gruppenmeeting präsentiert 
 <pre><pre><pre> <img src="https://github.com/vardoo/terradbtag/blob/Dokumentation/Images/EvernoteLike.PNG" width="220px" height="160px" /><br>
 8. Classic“ Listbox (Popup)
 <pre><pre><pre>  <img src="https://github.com/vardoo/terradbtag/blob/Dokumentation/Images/ClassikListBox.PNG" width="220px" height="160px" />
-
-
-
-
-
-
-
-
 
