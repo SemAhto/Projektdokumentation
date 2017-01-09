@@ -16,7 +16,7 @@ zum Projektseminar „Social Tagging, Folksonomien und Tag-Clouds in ERP-Systeme
 
 * [AmayaSue](https://github.com/orgs/SemAhto/people/AmayaSue)
 * [laabernet89](https://github.com/orgs/SemAhto/people/laabernet89)
-* [marking587](https://github.com/orgs/SemAhto/people/marking587)
+* [Martin Siegfried Däbritz](https://github.com/orgs/SemAhto/people/marking587)
 * nomen nominandum
 * nomen nominandum
 * [Wolf](https://github.com/s72785)
