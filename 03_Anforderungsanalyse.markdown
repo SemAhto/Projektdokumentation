@@ -1,4 +1,4 @@
-<!-- ## Anforderungsanalyse -->
+# Anforderungsanalyse
 
 Während den ersten zwei Gruppenmeetings wurden die Anwendungsfälle für Folksonomien, Social
 Tagging und Tag-Clouds im ERP-System von TecWare ausgearbeitet. Anhand dessen wurden folgende Prinzipsskizzen erstellt, wie auch Anforderungen schriftlich formuliert. Folgene Ergebnisse wurden dabei erzielt:

@@ -1,5 +1,5 @@
 #!/bin/sh
-#~ pwd=$(pwd)
+pwd=$(pwd)
 #~ twd="$(echo $pwd|rev|cut -d'/' -f1|rev)"
 #~ if [ "${twd}" = "PH" ]; then	DOCNAME=Pflichtenheft ; fi
 #~ if [ "${twd}" = "RFC" ]; then	DOCNAME=Entwicklerdokumentation ; fi
@@ -15,7 +15,7 @@ DOCNAME=Projektdokumentation
 export DOCNAME
 wrapper=00_Manteldokument
 inv=inventory
-mdext=md
+mdext=markdown
 md2tex=pandoc
 sed=sed
 tex2pdf=pdflatex
@@ -31,11 +31,11 @@ pub=${doc}/pub
 #~ if [ ! -h img ]; then
 	#~ ln -s ${img} img
 #~ fi
-#~ cd ./img/
-#~ if [ $? -eq 0 ]; then
-	#~ ./convert-svg2pdf.sh
-	#~ cd ${pwd}
-#~ fi
+cd ./img/
+if [ $? -eq 0 ]; then
+	./convert-svg2pdf.sh
+	cd ${pwd}
+fi
 #~ x="PersonenAufgabenbereiche"
 #~ ${md2tex} -f markdown -t latex -o ./${x}.tex ${doc}/${x}.md
 for i in $(ls *.${mdext}); do
