@@ -21,67 +21,85 @@ Tagging und Tag-Clouds im ERP-System von TecWare ausgearbeitet. Anhand dessen wu
 
 **Glossar**:
 
-Systemtags: Tags, die bei Erstellung eines Objekts vom System generiert werden.
-Usertags: Tags, die vom User selbst erstellt und an das Objekt angehangen werden. 
-Tags: 	Menge aller System- und Usertags.
+<!-- hier ein Bsp. mit Definitionslisten -->
+
+Systemtags
+:	Tags, die bei Erstellung eines Objekts vom System generiert werden.
+
+Usertags
+:	Tags, die vom User selbst erstellt und an das Objekt angehangen werden. 
+
+Tags
+:	Menge aller System- und Usertags.
 
 Klassifikation: 
-    0 = Text
-		1 = Datum
-		2 = Nummer
+
+	0 = Text
+	1 = Datum
+	2 = Nummer
 
 **System**:
 
-Das System muss in der Lage sein, eine Vielzahl von Tags anzuzeigen.<br>
-Das System muss in der Lage sein, nach bestimmten Tags zu filtern<br>
-Das System muss in der Lage sein, eine Liste von Objekten (Bestellnummer, Artikel, Artikelnummer, Kundennummer) zu verkleinern, nachdem nach einem bestimmten Tag gefiltert wurde.<br>
-Das System muss in der Lage sein, einem Objekt Systemtags anzuhängen.<br>
-Das System muss in der Lage sein, aus den in der Liste angezeigten Tags, eine WordCloud zu generieren und anzuzeigen.<br>
-Das System muss in der Lage sein, Systemtags zu klassifizieren. <br>
-Das System muss in der Lage sein, zu einem einzelnen Objekt eine WordCloud zu generieren.<br>
-Das System muss in der Lage sein, in der Eingabemaske eine alphabetische Sortierung vorzunehemen.<br>
-Das System muss in der Lage sein, eine Filterliste in der Suchleiste zu generieren.<br>
-Das System muss in der Lage sein einen Suchverlauf anzuzeigen.<br>
-
-
+1. Das System muss in der Lage sein, eine Vielzahl von Tags anzuzeigen.
+2. Das System muss in der Lage sein, nach bestimmten Tags zu filtern
+3. Das System muss in der Lage sein, eine Liste von Objekten (Bestellnummer, Artikel, Artikelnummer, Kundennummer) zu verkleinern, nachdem nach einem bestimmten Tag gefiltert wurde.
+4. Das System muss in der Lage sein, einem Objekt Systemtags anzuhängen.
+5. Das System muss in der Lage sein, aus den in der Liste angezeigten Tags, eine WordCloud zu generieren und anzuzeigen.
+6. Das System muss in der Lage sein, Systemtags zu klassifizieren. 
+7. Das System muss in der Lage sein, zu einem einzelnen Objekt eine WordCloud zu generieren.
+8. Das System muss in der Lage sein, in der Eingabemaske eine alphabetische Sortierung vorzunehemen.
+9. Das System muss in der Lage sein, eine Filterliste in der Suchleiste zu generieren.
+10. Das System muss in der Lage sein einen Suchverlauf anzuzeigen.
 
 **Nutzer**:
 
-Der Nutzer muss in der Lage sein, nach Schlagworten in einer Eingabemaske zu suchen.<br>
-Der Nutzer muss in der Lage sein, eigene Tags an ein Objekt hinzuzufügen.<br>
-Der Nutzer muss in der Lage sein, Tags in der WordCloud ausblenden zu können.<br>
-Der Nutzer muss in der Lage sein, eigene Usertags zu ändern/löschen.<br>
-Der Nutzer muss in der Lage sein, Usertags zu klassifizieren.<br>
-Der Nutzer muss in der Lage sein, durch eine Interaktion einen Tag als Filter zu setzen.<br>
-Der Nutzer muss in der Lage sein, einen Tag auszuwählen.<br>
-Der Nutzer muss in der Lage sein, durch eine Interaktion einen Tag auszublenden.<br>
-
+1. Der Nutzer muss in der Lage sein, nach Schlagworten in einer Eingabemaske zu suchen.
+2. Der Nutzer muss in der Lage sein, eigene Tags an ein Objekt hinzuzufügen.
+3. Der Nutzer muss in der Lage sein, Tags in der WordCloud ausblenden zu können.
+4. Der Nutzer muss in der Lage sein, eigene Usertags zu ändern/löschen.
+5. Der Nutzer muss in der Lage sein, Usertags zu klassifizieren.
+6. Der Nutzer muss in der Lage sein, durch eine Interaktion einen Tag als Filter zu setzen.
+7. Der Nutzer muss in der Lage sein, einen Tag auszuwählen.
+8. Der Nutzer muss in der Lage sein, durch eine Interaktion einen Tag auszublenden.
 
 **Administrator**:
 
-Der Administrator muss in der Lage sein, Tags zu ändern / löschen.
-
+1. Der Administrator muss in der Lage sein, Tags zu ändern / löschen.
 
 ## Entwurf der GUIs zur Eingabe von Tags:
 
-Um eine Vorstellung von der zukünftigen Oberfläche des ERP - Systems zu bekommen, wurden von den Studenten grafisch fünf GUIs entworfen. Diese sollten der Eingabe von Tags für sogenannte Datenobjekte dienen.
+Um eine Vorstellung von der zukünftigen Oberfläche des ERP-Systems zu bekommen, wurden von den Studenten grafisch fünf GUIs entworfen. Diese sollten der Eingabe von Tags für sogenannte Datenobjekte dienen.
 Die Aufgabe der Studenten bestand darin, sich eine Form der Eingabemöglichkeit für Tags zu überlegen wobei auch neue
 Dialoge entstehen können. Die Ergebnisse wurden im Gruppenmeeting präsentiert und deren Verwendung, im Austausch mit Herrn Stein  diskutiert. 
 
-1. Inline – vs. Popup – Editor
-<pre><pre><pre>  <img src="https://github.com/vardoo/terradbtag/blob/Dokumentation/Images/InlVSPopup.PNG" width="200px" height="160px" /><br>
-2. Beispielmaske (ohne Tag Eingabe)
-<pre><pre><pre>  <img src="https://github.com/vardoo/terradbtag/blob/Dokumentation/Images/BeispielMaskeOhne%20TE.PNG" width="200px" height="160px" /><br>
-3. Beispielmaske (mit Inline – Tag Eingabe)
-  <pre><pre><pre><img src="https://github.com/vardoo/terradbtag/blob/Dokumentation/Images/SAPmitInline.PNG" width="200px" height="160px" /><br>
-4. Beispielmaske (mit Popup – Tag Eingabe)
-  <pre><pre><pre><img src="https://github.com/vardoo/terradbtag/blob/Dokumentation/Images/SAPmitPopUpPNG.PNG" width="200px" height="160px" /><br>
-5. Twitter – like“ Textbox (Inline)
-<pre><pre><pre>  <img src="https://github.com/vardoo/terradbtag/blob/Dokumentation/Images/TwitterLIke.PNG" width="240px" height="120px" /><br>
-6. IDE – like“ Editor (Inline)
- <pre><pre><pre><img src="https://github.com/vardoo/terradbtag/blob/Dokumentation/Images/IDELike.PNG" width="220px" height="160px" /><br>
-7. Evernote – like“ Tagbox (Inline)
-<pre><pre><pre> <img src="https://github.com/vardoo/terradbtag/blob/Dokumentation/Images/EvernoteLike.PNG" width="220px" height="160px" /><br>
-8. Classic“ Listbox (Popup)
-<pre><pre><pre>  <img src="https://github.com/vardoo/terradbtag/blob/Dokumentation/Images/ClassikListBox.PNG" width="220px" height="160px" />
+1. Inline vs. Popup-Editor
 
+![InlVSPopup](img/InlVSPopup.png)
+
+2. Beispielmaske (ohne Tag Eingabe)
+
+![BeispielMaskeOhneTE](img/BeispielMaskeOhneTE.png)
+
+3. Beispielmaske (mit Inline-Tag Eingabe)
+
+![SAPmitInline](img/SAPmitInline.png)
+
+4. Beispielmaske (mit Popup – Tag Eingabe)
+
+![SAPmitPopUpPNG](img/SAPmitPopUpPNG.png)
+
+5. Twitter-like Textbox (Inline)
+
+![TwitterLIke](img/TwitterLIke.png)
+
+6. IDE-like Editor (Inline)
+
+![IDELike](img/IDELike.png)
+
+7. Evernote-like Tagbox (Inline)
+
+![EvernoteLike](img/EvernoteLike.png)
+
+8. Classic Listbox (Popup)
+
+![ClassikListBox](img/ClassikListBox.png)
