@@ -12,8 +12,11 @@ pwd=$(pwd)
 	#~ exit 1
 #~ fi
 DOCNAME=Projektdokumentation
+ProjTitle="Social Tagging, Folksonomien und Tag-Clouds in ERP-Systemen"
 export DOCNAME
+export ProjTitle
 wrapper=00_Manteldokument
+titlepg=titlepage
 inv=inventory
 mdext=markdown
 md2tex=pandoc
@@ -59,5 +62,5 @@ mkdir -p ${pub}
 mv ${wrapper}.pdf ${pub}/00_${DOCNAME}-draft${datum}.pdf && xdg-open ${pub}/00_${DOCNAME}-draft${datum}.pdf
 
 rm -f *.aux *.bbl *.bcf *.blg *.blg *.log *.mtc *.mtc0 *.xml *.toc
-rm -f $(ls *.tex  |grep -v ${wrapper} )
+rm -f $(ls *.tex  |grep -v ${wrapper}".tex" | grep -v ${titlepg}".tex" )
 #~ rm -f ${img}/*.pdf

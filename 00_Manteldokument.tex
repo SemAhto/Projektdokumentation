@@ -43,6 +43,7 @@
 
 % import env variable `docname`
 \getenv[\DOCNAME]{DOCNAME}
+\getenv[\ProjTitle]{ProjTitle}
 
 % include complete pdf as a page
 \usepackage{pdfpages}
@@ -185,6 +186,8 @@
 
 \date{}%no date on document as noone is really updating that
 \begin{document}
+
+\input{titlepage}
 
 \tableofcontents
 
