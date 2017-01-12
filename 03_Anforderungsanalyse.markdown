@@ -105,5 +105,9 @@ Dialoge entstehen können. Die Ergebnisse wurden im Gruppenmeeting präsentiert 
 ![ClassikListBox](img/ClassikListBox.png)
 
 ## Algorithmus Pseudocode
+
+
 ![Pseudocode](img/16002232756924747189.jpg)
+
+
 
