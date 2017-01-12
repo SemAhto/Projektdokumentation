@@ -1,7 +1,7 @@
 # Anforderungsanalyse
 
 Während den ersten zwei Gruppenmeetings wurden die Anwendungsfälle für Folksonomien, Social
-Tagging und Tag-Clouds im ERP-System von TecWare ausgearbeitet. Anhand dessen wurden folgende Prinzipsskizzen erstellt, wie auch Anforderungen schriftlich formuliert. Folgene Ergebnisse wurden dabei erzielt:
+Tagging und Tag-Clouds im ERP-System von TecWare ausgearbeitet. Dabei wurde sich an der Satzschablone von Chris Rupp orientiert. Anhand dessen wurden folgende Prinzipsskizzen erstellt, wie auch Anforderungen schriftlich formuliert. Folgene Ergebnisse wurden dabei erzielt:
 
 ## Prinzipskizzen:
 
@@ -103,3 +103,7 @@ Dialoge entstehen können. Die Ergebnisse wurden im Gruppenmeeting präsentiert 
 8. Classic Listbox (Popup)
 
 ![ClassikListBox](img/ClassikListBox.png)
+
+## Algorithmus Pseudocode
+![Pseudocode](img/16002232756924747189.jpg)
+
