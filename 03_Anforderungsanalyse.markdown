@@ -1,7 +1,7 @@
 # Anforderungsanalyse
 
-Während den ersten zwei Gruppenmeetings wurden die Anwendungsfälle für Folksonomien, Social
-Tagging und Tag-Clouds im ERP-System von TecWare ausgearbeitet. Dabei wurde sich an der Satzschablone von Chris Rupp orientiert. Anhand dessen wurden folgende Prinzipsskizzen erstellt, wie auch Anforderungen schriftlich formuliert. Folgene Ergebnisse wurden dabei erzielt:
+Während den ersten zwei Gruppenmeetings wurden der Entwurf von Anwendungsfällen für Folksonomien, Social
+Tagging und Tag-Clouds im ERP-System ausgearbeitet. Dabei wurde sich an der Satzschablone von Chris Rupp orientiert. Anhand dessen wurden folgende Prinzipsskizzen erstellt, wie auch Anforderungen schriftlich formuliert. Folgene Ergebnisse wurden dabei erzielt:
 
 ## Prinzipskizzen:
 
@@ -68,8 +68,8 @@ Klassifikation:
 
 ## Entwurf der GUIs zur Eingabe von Tags:
 
-Um eine Vorstellung von der zukünftigen Oberfläche des ERP-Systems zu bekommen, wurden von den Studenten grafisch fünf GUIs entworfen. Diese sollten der Eingabe von Tags für sogenannte Datenobjekte dienen.
-Die Aufgabe der Studenten bestand darin, sich eine Form der Eingabemöglichkeit für Tags zu überlegen wobei auch neue
+Um eine Vorstellung von der zukünftigen eingabe von Tags im ERP-Systems zu bekommen, wurden von den Studenten grafisch fünf GUIs entworfen. Diese sollten der Eingabe von Tags für sogenannte Datenobjekte dienen.
+Die Aufgabe der Studenten bestand darin, sich eine Form der Eingabemöglichkeit für Tags zu überlegen, wobei auch neue
 Dialoge entstehen können. Die Ergebnisse wurden im Gruppenmeeting präsentiert und deren Verwendung, im Austausch mit Herrn Stein  diskutiert. 
 
 1. Inline vs. Popup-Editor
@@ -106,6 +106,7 @@ Dialoge entstehen können. Die Ergebnisse wurden im Gruppenmeeting präsentiert 
 
 ## Algorithmus Pseudocode
 
+Zur visuellen Anordnung der unterschiedlich großen Tags/Worte in Tag-Clouds, recherchierten die Studenten nach verschiedenen Algorithmen. Ein Algorithmus wurde anhand von einem Pseudocode präsentiert. Anhand eines kleinen Beispiels wurde die Arbeitsweise des Algorithmus erläutert. 
 
 ![Pseudocode](img/16002232756924747189.jpg)
 
