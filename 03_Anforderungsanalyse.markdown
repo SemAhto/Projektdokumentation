@@ -104,7 +104,7 @@ Dialoge entstehen können. Die Ergebnisse wurden im Gruppenmeeting präsentiert 
 
 ![ClassikListBox](img/ClassikListBox.png)
 
-## Algorithmus Pseudocode
+## Algorithmus Pseudocode & Fallbeispiel
 
 Zur visuellen Anordnung der unterschiedlich großen Tags/Worte in Tag-Clouds, recherchierten die Studenten nach verschiedenen Algorithmen. Ein Algorithmus wurde anhand von einem Pseudocode präsentiert. Anhand eines kleinen Beispiels wurde die Arbeitsweise des Algorithmus erläutert. 
 
