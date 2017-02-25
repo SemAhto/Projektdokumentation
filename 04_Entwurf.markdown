@@ -44,18 +44,29 @@ Am Ende entsteht eine SQLite Datenbank die das gleiche Schema wie die XML Datei 
 
 Die bei \autoref{Abschn:TerraDBXML} erstellte SQLite Datenbank muss jetzt wieder geladen werden und mit Hilfe von SQL Abfragen werden die BusinessObjects und Tags erstellt. Dabei wurde statische Tags, d.h. diejenigen die bei allen BusinessObject des ElementTyps gleich sind, und Dynamische Tags, d.h. diejenigen die aus Attributen oder Verknüpfungstabellen des Elements gewonnen wurden und für jedes Business Object unterschiedlich sein können.
 
-Element Typ|Statistische Tags|Dynamische Tags
-----|----|----
-Berg|berg|Name, Land, Landteil, Gebirge
-Ebene|eben|Name, Land, Landteil,
-Fluss|fluss|Name, Land, Landteil, MündetInElementName
-Insel|insel|Name, Land, Landteil, Inselgruppe
-Land|land|Name, Land, Landteil
-Landteil|landteil|Name, Land, Landteil
-Meer|meer|Name, Land, Landteil
-See|see|Name, Land, Landteil
-Stadt|stadt|Name, Land, Landteil, LiegtAnElementTyp, LiegtAnElementName
-Wüste|wueste|Name, Land, Landteil, Wüstenart
++-------------+-------------------+-------------------------------------------------------------+
+| Element Typ | Statistische Tags | Dynamische Tags                                             |
++=============+===================+=============================================================+
+| Berg        | berg              | Name, Land, Landteil, Gebirge                               |
++-------------+-------------------+-------------------------------------------------------------+
+| Ebene       | eben              | Name, Land, Landteil                                        |
++-------------+-------------------+-------------------------------------------------------------+
+| Fluss       | fluss             | Name, Land, Landteil, MündetInElementName                   |
++-------------+-------------------+-------------------------------------------------------------+
+| Insel       | insel             | Name, Land, Landteil, Inselgruppe                           |
++-------------+-------------------+-------------------------------------------------------------+
+| Land        | land              | Name, Land, Landteil                                        |
++-------------+-------------------+-------------------------------------------------------------+
+| Landteil    | landteil          | Name, Land, Landteil                                        |
++-------------+-------------------+-------------------------------------------------------------+
+| Meer        | meer              | Name, Land, Landteil                                        |
++-------------+-------------------+-------------------------------------------------------------+
+| See         | see               | Name, Land, Landteil                                        |
++-------------+-------------------+-------------------------------------------------------------+
+| Stadt       | stadt             | Name, Land, Landteil, LiegtAnElementTyp, LiegtAnElementName |
++-------------+-------------------+-------------------------------------------------------------+
+| Wüste       | wueste            | Name, Land, Landteil, Wüstenart                             |
++-------------+-------------------+-------------------------------------------------------------+
 
 ##### BusinessObject hinzufügen
 
