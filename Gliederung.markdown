@@ -1,14 +1,15 @@
 
+\chapter{Projektauftrag}
 \input{01_BeschreibungProjektauftrag}
 
-\newpage
+\chapter{Stand der Technik}
 \input{02_StandDerTechnik}
 <!-- 
 Filter des ERP-Systems
 Entwicklungsvoraussetzungen
 -->
 
-\newpage
+\chapter{Anforderungsanalyse}
 \input{03_Anforderungsanalyse}
 <!--
 Prinzipskizzen
@@ -19,32 +20,36 @@ Algorithmus Pseudocode & Fallbeispiele
 
 \input{03.0_VerfahrenTagCloudErstellung}
 
-\newpage
+\chapter{Entwurf}
 \input{04_Entwurf}
 
-\newpage
+\chapter{Implementierung (PPsn)}
 \input{05_Implementierung}
 <!-- PPsn -->
 
-\newpage
+\chapter{Performance-Tests}
 \input{06_Performance}
 
-\newpage
+\chapter{Text Mining}
 \input{07_Textmining}
 
-\newpage
+\chapter{Fazit}
 \input{08_Fazit}
 
-\newpage
 
-<!-- *** Anhang *** -->
-\pagenumbering{Alph}
-
-\newpage
-
-\addcontentsline{toc}{section}{Aufgabenstellung}
+\appendix
 \clearpage
-\includepdf[pages={1}]{img/ProjBeschr-Munkelt.pdf} 
+<!--       %Beginn des Anhangs
+\chapter*{Anhange}
+\addcontentsline{toc}{chapter}{Anhang}
+\pagenumbering{Alph}
+\newpage
+\stepcounter{page}
+ -->
+
+<!--
+\includepdf[pages={1},addtotoc={0,section*,1,Aufgabenstellung,p1}]{img/ProjBeschr-Munkelt.pdf}
+\addcontentsline{toc}{section}{Aufgabenstellung}  \label{sec:Aufgabenstellung}
 
 \newpage
 
@@ -54,6 +59,7 @@ Algorithmus Pseudocode & Fallbeispiele
 \input{Glossar}
 
 \newpage
+-->
 
 <!--
 s.a. http://www.suedraum.de/latex/stammtisch/degenkolb_latex_biblatex_folien-final.pdf

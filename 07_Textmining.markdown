@@ -1,15 +1,14 @@
-# Text Mining
 
 Unter Text Mining wird ein Bündel von Algorithimus-basierten Analyseverfahren zur Entdeckung von Bedeutungsstrukturen verstanden, die Kerninformationen schnell erfassen können. 
 Gedacht sind diese Verfahren für die Verarbeitung und Durchsuchen großer Textmengen.
 
-## Aufgabe
+# Aufgabe
 
 Zu Beginn des Projektseminars kam schnell die Frage auf, wie die Tags angelegt werden sollen. Die Eingabefelder der Artikel könnten automatisch zu Tags transformiert werden.
 Aber wie wird dann das Beschreibungsfeld behandelt. Ein Beispiel hierzu wäre ein Nutzer, der einen neuen Artikel anlegt und das Beschreibungsfeld mit folgendem Text füllt:
 \enquote{Kotflügel für großes Auto}. Folgende Tags sollten automatisch gesetzt werden: Kotflügel, groß und Auto. Doch wie ist es möglich, das Wort \enquote{großes} zu dem Wort \enquote{groß} als Tag umzuwandeln. Durch diese Fragestellung sind die Studenten auf das Thema Text Mining aufmerksam geworden.
 
-## Vorgehen
+# Vorgehen
 
 Folgende drei Teilbereiche des Text Mining wurden behandelt.
 Die Stammformreduktion (Stemming), die Lemmatisierung und das Part-of-Speach Tagging.
@@ -19,9 +18,9 @@ Bei der Lemmatisierung wird das Wort auf seiner lexikalischen Grundform reduzier
 Als Part-of-Speach Tagging bezeichnet man die Zuordnung von Wörtern und Satzzeichen eines Textes zu Wortarten. Hierzu werden sowohl die Definition des Wortes als auch der Kontext
 berücksichtigt.
 
-## Mögliche Lösungsansätze
+# Mögliche Lösungsansätze
 
-### Stammformreduktion
+## Stammformreduktion
 Im Bereich der Stammformreduktion haben die Studenten sich mit dem Porter-Stemmer-Algorithmus auseinandergesetzt.
 Der Porter-Stemmer-Algorithmus ist ein verbreiteter Algorithmus der Computerlinguistik zum automatischen Zurückführen von Wörtern auf ihren Wortstamm (Stemming). Der Algorithmus basiert auf einer Menge von Verkürzungsregeln, die so lange auf ein Wort angewandt werden, bis dieses eine Minimalanzahl von Silben aufweist. Der ursprünglich für Wörter der englischen Sprache entwickelte Algorithmus kann relativ leicht für andere Sprachen portiert werden.
 
@@ -38,7 +37,7 @@ Zum besseren Verständnis haben die Studenten den Porter-Stemmmer-Algorithmus (s
 
 ![\label{abb:PorterStemmerAlgorithmus} Porter-Stemmer-Algorithmus](img/PorterStemmerAlgorithmus.png)
 
-### Lemmatisierung
+## Lemmatisierung
 
 Im Bereich Lemmatisierung wurde festgestellt, dass ein Wörterbuch im Hintergrund zum Abgleichen benötigt wird. Folgende Möglichkeiten wurden dabei näher betrachtet:
 
@@ -46,7 +45,7 @@ Im Bereich Lemmatisierung wurde festgestellt, dass ein Wörterbuch im Hintergrun
 - `GermaNet`
 - `Sketch Engine`
 
-#### Elasticsearch
+### Elasticsearch
 
 Elasticsearch ist eine Suchmaschine, die mit indizierten Dokumenten arbeitet. Die kleinste Einheit bilden dabei die Dokumente. Diese werden indiziert, um sie durchsuchen zu können. Mehrere Dokumente bilden einen Typ und mehrere Typen werden als Index bezeichnet. Vergleicht man diesen Aufbau mit einer SQL-Datenbank, wäre ein Dokument eine Zeile, der Typ die Tabelle und der Index die Datenbank.
 
@@ -60,11 +59,11 @@ Die Resultate des Analyseprozesses werden im Index gespeichert und können dann 
 
 Da die Studenten für die gestellte Aufgabe die Lemmata eines Wortes ermitteln wollen, wurde Elasticsearch nicht genauer untersucht.
 
-#### GermaNet
+### GermaNet
 
 GermaNet ist eine elektronische, lexikographische Referenzdatenbank für den deutschen Wortsinn. Es stammt von der Universität Tübingen. Für GermaNet wurde eine Nutzungslizenz über die HTW Dresden erworben. Die Möglichkeit für ein eingegebenes Wort, das Lemma zurück zu erhalten, wurde von den Studenten getestet. Da GermaNet für den semantischen Zusammenhang von Worten gedacht ist, war es nicht möglich nur das Lemma für ein Wort zu erfragen.
 
-#### Sketch Engine
+### Sketch Engine
 
 Sketch Engine ist eine seit 2004 von Lexical Computing Limited entwickelte Corpus Manager- und Analysesoftware. Mittels einer 30-Tage-Testversion haben wir die Möglichkeiten der Sketch Engine überprüft. Sketch Engine bietet u.a. folgende Funktionen:
 
@@ -76,7 +75,7 @@ Sketch Engine ist eine seit 2004 von Lexical Computing Limited entwickelte Corpu
 
 Auch hier sind die Studenten nicht weitergekommen, da die Sketch Engine und nicht ein einzelnes Lemma zurückgeben werden kann.
 
-### TreeTagger
+## TreeTagger
 
 Der TreeTagger der Universität München ist ein Werkzeug zur Annotation eines Textes mittels Part-of-speach Tagging und Lemmata Informationen. Entwickelt wurde er von Helmut Schmidt in dem TC Projekt am Institut für Conputerlinguistik der Universität Stuttgart. Er kann erfolgreich Deutsch, Englisch, Französisch und viele weitere Sprachen taggen. Er besitzt einen handtrainierten Textkorpus, der individuell erweiterbar ist. Einsetzbar ist er unter Windows, Linux und Mac-OS. Der TreeTagger und das Trainingsprogramm ist frei verfügbar für Forschung, Bildung und Evaluation. Zusätzlich ist unter Windows ein graphisches Interface verfügbar.
 
@@ -113,7 +112,7 @@ Anhand der umliegenden Wörter kann der TreeTagger genauere Zuordnungen treffen.
 Das erste Problem ist, dass der TreeTagger besser mit ganzen Sätzen arbeitet. Der weiteren bedeutetet Wahrscheinlichkeit nicht Sicherheit. Bei 20.000 Wörtern ordnet der TreeTagger zu 97,53% die richtige Wortart zum jeweiligen Wort zu. Die größte Schwachstelle, die die Studenten im TreeTagger sahen, war die Tatsache, dass er nicht hauptsächlich zur Findung der Lemmata dient, sondern Wortarten zuordnen soll. Das der TreeTagger zusätzlich anhand seines Korpus auch Lemmata ausgeben kann, ist nur ein schöner Zusatz.
 Würden die Studenten den TreeTagger für ihre o.g. Aufgabe einsetzen wollen, müssten sie den Textkorpus mittels des Trainingsprogrammes erweitern, d.h. händisch Wortarten und Lemmata zuordnen. Daraus wurde geschlossen, dass die Tagliste für das ERP-System händisch geführt werden kann. Der Aufwand wäre der Gleiche.
 
-### Wortschatzprojekt Uni Leipzig
+## Wortschatzprojekt Uni Leipzig
 
 Das Wortschatzprojekt der Universität Leipzig beinhaltet korpusbasierte monolinguale Wörterbücher für unter anderem die deutsche Sprache. Es wird seit 1998 von Gerhard Heyer und Uwe Quasthoff an der Universität Leipzig entwickelt.
 Es wurde ein umfassender Korpus des deutschen Wortschatzes als Vollformlexikon erstellt. Die über Jahre aufgebaute Lexikondatenbank wurde über das Internet zur Nutzung verfügbar gemacht und zur Bearbeitung und Ergänzung zur Verfügung gestellt. Seitdem wurde es beständig erweitert.

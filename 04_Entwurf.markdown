@@ -1,14 +1,13 @@
-# Entwurf
 
 Aufgrund des sehr frühen Entwicklungsstandes von der echten Laufzeitumgebung für die WordCloud wurde beschlossen zunächst eine ähnlichen Prototypen zu erstellen mit dem Ziel, die komplexen Abläufe des realen Systems einfacher darzustellen, um ungewollte und für das Projektteam nicht nachvollziehbare Nebeneffekte während der Entwicklungsphase stark zu reduzieren. Anhand des Prototyen wurde die Berechnung von Folksonomien und die Möglichkeiten der Tageingabe erforscht.
 
 Um eine einfache Datenbasis zum Testen zu erstellen wurde die freie Datenbank Terra\footnote{\cite{TN_libero_mab2337570} via \href{https://www.sachsen.schule/~terra2014/index.php}{https://www.sachsen.schule/~terra2014/index.php} \label{foot:terra} } ausgewählt. Sie enthält geografische Daten wie Städte, Flüsse und Berge mit Relation untereinander, was sich als sehr nützlich erwies, da sich diese einfach in Tags übertragen ließen.
 
-## Aufbau
+# Aufbau
 
 In diesen Abschnitt wird der Aufbau des Prototypen beschrieben.
 
-### Funktionen
+## Funktionen
 
 In diesem Teilabschnitt werden die implementierten Funktionen kurz erläutert.
 
@@ -21,7 +20,7 @@ Datenbank anlegen oder laden
 Datenbank leeren
 :	Über den Reiter \enquote{Datenbank} $\rightarrow$ \enquote{Leeren} kann man in einer zuvor geladenen Datenbank alle Datensätze löschen.
 
-#### Daten
+### Daten
 
 Die folgenden Funktionen dienen Import und Export von gespeicherten Daten von bzw. in andere Systeme und deren manuellen Modifikation.
 
@@ -64,7 +63,7 @@ Datenbank als Cypher Graph Definition exportieren
 BusinessObject anzeigen und editieren
 :	Um ein konkretes BussinessObject anzuzeigen, muss lediglich auf dieses geklickt werden. Es öffnet sich ein Fenster welches alle Daten zum angeklickten Objekt in einem Formular anzeigt, worin diese auch direkt geändert werden können.
 
-#### WordCloud
+### WordCloud
 
 Die folgenden Funktionen dienen zur Modifikation des Filters über die WordCloud.
 
@@ -74,11 +73,11 @@ Tag dem Filter hinzufügen
 Tag vom Filter entfernen
 :	Einen Tag vom Filter zu entfernen ist ähnlich simpel, wie einen Tag zum Filter hinzuzufügen. Zum Entfernen ist ebenfalls nur ein Klick auf das zu entfernende Tag im Filter nötig. Darauffolgend wird, analog zum Tag hinzufügen, die WordCloud sowie die Anzeige der BussinessObjects aktualisiert.
 
-### Komponenten
+## Komponenten
 
 In diesem Teilabschnitt werden die Komponenten zur Funktionsbereitstellung technisch beschrieben und deren Modellierung erläutert. Es wurde darauf geachtet die Funktionalität, die Daten und die Benutzer
 
-#### Model \label{abschn:Model}
+### Model \label{abschn:Model}
 
 Das Modell für die Datenhaltung ist dem des realen Systems nachempfunden, beschränkt aber sich auf die wesentlichen Elemente zur Generierung einer Folksonomie. Zur Visualisierung für die Präsentation wurde zusätzlich noch ein Bild hinzugefügt.
 
@@ -98,7 +97,7 @@ Das Bild wird base64 Codiert als Text in dem data Attribut des Business Objects 
 
 ![\label{abb:EntityRelationshipDiagram} Entity Relationship Diagram](img/EntityRelationshipDiagram.jpg)
 
-#### DataAccess
+### DataAccess
 
 Die Klasse SqliteDatabaseConnection abstrahiert die systemeigene Schnittstelle und erstellt Abfragen verschiedener Rückgabegranularität (Nur Ausführen, Skalarer Wert, Alle Werte). Außerdem wird die Funktionalität um weitere Hilfsmethoden wie Tabellenexistenz prüfen erweitert. Die Klasse Repository stellt die Datenobjektzugriffsmethoden bereit und bietet so einen abstrakten und objektorientierten Zugriff auf die Persistenzschicht.
 
@@ -106,7 +105,7 @@ Die Klasse SqliteDatabaseConnection abstrahiert die systemeigene Schnittstelle u
 
 ![\label{abb:KlassendiagrammDatenbankzugriff} Klassendiagramm von Datenbankzugriff](img/KlassendiagrammDatenbankzugriff.jpg)
 
-#### Service
+### Service
 
 In dieser Komponente ist die gesamte Logik implementiert. 
 
@@ -135,7 +134,7 @@ Der `DataLoadingService`
 
 ![\label{abb:KlassendiagrammServices} Klassendiagramm von Services](img/KlassendiagrammServices.jpg)
 
-#### Klassen
+### Klassen
 
 Die WordCloud Klasse `TerraDbWordCloudAppearenceArguments`
 :	definiert die für die WordClouddarstellung benötigten Parameter.
@@ -143,7 +142,7 @@ Die WordCloud Klasse `TerraDbWordCloudAppearenceArguments`
 Die Klasse `Logger`
 :	dient zu Demonstrationszwecken und bieten dem Nutzer einen Einblick, wie die Berechnungsalgorithmen für die Folksonomien funktionieren.
 
-#### MVVM
+### MVVM
 
 Das Model-View-ViewModel (MVVM) Pattern ist zentraler Bestandteil der Windows Presentaion Foundation (WPF), dem aktuellen Applicationframework für die Windowsprogrammierung. Es dient der strikten Trennung der Oberfläche (View) von der Logik (ViewModel) und den Daten (Model).
 
@@ -153,7 +152,7 @@ Die `ViewModel`
 Das `RelayCommand`
 :	ist eine Helferklasse, die das ICommand Inferface implementiert und die Methoden CanExecute und Execute als Delegat-Typen bereitstellt, sodass diese Logik direkt im ViewModel implementiert werden kann ohne dass eine Extra Klasse für Kommandos angelegt werden muss und gegebenenfalls Kontexte umständlich übergeben werden müssen.
 
-#### Converter
+### Converter
 
 Der `Converter`
 :	dienen als Übersetzer der Daten in ein angemessenes Format für die View. Sie werden an eine Datenbindung angehangen über konvertieren die Daten bei jeder Änderung. So kann diese Konvertierungslogik aus dem ViewModel entfernt werden und ist wiederverwendbar
@@ -164,7 +163,7 @@ Der `BooleanToVisibilityContainer`
 Der `TagCollectionToStringConverter`
 :	serialisiert die TagCollection in eine Zeichenkette und parst diese nach Änderung wieder in eine TagCollection zurück. Somit ist eine sehr einfache Tageingabe möglich, da dieser an jede beliebige Texteingabe gebunden werden kann.
 
-### Benutzeroberfläche
+## Benutzeroberfläche
 
 Die Benutzeroberfläche ist wie für einen Prototypen typisch schlicht gehalten. Zur besseren Benutzbarkeit sind die Grenzen rechts und unterhalb der Gefundenen BusinessObjects frei verschiebbar.
 
@@ -172,11 +171,11 @@ Die Benutzeroberfläche ist wie für einen Prototypen typisch schlicht gehalten.
 
 ![\label{abb:InitialzustandPrototyp} Initialzustand des Prototyps (Datenbank geladen)](img/InitialzustandPrototyp.jpg)
 
-## Konstruktion eines nachvollziehbaren Beispiels für die Präsentation
+# Konstruktion eines nachvollziehbaren Beispiels für die Präsentation
 
 Da geographische Daten für die Präsentation für den Zuhörer eher uninteressant und nicht unbedingt nachvollziehbar sind wurde beschlossen, unser erworbenes Verständnis einer guten Folksonomie zu anzuwenden und ein simples Beispiel zu erstellen, sodass der Zuhörer das Interesse während der Präsentation nicht verliert. Dabei wurde sich auf den Themenbereich Disney geeinigt, da davon ausgegangen wurde, dass jeder einen Großteil dieser Figuren kennt und so die Beziehungen deutlicher und somit verständlicher werden.
 
-### Beispielhafter Filter-/Suchprozess
+## Beispielhafter Filter-/Suchprozess
 
 Um ein Verständnis für den Ablauf einer Such- bzw. Filteraktion durch den Nutzer und den Zusammenhang zwischen WordCloud, Ergebnisliste und Datenbankabfrage zu erlangen, wird der Prozess exemplarisch anhand der selbst erstellten Datenbank beschrieben.
 

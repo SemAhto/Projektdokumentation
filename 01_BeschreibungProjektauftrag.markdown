@@ -1,5 +1,3 @@
 
-# Beschreibung des Projektauftrags
-
 Im Rahmen eines Projektseminars wurde die Aufgabe (\nameref{sec:Aufgabenstellung}) gestellt, eine Tag-Cloud innerhalb eines sich in Entwicklung befindenden ERP-Systems zu implementieren. Die Umsetzung erfolgt im Verlauf des Wintersemesters 2016/2017, in Zusammenarbeit mit dem ERP-Hersteller TecWare.
-Unterstützt werden die Studenten der HTW Dresden von Softwareentwickler Herrn Matthias Stein, der Firma TecWare und Herrn Professor Dr. Torsten Munkelt.
+Unterstützt werden die Studenten der HTW Dresden vom Softwareentwickler *neolithos*\footnote{\href{https://github.com/neolithos}{https://github.com/neolithos}}, der Firma TecWare und Herrn Professor Dr. Torsten Munkelt\footnote{\href{https://www.htw-dresden.de/fakultaet-informatikmathematik/personal/professuren/prof-dr-torsten-munkelt.html}{https://www.htw-dresden.de/fakultaet-informatikmathematik/personal/professuren/prof-dr-torsten-munkelt.html}}.

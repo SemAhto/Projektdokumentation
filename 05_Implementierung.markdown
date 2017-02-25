@@ -1,12 +1,13 @@
-# Implementierung (PPsn)
 
-## Beschreibung
+<!-- text wanted -->
 
-## Layout
+# Beschreibung
 
-## Implementierung der WordCloud Komponente
+# Layout
 
-### Komponenten
+# Implementierung der WordCloud Komponente
+
+## Komponenten
 
 \autoref{abb:PpsObjectGenerator}
 
@@ -20,7 +21,7 @@
 
 ![\label{abb:PpsNavigatorModel} PpsNavigatorModel](img/PpsNavigatorModel.jpg)
 
-### Abläufe
+## Abläufe
 
 \autoref{abb:AblaufPpsNavigatorModel}
 

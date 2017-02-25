@@ -1,10 +1,9 @@
-# Anforderungsanalyse
 
 Während den ersten zwei Gruppenmeetings wurden der Entwurf von Anwendungsfällen für Folksonomien, Social
 Tagging und Tag-Clouds im ERP-System ausgearbeitet. Dabei wurde sich an der Satzschablone von Chris Rupp (vgl. \cite{Sophist:Schablonen})
 orientiert. Anhand dessen wurden folgende Prinzipsskizzen erstellt, wie auch Anforderungen schriftlich formuliert. Folgene Ergebnisse wurden dabei erzielt:
 
-## Prinzipskizzen:
+# Prinzipskizzen:
 
 \autoref{abb:Prinzipskizze1}
 
@@ -16,9 +15,9 @@ orientiert. Anhand dessen wurden folgende Prinzipsskizzen erstellt, wie auch Anf
 
 \autoref{abb:Prinzipskizze3}
 
-![}label{abb:Prinzipskizze3} 3. Prinzipskizze](img/03Prinzipienskizze.png)
+![\label{abb:Prinzipskizze3} 3. Prinzipskizze](img/03Prinzipienskizze.png)
 
-## Anforderungen:
+# Anforderungen:
 
 **Glossar**:
 
@@ -67,7 +66,7 @@ Klassifikation:
 
 1. Der Administrator muss in der Lage sein, Tags zu ändern / löschen.
 
-## Entwurf der GUIs zur Eingabe von Tags:
+# Entwurf der GUIs zur Eingabe von Tags:
 
 Um eine Vorstellung von der zukünftigen Eingabe von Tags im ERP-System zu bekommen, wurden von den Studenten grafisch fünf GUIs entworfen. Diese sollten der Eingabe von Tags für sogenannte Datenobjekte dienen.
 Die Aufgabe der Studenten bestand darin, sich eine Form der Eingabemöglichkeit für Tags zu überlegen, wobei auch neue
@@ -105,7 +104,7 @@ Dialoge entstehen können. Die Ergebnisse wurden im Gruppenmeeting präsentiert 
 
 ![\label{abb:ClassicListbox} Classic Listbox (Popup)](img/ClassikListBox.png)
 
-## Algorithmus Pseudocode & Fallbeispiel
+# Algorithmus Pseudocode & Fallbeispiel
 
 Zur visuellen Anordnung der unterschiedlich großen Tags/Worte in Tag-Clouds, recherchierten die Studenten nach verschiedenen Algorithmen. Ein Algorithmus wurde anhand eines \nameref{abb:Pseudocode}s präsentiert. Anhand eines kleinen Beispiels wurde die Arbeitsweise des Algorithmus erläutert. 
 

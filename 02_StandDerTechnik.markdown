@@ -1,7 +1,5 @@
 
-# Stand der Technik
-
-## Die Filter des ERP - System
+# Die Filter des ERP - System
 
 Das ERP-System, der Firma TecWare, besitzt aktuell drei Filter:
 
@@ -10,7 +8,7 @@ Das ERP-System, der Firma TecWare, besitzt aktuell drei Filter:
 3. *Volltextfilter*: Anhand dessen kann der Nutzer ein Textfragment eingeben.
 
 
-## Entwicklungsvoraussetzungen
+# Entwicklungsvoraussetzungen
 
 Um an dem ERP-System arbeiten zu können, sind folgende Voraussetzungen für die Entwicklungsumgebung gegeben:
 
