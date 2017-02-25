@@ -69,7 +69,7 @@ Klassifikation:
 
 ## Entwurf der GUIs zur Eingabe von Tags:
 
-Um eine Vorstellung von der zukünftigen eingabe von Tags im ERP-Systems zu bekommen, wurden von den Studenten grafisch fünf GUIs entworfen. Diese sollten der Eingabe von Tags für sogenannte Datenobjekte dienen.
+Um eine Vorstellung von der zukünftigen Eingabe von Tags im ERP-System zu bekommen, wurden von den Studenten grafisch fünf GUIs entworfen. Diese sollten der Eingabe von Tags für sogenannte Datenobjekte dienen.
 Die Aufgabe der Studenten bestand darin, sich eine Form der Eingabemöglichkeit für Tags zu überlegen, wobei auch neue
 Dialoge entstehen können. Die Ergebnisse wurden im Gruppenmeeting präsentiert und deren Verwendung, im Austausch mit Herrn Stein  diskutiert. 
 

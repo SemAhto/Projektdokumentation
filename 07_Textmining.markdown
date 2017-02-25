@@ -1,6 +1,6 @@
 # Text Mining
 
-Unter Text Mining wird ein Bündel von Algorthimus-basierten Analyseverfahren zur Entdeckung von Bedeutungsstrukturen verstanden, die Kerninformationen schnell erfassen können. 
+Unter Text Mining wird ein Bündel von Algorithimus-basierten Analyseverfahren zur Entdeckung von Bedeutungsstrukturen verstanden, die Kerninformationen schnell erfassen können. 
 Gedacht sind diese Verfahren für die Verarbeitung und Durchsuchen großer Textmengen.
 
 ## Aufgabe
@@ -42,9 +42,9 @@ Zum besseren Verständnis haben die Studenten den Porter-Stemmmer-Algorithmus (s
 
 Im Bereich Lemmatisierung wurde festgestellt, dass ein Wörterbuch im Hintergrund zum Abgleichen benötigt wird. Folgende Möglichkeiten wurden dabei näher betrachtet:
 
-- `Elastiksearch`
+- `Elasticsearch`
 - `GermaNet`
-- `Sktech Engine`
+- `Sketch Engine`
 
 #### Elasticsearch
 
@@ -122,7 +122,7 @@ Der Zweck des Projektes soll vor allem der Sprachverarbeitung und Texttechnologi
 Die Annotation der Token umfasst das Sachgebiet Beispielsätze sowie die Grammatik.
 Da das Ziel aus der Ermittlung der Lemmata der Worte des Beschreibungsfeldes bestand, schien das Wortschatzprojekt eine geeignete Lösung darzustellen.
 
-#### Umsetzung
+**Umsetzung**
 
 Die Universität Leipzig stellt u.a. einige SOAP-Webservices zur Verfügung, mit denen ein direkter Datenzugriff sowie gezielte Abfragen möglich sind. Zu jedem Webservice wird ein Beispielclient mit Quellen zur Verfügung gestellt. Dies ermöglicht die Kombination sowie das Einbauen der Webservices in eigene Programme.
 Die Zugriffsvoraussetzungen unterscheiden sich je nach Abfrageumfang.
