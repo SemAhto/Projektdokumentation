@@ -27,7 +27,7 @@ Algorithmus Pseudocode & Fallbeispiele
 \input{05_Implementierung}
 <!-- PPsn -->
 
-\input{05.1_Performange}
+\input{05.1_Performance}
 
 # Test
 
