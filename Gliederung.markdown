@@ -15,6 +15,7 @@ Anforderungen
 Entwurf der GUI zur Eingabe von Tags
 Algorithmus Pseudocode & Fallbeispiele
 -->
+\input{03.1_Textmining}
 
 \input{04_Entwurf}
 

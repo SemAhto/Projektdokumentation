@@ -7,7 +7,7 @@ Gedacht sind diese Verfahren für die Verarbeitung und Durchsuchen großer Textm
 
 Zu Beginn des Projektseminars kam schnell die Frage auf, wie die Tags angelegt werden sollen. Die Eingabefelder der Artikel könnten automatisch zu Tags transformiert werden.
 Aber wie wird dann das Beschreibungsfeld behandelt. Ein Beispiel hierzu wäre ein Nutzer, der einen neuen Artikel anlegt und das Beschreibungsfeld mit folgendem Text füllt:
-\enquote {Kotflügel für großes Auto}. Folgende Tags sollten automatisch gesetzt werden: Kotflügel, groß und Auto. Doch wie ist es möglich, das Wort \enquote{großes} zu dem Wort \enquote{groß} als Tag umzuwandeln. Durch diese Fragestellung sind die Studenten auf das Thema Text Mining aufmerksam geworden.
+\enquote{Kotflügel für großes Auto}. Folgende Tags sollten automatisch gesetzt werden: Kotflügel, groß und Auto. Doch wie ist es möglich, das Wort \enquote{großes} zu dem Wort \enquote{groß} als Tag umzuwandeln. Durch diese Fragestellung sind die Studenten auf das Thema Text Mining aufmerksam geworden.
 
 ## Vorgehen
 
@@ -33,9 +33,9 @@ Beispiele:
 - `tr-ee (m=0)`
 
 Nach der Bestimmung der Silben werden die vorher festgelegten Verkürzungsregeln abgearbeitet. Die Verkürzungsregeln bestehen aus Paaren von Bedingungen und Ableitungen für verschiedene Suffixe (Wortendungen). Die Verkürzungsregeln werden in Gruppen zusammengefasst. Aus jeder Gruppe darf nur eine Regel angewendet werden.
-Beispiel:  Die erste Gruppe beinhaltet die Suffix-Verkürzungsregeln \enquote{sses} \rightarrow \enquote{s}, \enquote{ies} \rightarrow \enquote{i} und \enquote{s}  \enquote{~}, die beispielsweise zu den Ableitungen \enquote{libraries} \rightarrow \enquote{librari} und \enquote{Wikis} \rightarrow \enquote{Wiki} führen. Eine später folgende Gruppe besteht aus der Regel \enquote{y} \rightarrow \enquote{i}, so dass beispielsweise das Wort \enquote{library} auf den gleichen Stamm (\enquote{library} \rightarrow \enquote{librari}) zurückgeführt wird.
+Beispiel:  Die erste Gruppe beinhaltet die Suffix-Verkürzungsregeln \enquote{sses} $\rightarrow$ \enquote{s}, \enquote{ies} $\rightarrow$ \enquote{i} und \enquote{s}  \enquote{~}, die beispielsweise zu den Ableitungen \enquote{libraries} $\rightarrow$ \enquote{librari} und \enquote{Wikis} $\rightarrow$ \enquote{Wiki} führen. Eine später folgende Gruppe besteht aus der Regel \enquote{y} $\rightarrow$ \enquote{i}, so dass beispielsweise das Wort \enquote{library} auf den gleichen Stamm (\enquote{library} $\rightarrow$ \enquote{librari}) zurückgeführt wird.
 Zum besseren Verständnis haben die Studenten den Porter-Stemmmer-Algorithmus zusätzlich für die deutsche Sprache ausprobiert.
-![\label{abb: PorterStemmerAlgorithmus} Porter-Stemmer-Algorithmus]
+![\label{abb:PorterStemmerAlgorithmus} Porter-Stemmer-Algorithmus]
 
 ###Lemmatisierung
 Im Bereich Lemmatisierung wurde festgestellt, dass ein Wörterbuch im Hintergrund zum Abgleichen benötigt wird. Folgende Möglichkeiten wurden dabei näher betrachtet:
@@ -114,8 +114,6 @@ Der Zweck des Projektes soll vor allem der Sprachverarbeitung und Texttechnologi
 Die Annotation der Token umfasst das Sachgebiet Beispielsätze sowie die Grammatik.
 Da das Ziel aus der Ermittlung der Lemmata der Worte des Beschreibungsfeldes bestand, schien das Wortschatzprojekt eine geeignete Lösung darzustellen.
 
-
-
 #### Umsetzung
 Die Universität Leipzig stellt u.a. einige SOAP-Webservices zur Verfügung, mit denen ein direkter Datenzugriff sowie gezielte Abfragen möglich sind. Zu jedem Webservice wird ein Beispielclient mit Quellen zur Verfügung gestellt. Dies ermöglicht die Kombination sowie das Einbauen der Webservices in eigene Programme.
 Die Zugriffsvoraussetzungen unterscheiden sich je nach Abfrageumfang.
@@ -125,38 +123,18 @@ Da der Verwendung des Wortschatzprojektes vorerst lediglich ein \enquote{Versuch
 
 Nach Start der API öffnet sich ein Konsolenfenster. Nun ist es möglich ein Wort einzugeben von welchem man den zugehörigen Thesaurus als Rückgabewert erhalten möchte.
 
-![\label{abb: EingabeC#-API Thesaurus} Eingabe C# - API Thesaurus](img/EingabeCAPIhesaurus.jpg)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+![\label{abb:EingabeCSharp-API Thesaurus} Eingabe C# - API Thesaurus](img/EingabeCAPIThesaurus.jpg)
 
 Als Rückgabe erhält man alle gefundenen Thesauri, sowie die Anzahl.
 
-![\label{abb: RückgabeC#-API Thesaurus} Rückgabe C# - API Thesaurus](img/RueckgabeCAPIThesaurus.jpg)
+![\label{abb:RückgabeCSharp-API Thesaurus} Rückgabe C# - API Thesaurus](img/RueckgabeCAPIThesaurus.jpg)
 
 
 Das Ziel bestand daraus, statt des Thesaurus die Lemmata des Eingabewortes zu erhalten. Darüber hinaus sollte es möglich sein mehrere Worte nacheinander abzufragen. Die Eingabe sollte außerdem über einlesen einer Liste aus einem Textdokument erfolgen. Folgende Codeabschnitte wurden daher geändert:
 
 Ändern der Funktion GetSynonyms();
 
-![\label{abb: C#-FunktionGetBaseform} C# - FunktionGetBaseform](img/CFunktionGetBaseform.jpg)
-
-
+![\label{abb:CSharp-FunktionGetBaseform} C# - FunktionGetBaseform](img/CFunktionGetBaseform.jpg)
 
 Zeile 23 bis 25
 	Änderung der Servicereferenz zur Abfrage der Lemmata.
@@ -174,9 +152,7 @@ Zeile 34 bis 45
 
 Ändern der Funktion Main();
 
-![\label{abb: C#-FunktionMain} C# - FunktionMain](img/CFunktionMain.jpg)
-
-
+![\label{abb:CSharp-FunktionMain} C# - FunktionMain](img/CFunktionMain.jpg)
 
 Zeile 16 bis 17
 	Anlegen der Hilfsparameter.
@@ -190,18 +166,15 @@ Zeile 23 bis 31
 
 Bei der Eingabe der Worte \enquote{guter}, \enquote{Katzen} und \enquote{schneller} erfolgt nun folgende Rückgabe:
 
-![\label{abb: RückgabeC#-APIBaseform} Rückgabe C# - APIBaseform](img/RueckgabeCAPIBaseform.jpg)
-
-
+![\label{abb:RückgabeCSharp-APIBaseform} Rückgabe C# - APIBaseform](img/RueckgabeCAPIBaseform.jpg)
 
 Zu jedem Wort wird das Lemma sowie die Wortart zurückgegeben. Bei obigem Beispiel also:
 
-Wort|Lemma|Wortart
-:---|:---|:---
-Guter|Gut|A (Adjektiv)
-Katzen|Katze|N (Nomen)
-Schneller|Schnell|A (Adjektiv)
-
+| Wort      | Lemma   | Wortart      |
+| :---      | :---    | :----------  |
+| Guter     | Gut     | A (Adjektiv) |
+| Katzen    | Katze   | N (Nomen)    |
+| Schneller | Schnell | A (Adjektiv) |
 
 Auswertung:
 Generell eignet sich das Wortschatzprojekt sehr gut zur Abfrage der Lemmata und auch
@@ -210,18 +183,12 @@ der Wortart eines Wortes. Bei einer Eingabe von 263 Wörtern aus einem Buchabsch
 Da es sich um sehr fachspezifische Daten handelt, welche als Eingabe erfolgen würden, ist das Wortschatzprojekt nicht geeignet. Bei unbekannten Wörtern erfolgt keine Rückgabe.
 Bei einer Eingabe von 199 Wörtern aus einem Abschnitt eines Zahnmedizinischen Katalogs lag die Genauigkeit nunmehr bei 62%. Darüber hinaus führt die Eingabe von Zahlen zu einer Überflutung an Rückgaben.
 
-
-
-
 ## Fazit
 
 Zusammengefasst wurde der TreeTagger und das Wortschatzprojekt miteinander verglichen. Dazu haben die Studenten das Buch \enquote{Volkserzählung} aus dem Gutenbergprojekt und Katalogdaten aus dem zahnärztlichen und kieferorthopädischen Bereich durch beide Programme laufen lassen. Aufgrund des begrenzten Abfragekontingentes des Wortschatzprojektes mussten die übergebenen Wörter stark begrenzt werden. Aus dem Buch \enquote{Volkserzählungen} von Lew Tolstoi wurden 263 Wörter des ersten Kapitels übergeben. Hier lag der TreeTagger mit 97 \% (255) richtig zugeordneten Lemmata besser, als das Wortschatzprojekt mit 92 \% (241) richtigen Lemmata. Wie es auch im folgenden Diagramm veranschaulicht dargestellt wurde. Bei den Katalogdaten lag das Wortschatzprojekt mit 65 % (130) richtig zugeordneten Lemmata vor dem TreeTagger mit nur 59 \% (117) richtiger Zuordnung. Hier sieht man deutlich, dass der TreeTagger mit umliegenden Wörtern in einem Satz arbeitet, was bei den Katalogdaten nicht gegeben war. Es handelt sich bei den Katalogdaten um einen Auszug auf einer Artikeldatenbank, der aus insgesamt 199 Wörtern bestand.
 
-![\label{abb: TreeTaggerWortschatzprojekt } TreeTagger vs. Wortschatzprojekt](img/TreeTaggerWortschatzprojekt.png)
-
+![\label{abb:TreeTaggerWortschatzprojekt } TreeTagger vs. Wortschatzprojekt](img/TreeTaggerWortschatzprojekt.png)
 
 Sollte Lemmatisierung in dem ERP-System umgesetzt werden, würde sich eine Mischung aus dem Wortschatzprojekt und dem TreeTagger empfehlen. Da die Daten im ERP-System eher wie die Katalogdaten aufgebaut sind, hat das Wortschatzprojekt mit seinem breiten Wörterstamm einen klaren Vorteil, was die Zuordnung bei einzelnen Worten vereinfacht.
 Ein Lösungsansatz der Studenten wäre:
 Alle anderen Felder bei der Anlage eines Artikels werden zu Tags, damit können die Wörter im Beschreibungsfeld erst mit den vorhandenen Tag abgeglichen werden. Mittels einer Füllwörterliste können nicht relevante Wörter wie (für, ein, und, usw.) herausgefiltert werden und nur bei den noch verbleibenden Wörtern, könnte mit Hilfe des Wortschatzprojektes oder auch des TreeTaggers das Lemma gefunden und als Tag hinzugefügt werden.
-
-
