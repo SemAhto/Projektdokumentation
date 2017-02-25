@@ -6,7 +6,7 @@
 
 Aufgrund des sehr frühen Entwicklungsstandes von der echten Laufzeitumgebung für die WordCloud wurde beschlossen zunächst eine ähnlichen Prototypen zu erstellen mit dem Ziel, die komplexen Abläufe des realen Systems einfacher darzustellen, um ungewollte und für das Projektteam nicht nachvollziehbare Nebeneffekte während der Entwicklungsphase stark zu reduzieren. Anhand des Prototyen wurde die Berechnung von Folksonomien und die Möglichkeiten der Tageingabe erforscht.
 
-Um eine einfache Datenbasis zum Testen zu erstellen wurde die freie Datenbank Terra <!-- [^FUSSNOTE] --> ausgewählt. Sie enthält geografische Daten wie Städte, Flüsse und Berge mit Relation untereinander, was sich als sehr nützlich erwies, da sich diese einfach in Tags übertragen ließen.
+Um eine einfache Datenbasis zum Testen zu erstellen wurde die freie Datenbank [Terra](https://www.sachsen.schule/~terra2014/index.php)\footnote{\label{foot:terra} Terra DB \href{https://www.sachsen.schule/~terra2014/}{https://www.sachsen.schule/~terra2014/} } ausgewählt. Sie enthält geografische Daten wie Städte, Flüsse und Berge mit Relation untereinander, was sich als sehr nützlich erwies, da sich diese einfach in Tags übertragen ließen.
 
 ## Aufbau
 
