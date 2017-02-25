@@ -1,7 +1,8 @@
 # Anforderungsanalyse
 
 Während den ersten zwei Gruppenmeetings wurden der Entwurf von Anwendungsfällen für Folksonomien, Social
-Tagging und Tag-Clouds im ERP-System ausgearbeitet. Dabei wurde sich an der Satzschablone von Chris Rupp orientiert. Anhand dessen wurden folgende Prinzipsskizzen erstellt, wie auch Anforderungen schriftlich formuliert. Folgene Ergebnisse wurden dabei erzielt:
+Tagging und Tag-Clouds im ERP-System ausgearbeitet. Dabei wurde sich an der Satzschablone von Chris Rupp (vgl. \cite{Sophist:Schablonen})
+orientiert. Anhand dessen wurden folgende Prinzipsskizzen erstellt, wie auch Anforderungen schriftlich formuliert. Folgene Ergebnisse wurden dabei erzielt:
 
 ## Prinzipskizzen:
 
