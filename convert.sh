@@ -45,6 +45,9 @@ for i in $(ls *.${mdext}); do
 	x=$(echo "${i}" | rev | cut -d"." -f2- | rev)
 	${md2tex} -f markdown -t latex -o ${x}.tex ${x}.${mdext}
 	${sed} -i 's/\includegraphics/\scalegraphics/g' ${x}.tex
+	#~ ${sed} -i 's/{Shaded}/{shaded}/g' ${x}.tex
+	#~ ${sed} -i 's/\begin{Highlighting}\[\]//g' ${x}.tex
+	#~ ${sed} -i 's/\end{Highlighting}//g' ${x}.tex
 	#~ ${sed} -i 's/\[htbp\]/\[\!H\]/g' ${x}.tex
 done
 #~ cp ${doc}/${wrapper}.tex ./
@@ -52,9 +55,9 @@ done
 
 #~ ${tex2pdf} ${wrapper}.tex && ${bib2tex} ${wrapper} && ${tex2pdf} ${wrapper}.tex && ${tex2pdf} ${wrapper}.tex
 ${tex2pdf} ${wrapper}.tex 
-#~ ${bib2tex} ${wrapper}
+${bib2tex} ${wrapper}
 ${tex2pdf} ${wrapper}.tex 
-#~ ${tex2pdf} ${wrapper}.tex
+${tex2pdf} ${wrapper}.tex
 
 datum=$( date +"%y%m%d-%H%M" )
 mkdir -p ${pub}
