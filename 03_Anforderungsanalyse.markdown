@@ -6,17 +6,17 @@ orientiert. Anhand dessen wurden folgende Prinzipsskizzen erstellt, wie auch Anf
 
 ## Prinzipskizzen:
 
-1. Prinzipskizze 
+\autoref{abb:Prinzipskizze1}
 
-![01](img/01Prinzipienskizze.png)
+![\label{abb:Prinzipskizze1} 1. Prinzipskizze](img/01Prinzipienskizze.png)
 
-2. Prinzipskizze 
+\autoref{abb:Prinzipskizze2}
 
-![01](img/02Prinzipienskizze.png)
+![\label{abb:Prinzipskizze2} 2. Prinzipskizze](img/02Prinzipienskizze.png)
 
-3. Prinzipskizze 
+\autoref{abb:Prinzipskizze3}
 
-![03](img/03Prinzipienskizze.png)
+![}label{abb:Prinzipskizze3} 3. Prinzipskizze](img/03Prinzipienskizze.png)
 
 ## Anforderungen:
 
@@ -73,43 +73,40 @@ Um eine Vorstellung von der zukünftigen Eingabe von Tags im ERP-System zu bekom
 Die Aufgabe der Studenten bestand darin, sich eine Form der Eingabemöglichkeit für Tags zu überlegen, wobei auch neue
 Dialoge entstehen können. Die Ergebnisse wurden im Gruppenmeeting präsentiert und deren Verwendung, im Austausch mit Herrn Stein  diskutiert. 
 
-1. Inline vs. Popup-Editor
+\autoref{abb:Inline-vs-PopupEditor}
 
-![InlVSPopup](img/InlVSPopup.png)
+![\label{abb:Inline-vs-PopupEditor} Inline vs. Popup-Editor](img/InlVSPopup.png)
 
-2. Beispielmaske (ohne Tag Eingabe)
+\autoref{abb:BeispielmaskeOhneTagEingabe}
 
-![BeispielMaskeOhneTE](img/BeispielMaskeOhneTE.png)
+![\label{abb:BeispielmaskeOhneTagEingabe} Beispielmaske (ohne Tag Eingabe)](img/BeispielMaskeOhneTE.png)
 
-3. Beispielmaske (mit Inline-Tag Eingabe)
+\autoref{abb:BeispielmaskeMitTagEingabe}
 
-![SAPmitInline](img/SAPmitInline.png)
+![\label{abb:BeispielmaskeMitTagEingabe} Beispielmaske (mit Inline-Tag Eingabe)](img/SAPmitInline.png)
 
-4. Beispielmaske (mit Popup – Tag Eingabe)
+\autoref{abb:BeispielmaskeMitPopupTagEingabe}
 
-![SAPmitPopUpPNG](img/SAPmitPopUpPNG.png)
+![\label{abb:BeispielmaskeMitPopupTagEingabe} Beispielmaske (mit Popup – Tag Eingabe)](img/SAPmitPopUpPNG.png)
 
-5. Twitter-like Textbox (Inline)
+\autoref{abb:Twitter-likeTextbox}
 
-![TwitterLIke](img/TwitterLIke.png)
+![\label{abb:Twitter-likeTextbox} Twitter-like Textbox (Inline)](img/TwitterLIke.png)
 
-6. IDE-like Editor (Inline)
+\autoref{abb:IDE-likeEditor}
 
-![IDELike](img/IDELike.png)
+![\label{abb:IDE-likeEditor} IDE-like Editor (Inline)](img/IDELike.png)
 
-7. Evernote-like Tagbox (Inline)
+\autoref{abb:Evernote-likeTagbox}
 
-![EvernoteLike](img/EvernoteLike.png)
+![\label{abb:Evernote-likeTagbox} Evernote-like Tagbox (Inline)](img/EvernoteLike.png)
 
-8. Classic Listbox (Popup)
+\autoref{abb:ClassicListbox}
 
-![ClassikListBox](img/ClassikListBox.png)
+![\label{abb:ClassicListbox} Classic Listbox (Popup)](img/ClassikListBox.png)
 
 ## Algorithmus Pseudocode & Fallbeispiel
 
-Zur visuellen Anordnung der unterschiedlich großen Tags/Worte in Tag-Clouds, recherchierten die Studenten nach verschiedenen Algorithmen. Ein Algorithmus wurde anhand von einem Pseudocode präsentiert. Anhand eines kleinen Beispiels wurde die Arbeitsweise des Algorithmus erläutert. 
+Zur visuellen Anordnung der unterschiedlich großen Tags/Worte in Tag-Clouds, recherchierten die Studenten nach verschiedenen Algorithmen. Ein Algorithmus wurde anhand eines \autoref{abb:Pseudocode}s präsentiert. Anhand eines kleinen Beispiels wurde die Arbeitsweise des Algorithmus erläutert. 
 
-![Pseudocode](img/16002232756924747189.jpg)
-
-
-
+![\label{abb:Pseudocode} Pseudocode](img/16002232756924747189.jpg)
