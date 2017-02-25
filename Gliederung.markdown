@@ -1,13 +1,14 @@
 
-<!-- 1. -->
 \input{01_BeschreibungProjektauftrag}
 
+\newpage
 \input{02_StandDerTechnik}
 <!-- 
 Filter des ERP-Systems
 Entwicklungsvoraussetzungen
 -->
 
+\newpage
 \input{03_Anforderungsanalyse}
 <!--
 Prinzipskizzen
@@ -18,17 +19,23 @@ Algorithmus Pseudocode & Fallbeispiele
 
 \input{03.0_VerfahrenTagCloudErstellung}
 
+\newpage
 \input{04_Entwurf}
 
+\newpage
 \input{05_Implementierung}
 <!-- PPsn -->
 
+\newpage
 \input{06_Performance}
 
+\newpage
 \input{07_Textmining}
 
-# Fazit
-<!-- todo -->
+\newpage
+\input{08_Fazit}
+
+\newpage
 
 <!-- *** Anhang *** -->
 \pagenumbering{Alph}
@@ -36,6 +43,7 @@ Algorithmus Pseudocode & Fallbeispiele
 \newpage
 
 \addcontentsline{toc}{section}{Aufgabenstellung}
+\clearpage
 \includepdf[pages={1}]{img/ProjBeschr-Munkelt.pdf} 
 
 \newpage

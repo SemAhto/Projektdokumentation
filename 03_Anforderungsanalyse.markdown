@@ -107,6 +107,6 @@ Dialoge entstehen können. Die Ergebnisse wurden im Gruppenmeeting präsentiert 
 
 ## Algorithmus Pseudocode & Fallbeispiel
 
-Zur visuellen Anordnung der unterschiedlich großen Tags/Worte in Tag-Clouds, recherchierten die Studenten nach verschiedenen Algorithmen. Ein Algorithmus wurde anhand eines \autoref{abb:Pseudocode}s präsentiert. Anhand eines kleinen Beispiels wurde die Arbeitsweise des Algorithmus erläutert. 
+Zur visuellen Anordnung der unterschiedlich großen Tags/Worte in Tag-Clouds, recherchierten die Studenten nach verschiedenen Algorithmen. Ein Algorithmus wurde anhand eines \nameref{abb:Pseudocode}s präsentiert. Anhand eines kleinen Beispiels wurde die Arbeitsweise des Algorithmus erläutert. 
 
 ![\label{abb:Pseudocode} Pseudocode](img/16002232756924747189.jpg)
