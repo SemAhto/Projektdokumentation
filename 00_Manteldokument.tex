@@ -54,18 +54,24 @@
 % include complete pdf as a page
 \usepackage{pdfpages}
 
-\usepackage[pdftex, unicode,
-			driverfallback=hpdftex,	%hypertex,
-			colorlinks=false,
-			pdfborderstyle={/S/U/W 1},
+
+\usepackage[hang, flushmargin]{footmisc}
+\usepackage[colorlinks=true]{hyperref}
+\usepackage{footnotebackref}
+%~ \usepackage[pdftex, unicode,
+			%~ driverfallback=hypertex,%hpdftex,	%
+			%~ colorlinks=true,
+			%~ pdfborderstyle={/S/U/W 1},
 			%~ pdfborderstyle=false,
-            pdfauthor={8Fragezeichen},
-            pdftitle={\projektname{} / \DOCNAME{}},
-            pdfsubject={Projektarbeit SE\,II},
-            pdfkeywords={Software Engeneering, Care Garden, Therapie, Kommunikation, Team},
-            pdfproducer={Wolf using markdown, pandoc and LaTeX},
-            pdfcreator={pdflatex}
-]{hyperref}
+            %~ pdfauthor={8Fragezeichen},
+            %~ pdftitle={\projektname{} / \DOCNAME{}},
+            %~ pdfsubject={Projektarbeit SE\,II},
+            %~ pdfkeywords={Software Engeneering, Care Garden, Therapie, Kommunikation, Team},
+            %~ pdfproducer={Wolf using markdown, pandoc and LaTeX},
+            %~ hyperfootnotes=false, %needed for footnotemisc
+            %~ pdfcreator={pdflatex}
+%~ ]{hyperref}
+
 
 \usepackage{graphicx}
 \usepackage{color}

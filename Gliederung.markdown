@@ -18,22 +18,19 @@ Algorithmus Pseudocode & Fallbeispiele
 
 \input{03.0_VerfahrenTagCloudErstellung}
 
-\input{03.1_Textmining}
-
-
-
 \input{04_Entwurf}
 
 \input{05_Implementierung}
 <!-- PPsn -->
 
-\input{05.1_Performance}
+\input{06_Performance}
 
-# Test
+\input{07_Textmining}
 
 # Fazit
+<!-- todo -->
 
-# Begriffserklärungen
+\newpage
 
 \section*{Glossar}
 \addcontentsline{toc}{section}{Glossar}

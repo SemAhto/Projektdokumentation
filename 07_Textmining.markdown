@@ -1,6 +1,6 @@
 # Text Mining
 
-Unter Text Mining wird ein Bündel von algorthimus-basierten Analyseverfahren zur Entdeckung von Bedeutungsstrukturen verstanden, die Kerninformationen schnell erfassen können. 
+Unter Text Mining wird ein Bündel von Algorthimus-basierten Analyseverfahren zur Entdeckung von Bedeutungsstrukturen verstanden, die Kerninformationen schnell erfassen können. 
 Gedacht sind diese Verfahren für die Verarbeitung und Durchsuchen großer Textmengen.
 
 ## Aufgabe
@@ -35,9 +35,11 @@ Beispiele:
 Nach der Bestimmung der Silben werden die vorher festgelegten Verkürzungsregeln abgearbeitet. Die Verkürzungsregeln bestehen aus Paaren von Bedingungen und Ableitungen für verschiedene Suffixe (Wortendungen). Die Verkürzungsregeln werden in Gruppen zusammengefasst. Aus jeder Gruppe darf nur eine Regel angewendet werden.
 Beispiel:  Die erste Gruppe beinhaltet die Suffix-Verkürzungsregeln \enquote{sses} $\rightarrow$ \enquote{s}, \enquote{ies} $\rightarrow$ \enquote{i} und \enquote{s}  \enquote{~}, die beispielsweise zu den Ableitungen \enquote{libraries} $\rightarrow$ \enquote{librari} und \enquote{Wikis} $\rightarrow$ \enquote{Wiki} führen. Eine später folgende Gruppe besteht aus der Regel \enquote{y} $\rightarrow$ \enquote{i}, so dass beispielsweise das Wort \enquote{library} auf den gleichen Stamm (\enquote{library} $\rightarrow$ \enquote{librari}) zurückgeführt wird.
 Zum besseren Verständnis haben die Studenten den Porter-Stemmmer-Algorithmus zusätzlich für die deutsche Sprache ausprobiert.
-![\label{abb:PorterStemmerAlgorithmus} Porter-Stemmer-Algorithmus]
 
-###Lemmatisierung
+![\label{abb:PorterStemmerAlgorithmus} Porter-Stemmer-Algorithmus](img/PorterStemmerAlgorithmus.png)
+
+### Lemmatisierung
+
 Im Bereich Lemmatisierung wurde festgestellt, dass ein Wörterbuch im Hintergrund zum Abgleichen benötigt wird. Folgende Möglichkeiten wurden dabei näher betrachtet:
 
 - `Elastiksearch`
@@ -45,6 +47,7 @@ Im Bereich Lemmatisierung wurde festgestellt, dass ein Wörterbuch im Hintergrun
 - `Sktech Engine`
 
 #### Elasticsearch
+
 Elasticsearch ist eine Suchmaschine, die mit indizierten Dokumenten arbeitet. Die kleinste Einheit bilden dabei die Dokumente. Diese werden indiziert, um sie durchsuchen zu können. Mehrere Dokumente bilden einen Typ und mehrere Typen werden als Index bezeichnet. Vergleicht man diesen Aufbau mit einer SQL-Datenbank, wäre ein Dokument eine Zeile, der Typ die Tabelle und der Index die Datenbank.
 
 
@@ -105,6 +108,7 @@ Anhand der umliegenden Wörter kann der TreeTagger genauere Zuordnungen treffen.
 Auswertung:
 Das erste Problem ist, dass der TreeTagger besser mit ganzen Sätzen arbeitet. Der weiteren bedeutetet Wahrscheinlichkeit nicht Sicherheit. Bei 20.000 Wörtern ordnet der TreeTagger zu 97,53% die richtige Wortart zum jeweiligen Wort zu. Die größte Schwachstelle, die die Studenten im TreeTagger sahen, war die Tatsache, dass er nicht hauptsächlich zur Findung der Lemmata dient, sondern Wortarten zuordnen soll. Das der TreeTagger zusätzlich anhand seines Korpus auch Lemmata ausgeben kann, ist nur ein schöner Zusatz.
 Würden die Studenten den TreeTagger für ihre o.g. Aufgabe einsetzen wollen, müssten sie den Textkorpus mittels des Trainingsprogrammes erweitern, d.h. händisch Wortarten und Lemmata zuordnen. Daraus wurde geschlossen, dass die Tagliste für das ERP-System händisch geführt werden kann. Der Aufwand wäre der Gleiche.
+
 ### Wortschatzprojekt Uni Leipzig
 
 Das Wortschatzprojekt der Universität Leipzig beinhaltet korpusbasierte monolinguale Wörterbücher für unter anderem die deutsche Sprache. Es wird seit 1998 von Gerhard Heyer und Uwe Quasthoff an der Universität Leipzig entwickelt.
@@ -115,6 +119,7 @@ Die Annotation der Token umfasst das Sachgebiet Beispielsätze sowie die Grammat
 Da das Ziel aus der Ermittlung der Lemmata der Worte des Beschreibungsfeldes bestand, schien das Wortschatzprojekt eine geeignete Lösung darzustellen.
 
 #### Umsetzung
+
 Die Universität Leipzig stellt u.a. einige SOAP-Webservices zur Verfügung, mit denen ein direkter Datenzugriff sowie gezielte Abfragen möglich sind. Zu jedem Webservice wird ein Beispielclient mit Quellen zur Verfügung gestellt. Dies ermöglicht die Kombination sowie das Einbauen der Webservices in eigene Programme.
 Die Zugriffsvoraussetzungen unterscheiden sich je nach Abfrageumfang.
 Für einfache Abfragen kann das login \enquote{anonymous} mit dem Passwort \enquote{anonymous} verwendet werden. Eine Registrierung ist für komplexere Abfragen allerdings erforderlich, um bei Problemen kontaktiert werden zu können. Massendatenabfragen sind lediglich Kooperationspartnern vorbehalten.
@@ -148,7 +153,7 @@ Zeile 31 bis 32
 Zeile 34 bis 45
 	Erstellung der Aufrufparameter.
 	Es sind 2 Parameter erforderlich, zum Einen das Wort zu welchem das Lemmata zurück 	gegeben werden soll sowie das Wörterbuch in dem gesucht werden soll. Das Wörterbuch
-	wurde bereits im Funktionskopf übergeben (string corpus = \enquote{de}). Die Parameter können nicht als \enquote{String} übergeben werden, sondern erfordern obige Datenstruktur.
+	wurde bereits im Funktionskopf übergeben (`string corpus = "de"`). Die Parameter können nicht als \enquote{String} übergeben werden, sondern erfordern obige Datenstruktur.
 
 Ändern der Funktion Main();
 
@@ -157,9 +162,11 @@ Zeile 34 bis 45
 Zeile 16 bis 17
 	Anlegen der Hilfsparameter.
 	Counter um Anzahl der Eingabe Worte im Dokument zu zählen.
+
 Zeile 20 bis 21
 	Einlesen des Dokuments welches Liste mit Worten enthält
 	Erstellen des Dokuments in dem die zurückgegebenen Lemmata gespeichert werden sollen.
+
 Zeile 23 bis 31
 	Hier erfolgt der Aufruf der Funktion GetBaseform(); .
 	*Jedes zurückgegebene Lemma wird in die Datei ergebnis.txt geschrieben sowie auf der 	Konsole ausgegeben. Die Schleife wird so lange erneut aufgerufen bist die Datei test.txt 	keine Zeile mehr enthält.*
