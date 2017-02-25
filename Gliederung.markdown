@@ -34,8 +34,18 @@ Algorithmus Pseudocode & Fallbeispiele
 # Fazit
 
 # Begriffserklärungen
-<!-- 
-Glossar
--->
 
-# Quellennachweis
+\section*{Glossar}
+\addcontentsline{toc}{section}{Glossar}
+
+\pagenumbering{Alph}
+
+\input{Glossar}
+
+\newpage
+
+\printbibliography[
+	title={Quellennachweise}
+]
+
+\addcontentsline{toc}{section}{Quellennachweise}
