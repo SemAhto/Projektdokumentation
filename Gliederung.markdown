@@ -41,6 +41,9 @@ Algorithmus Pseudocode & Fallbeispiele
 
 \newpage
 
+<!--
+s.a. http://www.suedraum.de/latex/stammtisch/degenkolb_latex_biblatex_folien-final.pdf
+-->
 \printbibliography[
 	title={Quellennachweise}
 ]
