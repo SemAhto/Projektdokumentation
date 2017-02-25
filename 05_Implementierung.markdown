@@ -1,6 +1,6 @@
 # Implementierung (PPsn)
 
-## 3.1 Beschreibung
+## Beschreibung
 
 ## Layout
 
