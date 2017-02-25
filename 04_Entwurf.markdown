@@ -74,7 +74,7 @@ Um ein neues BussinessObject hinzuzufügen, kann über die Menüleiste unter dem
 
 ##### Datenbank als Cypher Graph Definition exportieren
 
-Im Prototyp existiert ein Service, welcher Code für das Anlegen einer Neo4J Datenbank erstellt. Dieser Code erstellt die benötigten Datensätze über BussinesObjects und Tags sowie deren Beziehung zueinander.
+Im Prototyp existiert ein Service, welcher Code für das Anlegen einer Neo4J\footnote{\href{https://neo4j.com/}{https://neo4j.com/}} Datenbank erstellt. Dieser Code erstellt die benötigten Datensätze über BussinesObjects und Tags sowie deren Beziehung zueinander.
 
 ##### BusinessObject anzeigen und editieren
 
@@ -84,13 +84,11 @@ Um ein konkretes BussinessObject anzuzeigen, muss lediglich auf dieses geklickt 
 
 Die folgenden Funktionen dienen zur Modifikation des Filters über die WordCloud.
 
-##### Tag dem Filter hinzufügen
+Tag dem Filter hinzufügen
+:	Um ein Tag zum Filter hinzuzufügen, ist lediglich ein Klick auf das gewünschte Tag in der WordCloud nötig. Dieses wird dann sofort zum Filter hinzugefügt. Sofort darauffolgend aktualisiert sich auch die WordCloud und die Anzeige der gefundenen BussinessObjects, da diese direkt von dem Filter abhängen.
 
-Um ein Tag zum Filter hinzuzufügen, ist lediglich ein Klick auf das gewünschte Tag in der WordCloud nötig. Dieses wird dann sofort zum Filter hinzugefügt. Sofort darauffolgend aktualisiert sich auch die WordCloud und die Anzeige der gefundenen BussinessObjects, da diese direkt von dem Filter abhängen.
-
-##### Tag vom Filter entfernen
-
-Einen Tag vom Filter zu entfernen ist ähnlich simpel, wie einen Tag zum Filter hinzuzufügen. Zum Entfernen ist ebenfalls nur ein Klick auf das zu entfernende Tag im Filter nötig. Darauffolgend wird, analog zum Tag hinzufügen, die WordCloud sowie die Anzeige der BussinessObjects aktualisiert.
+Tag vom Filter entfernen
+:	Einen Tag vom Filter zu entfernen ist ähnlich simpel, wie einen Tag zum Filter hinzuzufügen. Zum Entfernen ist ebenfalls nur ein Klick auf das zu entfernende Tag im Filter nötig. Darauffolgend wird, analog zum Tag hinzufügen, die WordCloud sowie die Anzeige der BussinessObjects aktualisiert.
 
 ### Komponenten
 
@@ -100,10 +98,11 @@ In diesem Teilabschnitt werden die Komponenten zur Funktionsbereitstellung techn
 
 Das Modell für die Datenhaltung ist dem des realen Systems nachempfunden, beschränkt aber sich auf die wesentlichen Elemente zur Generierung einer Folksonomie. Zur Visualisierung für die Präsentation wurde zusätzlich noch ein Bild hinzugefügt.
 
-
+<!--
 Abb. \ref{abb:KlassendiagrammDatenmodell} TESTEN
 
 Abb. \nameref{abb:KlassendiagrammDatenmodell} TESTEN
+-->
 
 \autoref{abb:KlassendiagrammDatenmodell}
 
@@ -194,10 +193,10 @@ Um ein Verständnis für den Ablauf einer Such- bzw. Filteraktion durch den Nutz
 Ein Benutzer sucht nach einem Objekt, was er nicht genau kennt. Ihm sind lediglich einige Eigenschaften bekannt. Die zugehörige Datenbank wurde bereits geladen.
 
 Tags | Auswahl (mit Ziel \enquote{Munkelt})
-----:|:------
-1 | Stark
-2 | Mutig
-3 | Clever
+----:|:-------------------------------------
+1    | Stark
+2    | Mutig
+3    | Clever
 
 **Schritt 1: Benutzer klickt auf das Tag \enquote{stark} in der WordCloud.**
 
