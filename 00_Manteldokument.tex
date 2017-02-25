@@ -17,6 +17,12 @@
 \usepackage{ifxetex}
 \usepackage{ifluatex}
 
+% Markdown Source Blocks are translated to Shaded boxes with Highlighting
+% we better ommit this here with simple listings
+%~ \usepackage{xcolor}
+%~ \usepackage{framed}
+%~ \definecolor{shadecolor}{cmyk}{0,0,0,10}
+
 \newcommand{\projektname}{SemAhto}
 
 % enable environment variables to be used
@@ -78,6 +84,7 @@
 %for source code
 % see https://en.wikibooks.org/wiki/LaTeX/Source_Cbiode_Listings
 \usepackage{listings}
+\renewcommand{\lstlistingname}{}
 %~ \definecolor{mygreen}{rgb}{0,0.6,0}
 %~ \definecolor{mygray}{rgb}{0.5,0.5,0.5}
 %~ \definecolor{mymauve}{rgb}{0.58,0,0.82}
@@ -127,7 +134,7 @@
 %for references,literature
 %info: biber (2016) was incompatible with dependencies of biblatex (2015), so update or keep same versions together
 \usepackage[backend=biber,citestyle=authoryear]{biblatex}
-\addbibresource{../Literaturverzeichnis.bib}
+\addbibresource{./quellen.bib}
 
 %\usepackage{glossaries}
 %\setacronymstyle{long-sc-short}
