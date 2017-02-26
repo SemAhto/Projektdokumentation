@@ -59,20 +59,53 @@ Nun kann das WordCloudControl in das Layout eingefügt werden
 
 ## Implementierung im PPSn System
 ### Beschreibung
+Das PPSn System der Firma TechWare ist eine Client-Server ERP-Lösung für kleine und mittelständige Unternehmen. Es ist eine OpenSource Neuentwicklung der schon bestehenden ERP Lösung.
+
+Im Hintergrund arbeitet eine Lua Interpreter Engine, mit der sich, alternativ zu C#, das System erweitern lässt.
+
+Eine Neuerung im System ist die Nutzung einer TagCloud zur unscharfen Suche in der Datenbank. 
+
+\autoref{abb:PpsnScreenshot}
+
+![\label{abb:PpsnScreenshot} PPSn Softwaresystem](img/ppsn_screenshot.jpg)
+
+
 
 ### Layout
 
-### Implementierung der WordCloud Komponente
-<!-- WICHTIG: Berechnung der Gewichte beschreiben! -->
+Die Benutzeroberfläche besteht aus einer Objektliste, in der alle Datensätze der Datenbank angezeigt werden. Diese können mit Filtern, welche um dieser List platziert sind verkleinert werden. Anhand dieser Liste wird die TagCloud berechnet. Durch die Auswahl eines Tags wird eine neue Filterbedingung hinzugefügt und sodass die Objektliste aktualisiert wird und so die TagCloud neu berechnet. Durch diesen iterativen Prozess ist eine Suche anhand von Schlagworten möglich.
+
+\autoref{abb:PpsnLayout}
+
+![\label{abb:PpsnLayout} Layout von PPsn: Beeinflussungsübersicht. Dunkelgrau: Filterelemente; Hellgrau: Datenpräsentation](img/ppsn_layout.jpg)
+### Integration der WordCloud Komponente
+Um die WordCloud mit den Tags zu befüllen musste das PPSn System erweitert werden.
+
+Aufgrund der sehr komplexen Systemarchitektur, wird im Folgenden nur auf die Teile des Systems eingegangen in denen Änderungen vorgenommen wurden.
 #### Komponenten
+
+Das `PPsEnvironment` enthält den `PpsObjectGenerator`, welcher in der Lage ist SQL zu erzeugen und das Ergebnis als `IEnumerable` bereitzustellen, sodass es mit LINQ weiter verarbeitet werden kann. Da allerdings der bestehende Generator nicht in der Lage war Tags abzufragen und deren Gewichte zu berechnen, musste ein weiterer entwickelt werden. Um die Basisfunktionalität aber beizubehalten, wurde dieser zu `AbstractPpsObjectGenerator` abstrahiert und ohne Änderung wieder von `PpsObjectGenerator` abgeleitet um das Interface zu äbhängigen Komponenten nicht zu ändern. Die `AbstractPpsObjectGenerator` Klasse wurde um zwei virtuelle Methoden erweitert. `ExtendCommand` dient dazu, dass abgeleitete Klassen das Kommando über die Factory erweitern können. Durch Implementierung von `GenerateCommandSql` hingegen muss das gesamte Kommando als String neu implementiert werden.
+Für die TagCloud wurde dann der neue `WordCloudObjectGenerator` eingeführt, welcher die in Relastion stehenden Tags und deren Gewichte wie im Prototypen berechnet und abfragt.
 
 \autoref{abb:PpsObjectGenerator}
 
 ![\label{abb:PpsObjectGenerator} PpsObjectGenerator](img/PpsObjectGenerator.jpg)
 
+Um das generieren des SQL Strings zu vereinfachen und ein nachträgliches Erweitern zu ermöglichen wurde die `SelectStatementFactory` entwickelt. Sie enthält Methoden, die die einzelnen Teile einer Select Abfrage unabhängig von einander aufnimmt und zum Schluss zusammenführt. 
+
 \autoref{abb:SelectStatementFactory}
 
 ![\label{abb:SelectStatementFactory} SelectStatementFactory](img/SelectStatementFactory.jpg)
+
+Das ViewModel ist das `PpsNavigatorModel`. Es sind folgende Komponenten hinzugekommen
+
+|Name              |Funktion                                                                                                                                     |
+|------------------|---------------------------------------------------------------------------------------------------------------------------------------------|
+|Tags              |Beinhaltet alle in Relation stehenden Tags                                                                                                   |
+|SelectedTags      |Beinhaltet alle Tags nach denen gefiltert werden soll                                                                                        |
+|SelectTagCommand  |Wird ausgeführt, wenn in der TagCloud auf ein Tag geklickt wird. Fügt dieses der SelectTags Liste hinzu.                                     |
+|UnselectTagCommand|Wird ausgeführt, wenn auf ein Tag in der Liste der ausgewählten Tags geklickt wird. Entfernt dieses aus der SelectedTags Liste               |
+|TagFilter         |Generiert ein ExpressionObjekt, welches vom System in einen logischen Ausdruck umgewandelt wird und so zur Filterung der Objektliste beiträgt|
 
 \autoref{abb:PpsNavigatorModel}
 
@@ -80,13 +113,25 @@ Nun kann das WordCloudControl in das Layout eingefügt werden
 
 #### Abläufe
 
-\autoref{abb:AblaufPpsNavigatorModel}
-
-![\label{abb:AblaufPpsNavigatorModel} AblaufPpsNavigatorModel](img/AblaufPpsNavigatorModel.jpg)
+Im Folgenden wird beschrieben wie die Daten für die WordCloud geladen werden.
 
 \autoref{abb:AblaufPpsEnvironment}
 
-![\label{abb:AblaufPpsEnvironment} AblaufPpsEnvironment](img/AblaufPpsEnvironment.jpg)
+![\label{abb:AblaufPpsEnvironment} Daten laden](img/AblaufPpsEnvironment.jpg)
+
+
+Durch den Aufruf der zentralen Datenladefunktion `RefreshDataAsync` werden die Daten in die Objektliste geladen. Dabei wird der Tagfilter anhand der ausgewählten Tags generiert (3) und mit den bereits existierenden Filter mit `und` verknüpft. Die daraus entstehenden `DataSource` wird genutzt, um die in Relation stehenden Tags zu laden. Dafür wird im `PpsEnvironment` die `CreateTagCloudFilter` Methode gerufen, welche ein `WordCloudObjectGenerator`-Objekt erstellt und das daraus resultierende `IEnumerable` zurückgibt (5-8). Anschließend werden mit LINQ die benötigten Tagdaten aus dem `IEnumerable` Ergebnis extrahiert und der `Tags`-Property zugewiesen (9). Dadurch wird die WordCloud neu erstellt.
+
+Zusätzlich zu den bereits vorhandenen Aufrufen von `RefreshDataAsync`, wird diese Method nun auch ausgeführt, wenn ein Tag dem Filter hinzugefügt oder vom Filter entfernt wird. 
+
+\autoref{abb:Pps_SelectTag}
+
+![\label{abb:Pps_SelectTag} Ablauf: Tag auswählen](img/image18.jpg)
+
+\autoref{abb:Pps_UnselectTag}
+
+![\label{abb:Pps_UnselectTag}Ablauf: Tag aus Auswahl entfernen](img/AblaufPpsNavigatorModel.jpg)
+
 
 <!-- 
 
