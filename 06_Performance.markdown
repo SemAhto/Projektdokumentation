@@ -3,7 +3,7 @@ Die Tag-Cloud ist ein Teil des Filtersystems des ERP-Systems. Daher spielt bei d
 
 # Veränderte Parameter der spiralförmigen Tag-Cloud-Erstellung
 
-Bei der Erstellung einer Spirale sind zwei Parameter sehr wichtig, Wachstumsfaktor der Spirale und die Größe des Einfügesektors. Die (\autoref{abb:Spirale}) zeigt die Parameter in Zusammenhang mit einer Spirale.
+Bei der Erstellung einer Spirale sind zwei Parameter sehr wichtig, Wachstumsfaktor der Spirale und die Größe des Einfügesektors. Die \autoref{abb:Spirale} zeigt die Parameter in Zusammenhang mit einer Spirale.
 
 ![\label{abb:Spirale} Spirale, a: Wachstumsfaktor, b: Größe des Einfügesektors](img/Spirale.png)
 
