@@ -1,3 +1,4 @@
+
 # Implementierung
 ## WordCloud-Komponente
 ### Beschreibung
@@ -112,6 +113,7 @@ Das ViewModel ist das `PpsNavigatorModel`. Es sind folgende Komponenten hinzugek
 ![\label{abb:PpsNavigatorModel} PpsNavigatorModel](img/PpsNavigatorModel.jpg)
 
 #### Abläufe
+
 
 Im Folgenden wird beschrieben wie die Daten für die WordCloud geladen werden.
 

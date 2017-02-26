@@ -1,4 +1,5 @@
-\documentclass[german,11pt,paper=a4,DIV=calc]{scrartcl}
+%\documentclass[german,11pt,paper=a4,DIV=calc,oneside]{scrbook}
+\documentclass[german,11pt,paper=a4,DIV=calc,oneside]{scrreprt}
 
 % fix for recently "old" latex template (\tightlist in use) in pandoc
 \def\tightlist{}
@@ -56,7 +57,10 @@
 
 
 \usepackage[hang, flushmargin]{footmisc}
-\usepackage[colorlinks=true]{hyperref}
+\usepackage[
+	colorlinks=true,
+	hyperfootnotes=false
+]{hyperref}
 \usepackage{footnotebackref}
 %~ \usepackage[pdftex, unicode,
 			%~ driverfallback=hypertex,%hpdftex,	%
@@ -151,7 +155,7 @@
 %\newglossaryentry{ex}{name={Enhances Xenophobic}, description={srsly?}}		% use with  \gls{svm}
 %%%
 
-\usepackage[maxfloats=50]{morefloats}%[2012/01/28]% v1.0f
+\usepackage[maxfloats=90]{morefloats}%[2012/01/28]% v1.0f
 \usepackage{float} %enable floating with H for precise location
 \floatplacement{figure}{H} % standard placement: exactly here!
 \usepackage{caption} %enable caption control
@@ -197,20 +201,27 @@
 
 %\author{ s72785, s72784, ... }
 
+% glossaries
+\usepackage[toc,xindy]{glossaries}
+\makeglossaries
+
 \date{}%no date on document as noone is really updating that
 \begin{document}
 
+%\frontmatter    %römische Nummerierung aktivieren
 \input{titlepage}
-
+%~ \maketitle       % Titelei
+%~ \listoffigures    %Abbildungsverzeichnis
+%~ \listoftables     % Tabellenverzeichnis
 \tableofcontents
 
-\newpage
-
+%\mainmatter    %Arabische Seitenummerierung
+%~ \newpage
 \pagenumbering{arabic}
-
 \input{Gliederung}
 
-
+ 
+%\backmatter    %Ende des Buches
 
 %~ \printglossary
 

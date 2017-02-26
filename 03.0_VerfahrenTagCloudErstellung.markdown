@@ -1,7 +1,5 @@
 ## Herangehensweisen der Tag-Cloud-Erstellung
 
-## 
-
 ### Anforderungen / Grundlagen vor der Tag-Cloud-Erstellung
 
 In Vorbereitung auf die Tag-Cloud-Erstellung sollte eine bereits gefilterte Liste mit Angaben zu den jeweiligen Worthäufigkeiten vorliegen. Das Teilprojekt \enquote{Wortstammfindung} sollte als Grundlage diese gefilterte Liste erstellen. Da das Wortstammfindungs-Projekt parallel zur Implementierung startete, mussten die Studenten sich für Testzwecke eine eigene Liste schreiben. Um der Realität einer echten Tag-Cloud näherzukommen, wurde folgender Quellcode zufällige Wortausgaben generiert.
@@ -13,7 +11,6 @@ Die virtuelle Erstellung der vorgegebenen Positionierungsfläche für die Tag-Cl
 Das erste Wort wird aus der Liste entnommen und in ein Rechteck umgewandelt. Für die Berechnung der Rechteckgröße spielen Wortlänge, Häufigkeit und maximale Schriftgröße eine zentrale Rolle. 
 Passt bereits das erste Wort nicht in die Liste wird es bzw. das Rechteck solange verkleinert, bis es in das Fenster passt. Die Position des ersten Wortes ist zwingend im Zentrum des Positionierungsfensters. Jedes weitere Wort wird dann auf einer gedachten Spirale vom Zentrum des Positionierungsfensters aus abgelegt und auf Kollision geprüft. Liegt eine Kollision mit einem anderen gedachten Rechteck vor, so muss das Wort ein Stück weiter auf der gedachten Spirale verschoben werden. Ist die neue Position des Rechtecks nicht belegt, so bekommt das Rechteck diesen Platz zugewiesen. Als nächster Schritt kommt das nächste neue Wort bzw. umgewandelte Rechteck auf den nächsten neuen Punkt der Spirale. Der Positionierungsvorgang startet wieder. Dieser Schritt wird so oft wiederholt, wie Platz im Positionierungsfenster vorhanden oder eine maximale Wortanzahl vorhanden ist. 
 Die Studenten haben sich für dieses Verfahren entschieden, da es einfacher zu programmieren ist als das \enquote{Hierarchical-Bounding-Boxes-Verfahren} und es gab ein Beispiel-Code - der allerdings auf Pixel und Bildern basierte - an dem sie sich orientieren konnten. 
-
 
 ### Hierarchical-Bounding-Boxes -Verfahren
 

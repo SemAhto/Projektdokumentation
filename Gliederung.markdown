@@ -1,13 +1,15 @@
 
-<!-- 1. -->
+\chapter{Projektauftrag}
 \input{01_BeschreibungProjektauftrag}
 
+\chapter{Stand der Technik}
 \input{02_StandDerTechnik}
 <!-- 
 Filter des ERP-Systems
 Entwicklungsvoraussetzungen
 -->
 
+\chapter{Anforderungsanalyse}
 \input{03_Anforderungsanalyse}
 <!--
 Prinzipskizzen
@@ -18,25 +20,35 @@ Algorithmus Pseudocode & Fallbeispiele
 
 \input{03.0_VerfahrenTagCloudErstellung}
 
+\chapter{Entwurf}
 \input{04_Entwurf}
 
+\chapter{Implementierung (PPsn)}
 \input{05_Implementierung}
 <!-- PPsn -->
 
+\chapter{Performance-Tests}
 \input{06_Performance}
 
+\chapter{Text Mining}
 \input{07_Textmining}
 
-# Fazit
-<!-- todo -->
+\chapter{Fazit}
+\input{08_Fazit}
 
-<!-- *** Anhang *** -->
-\pagenumbering{Alph}
 
+<!--       %Beginn des Anhangs
+\appendix
+\clearpage
+\chapter*{Anhange}
+\addcontentsline{toc}{chapter}{Anhang}
 \newpage
+\stepcounter{page}
+ -->
 
-\addcontentsline{toc}{section}{Aufgabenstellung}
-\includepdf[pages={1}]{img/ProjBeschr-Munkelt.pdf} 
+<!--
+\includepdf[pages={1},addtotoc={0,section*,1,Aufgabenstellung,p1}]{img/ProjBeschr-Munkelt.pdf}
+\addcontentsline{toc}{section}{Aufgabenstellung}  \label{sec:Aufgabenstellung}
 
 \newpage
 
@@ -45,7 +57,8 @@ Algorithmus Pseudocode & Fallbeispiele
 
 \input{Glossar}
 
-\newpage
+-->
+
 
 <!--
 s.a. http://www.suedraum.de/latex/stammtisch/degenkolb_latex_biblatex_folien-final.pdf
@@ -53,5 +66,5 @@ s.a. http://www.suedraum.de/latex/stammtisch/degenkolb_latex_biblatex_folien-fin
 \printbibliography[
 	title={Quellennachweise}
 ]
-
-\addcontentsline{toc}{section}{Quellennachweise}
+\pagenumbering{Alph}
+\addcontentsline{toc}{chapter}{Quellennachweise}
