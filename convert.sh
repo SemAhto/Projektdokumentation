@@ -64,6 +64,6 @@ mkdir -p ${pub}
 
 mv ${wrapper}.pdf ${pub}/00_${DOCNAME}-draft${datum}.pdf && xdg-open ${pub}/00_${DOCNAME}-draft${datum}.pdf
 
-rm -f *.aux *.bbl *.bcf *.blg *.blg *.log *.mtc *.mtc0 *.xml *.toc
+rm -f *.aux *.bbl *.bcf *.blg *.blg *.mtc *.mtc0 *.xml *.toc #*.log
 rm -f $(ls *.tex  |grep -v ${wrapper}".tex" | grep -v ${titlepg}".tex" )
 #~ rm -f ${img}/*.pdf

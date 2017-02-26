@@ -200,23 +200,27 @@
 
 %\author{ s72785, s72784, ... }
 
+% glossaries
+\usepackage[toc,xindy]{glossaries}
+\makeglossaries
+
 \date{}%no date on document as noone is really updating that
 \begin{document}
 
-\frontmatter    %römische Nummerierung aktivieren
+%\frontmatter    %römische Nummerierung aktivieren
 \input{titlepage}
 %~ \maketitle       % Titelei
 %~ \listoffigures    %Abbildungsverzeichnis
 %~ \listoftables     % Tabellenverzeichnis
 \tableofcontents
 
-\mainmatter    %Arabische Seitenummerierung
+%\mainmatter    %Arabische Seitenummerierung
 %~ \newpage
-%~ \pagenumbering{arabic}
+\pagenumbering{arabic}
 \input{Gliederung}
 
  
-\backmatter    %Ende des Buches
+%\backmatter    %Ende des Buches
 
 %~ \printglossary
 
