@@ -1,11 +1,11 @@
 
-Aufgrund des sehr frühen Entwicklungsstandes von der echten Laufzeitumgebung für die WordCloud wurde beschlossen zunächst eine ähnlichen Prototypen zu erstellen mit dem Ziel, die komplexen Abläufe des realen Systems einfacher darzustellen, um ungewollte und für das Projektteam nicht nachvollziehbare Nebeneffekte während der Entwicklungsphase stark zu reduzieren. Anhand des Prototyen wurde die Berechnung von Folksonomien und die Möglichkeiten der Tageingabe erforscht.
+Aufgrund des sehr frühen Entwicklungsstandes von der echten Laufzeitumgebung für die WordCloud wurde beschlossen zunächst eine ähnlichen Prototyp zu erstellen mit dem Ziel, die komplexen Abläufe des realen Systems einfacher darzustellen, um ungewollte und für das Projektteam nicht nachvollziehbare Nebeneffekte während der Entwicklungsphase stark zu reduzieren. Anhand des Prototyp wurde die Berechnung von Folksonomien und die Möglichkeiten der Tageingabe erforscht.
 
 Um eine einfache Datenbasis zum Testen zu erstellen wurde die freie Datenbank Terra\footnote{\cite{TN_libero_mab2337570} via \href{https://www.sachsen.schule/~terra2014/index.php}{https://www.sachsen.schule/~terra2014/index.php} \label{foot:terra} } ausgewählt. Sie enthält geografische Daten wie Städte, Flüsse und Berge mit Relation untereinander, was sich als sehr nützlich erwies, da sich diese einfach in Tags übertragen ließen.
 
 # Aufbau
 
-In diesen Abschnitt wird der Aufbau des Prototypen beschrieben.
+In diesen Abschnitt wird der Aufbau des Prototyp beschrieben.
 
 ## Funktionen
 
@@ -25,7 +25,7 @@ Datenbank leeren
 Die folgenden Funktionen dienen Import und Export von gespeicherten Daten von bzw. in andere Systeme und deren manuellen Modifikation.
 
 TerraDB XML in SQLite Datenbank konvertieren \label{Abschn:TerraDBXML}
-:	Im Prototypen ist es möglich die XML-Export-Datei der Terra Datenbank in eine SQLite Datenbank umzuwandeln, damit weitere Transformationen einfacher mit SQL umgesetzt werden können. Dafür wird zunächst die XML Datei ausgewählt und anschließend der Speicherort der SQLiteDatenbank. Danach wird für jeden Tag-Typen eine Tabelle mit allen Attributen erstellt und anschließend die XML Datei eingelesen und die Datensätze entsprechend eingefügt. Fremdschlüssel werden nicht beachtet. Am Ende entsteht eine SQLite Datenbank die das gleiche Schema wie die XML Datei ausweist mit dem Vorteil, dass dieses mit SQL abgefragt werden kann.
+:	Im Prototyp ist es möglich die XML-Export-Datei der Terra Datenbank in eine SQLite Datenbank umzuwandeln, damit weitere Transformationen einfacher mit SQL umgesetzt werden können. Dafür wird zunächst die XML Datei ausgewählt und anschließend der Speicherort der SQLiteDatenbank. Danach wird für jeden Tag-Typen eine Tabelle mit allen Attributen erstellt und anschließend die XML Datei eingelesen und die Datensätze entsprechend eingefügt. Fremdschlüssel werden nicht beachtet. Am Ende entsteht eine SQLite Datenbank die das gleiche Schema wie die XML Datei ausweist mit dem Vorteil, dass dieses mit SQL abgefragt werden kann.
 
 TerraDB SQLite Datenbank importieren
 :	Die bei \autoref{Abschn:TerraDBXML} erstellte SQLite Datenbank muss jetzt wieder geladen werden und mit Hilfe von SQL Abfragen werden die BusinessObjects und Tags erstellt. Dabei wurde statische Tags, d.h. diejenigen die bei allen BusinessObject des ElementTyps gleich sind, und Dynamische Tags, d.h. diejenigen die aus Attributen oder Verknüpfungstabellen des Elements gewonnen wurden und für jedes Business Object unterschiedlich sein können.
@@ -165,7 +165,7 @@ Der `TagCollectionToStringConverter`
 
 ## Benutzeroberfläche
 
-Die Benutzeroberfläche ist wie für einen Prototypen typisch schlicht gehalten. Zur besseren Benutzbarkeit sind die Grenzen rechts und unterhalb der Gefundenen BusinessObjects frei verschiebbar.
+Die Benutzeroberfläche ist wie für einen Prototyp typisch schlicht gehalten. Zur besseren Benutzbarkeit sind die Grenzen rechts und unterhalb der Gefundenen BusinessObjects frei verschiebbar.
 
 \autoref{abb:InitialzustandPrototyp}
 

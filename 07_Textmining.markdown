@@ -1,5 +1,5 @@
 
-Unter Text Mining wird ein Bündel von Algorithimus-basierten Analyseverfahren zur Entdeckung von Bedeutungsstrukturen verstanden, die Kerninformationen schnell erfassen können. 
+Unter Text Mining (\cite{wiki:textmining}) wird ein Bündel von Algorithimus-basierten Analyseverfahren zur Entdeckung von Bedeutungsstrukturen verstanden, die Kerninformationen schnell erfassen können. 
 Gedacht sind diese Verfahren für die Verarbeitung und Durchsuchen großer Textmengen.
 
 # Aufgabe
@@ -15,14 +15,14 @@ Die Stammformreduktion (Stemming), die Lemmatisierung und das Part-of-Speach Tag
 
 Bei der Stammformredunktion wird das Wort auf eine Art Wortkern reduziert, der nicht unbedingt in der Sprache existiert.
 Bei der Lemmatisierung wird das Wort auf seiner lexikalischen Grundform reduziert.
-Als Part-of-Speach Tagging bezeichnet man die Zuordnung von Wörtern und Satzzeichen eines Textes zu Wortarten. Hierzu werden sowohl die Definition des Wortes als auch der Kontext
+Als Part-of-Speach Tagging (\cite{wiki:PartOfSpeechTagging}) bezeichnet man die Zuordnung von Wörtern und Satzzeichen eines Textes zu Wortarten. Hierzu werden sowohl die Definition des Wortes als auch der Kontext
 berücksichtigt.
 
 # Mögliche Lösungsansätze
 
 ## Stammformreduktion
 Im Bereich der Stammformreduktion haben die Studenten sich mit dem Porter-Stemmer-Algorithmus auseinandergesetzt.
-Der Porter-Stemmer-Algorithmus ist ein verbreiteter Algorithmus der Computerlinguistik zum automatischen Zurückführen von Wörtern auf ihren Wortstamm (Stemming). Der Algorithmus basiert auf einer Menge von Verkürzungsregeln, die so lange auf ein Wort angewandt werden, bis dieses eine Minimalanzahl von Silben aufweist. Der ursprünglich für Wörter der englischen Sprache entwickelte Algorithmus kann relativ leicht für andere Sprachen portiert werden.
+Der Porter-Stemmer-Algorithmus (\cite{wiki:porterStemmerAlgorithmus}) ist ein verbreiteter Algorithmus der Computerlinguistik zum automatischen Zurückführen von Wörtern auf ihren Wortstamm (Stemming). Der Algorithmus basiert auf einer Menge von Verkürzungsregeln, die so lange auf ein Wort angewandt werden, bis dieses eine Minimalanzahl von Silben aufweist. Der ursprünglich für Wörter der englischen Sprache entwickelte Algorithmus kann relativ leicht für andere Sprachen portiert werden.
 
 Zuerst wird die Anzahl der Vokal-Konsonant-Sequenzen bestimmt. Jedes Wort lässt sich als Zeichenkette in der Form `[C] (VC)<sup>m</sup> [V]` interpretieren, wobei `C` für eine Folge von einem oder mehreren Konsonanten und `V` für eine Folge von einem oder mehreren Vokalen steht. Gemessen wird hier die Anzahl `m` der Vokal-Konsonant-Sequenzen zwischen optional führenden Konsonanten und einer optionalen Folge von Vokalen am Ende.
 Beispiele:
@@ -45,9 +45,9 @@ Im Bereich Lemmatisierung wurde festgestellt, dass ein Wörterbuch im Hintergrun
 - `GermaNet`
 - `Sketch Engine`
 
-### Elasticsearch
+### Elasticsearch (\cite{elasticSearch})
 
-Elasticsearch ist eine Suchmaschine, die mit indizierten Dokumenten arbeitet. Die kleinste Einheit bilden dabei die Dokumente. Diese werden indiziert, um sie durchsuchen zu können. Mehrere Dokumente bilden einen Typ und mehrere Typen werden als Index bezeichnet. Vergleicht man diesen Aufbau mit einer SQL-Datenbank, wäre ein Dokument eine Zeile, der Typ die Tabelle und der Index die Datenbank.
+Elasticsearch (\cite{wiki:Elasticsearch}) ist eine Suchmaschine, die mit indizierten Dokumenten arbeitet. Die kleinste Einheit bilden dabei die Dokumente. Diese werden indiziert, um sie durchsuchen zu können. Mehrere Dokumente bilden einen Typ und mehrere Typen werden als Index bezeichnet. Vergleicht man diesen Aufbau mit einer SQL-Datenbank, wäre ein Dokument eine Zeile, der Typ die Tabelle und der Index die Datenbank.
 
 
 **Funktionsweise:**
@@ -59,13 +59,13 @@ Die Resultate des Analyseprozesses werden im Index gespeichert und können dann 
 
 Da die Studenten für die gestellte Aufgabe die Lemmata eines Wortes ermitteln wollen, wurde Elasticsearch nicht genauer untersucht.
 
-### GermaNet
+### GermaNet (\cite{germanetstructure})
 
-GermaNet ist eine elektronische, lexikographische Referenzdatenbank für den deutschen Wortsinn. Es stammt von der Universität Tübingen. Für GermaNet wurde eine Nutzungslizenz über die HTW Dresden erworben. Die Möglichkeit für ein eingegebenes Wort, das Lemma zurück zu erhalten, wurde von den Studenten getestet. Da GermaNet für den semantischen Zusammenhang von Worten gedacht ist, war es nicht möglich nur das Lemma für ein Wort zu erfragen.
+GermaNet (\cite{wiki:germaNet}) ist eine elektronische, lexikographische Referenzdatenbank für den deutschen Wortsinn. Es stammt von der Universität Tübingen. Für GermaNet wurde eine Nutzungslizenz über die HTW Dresden erworben. Die Möglichkeit für ein eingegebenes Wort, das Lemma zurück zu erhalten, wurde von den Studenten getestet. Da GermaNet für den semantischen Zusammenhang von Worten gedacht ist, war es nicht möglich nur das Lemma für ein Wort zu erfragen.
 
-### Sketch Engine
+### Sketch Engine (\cite{sketchEngin})
 
-Sketch Engine ist eine seit 2004 von Lexical Computing Limited entwickelte Corpus Manager- und Analysesoftware. Mittels einer 30-Tage-Testversion haben wir die Möglichkeiten der Sketch Engine überprüft. Sketch Engine bietet u.a. folgende Funktionen:
+Sketch Engine (\cite{wiki:sketchEngin}) ist eine seit 2004 von Lexical Computing Limited entwickelte Corpus Manager- und Analysesoftware. Mittels einer 30-Tage-Testversion haben wir die Möglichkeiten der Sketch Engine überprüft. Sketch Engine bietet u.a. folgende Funktionen:
 
 - Wortlisten
 - N-Gramm
@@ -77,7 +77,7 @@ Auch hier sind die Studenten nicht weitergekommen, da die Sketch Engine und nich
 
 ## TreeTagger
 
-Der TreeTagger der Universität München ist ein Werkzeug zur Annotation eines Textes mittels Part-of-speach Tagging und Lemmata Informationen. Entwickelt wurde er von Helmut Schmidt in dem TC Projekt am Institut für Conputerlinguistik der Universität Stuttgart. Er kann erfolgreich Deutsch, Englisch, Französisch und viele weitere Sprachen taggen. Er besitzt einen handtrainierten Textkorpus, der individuell erweiterbar ist. Einsetzbar ist er unter Windows, Linux und Mac-OS. Der TreeTagger und das Trainingsprogramm ist frei verfügbar für Forschung, Bildung und Evaluation. Zusätzlich ist unter Windows ein graphisches Interface verfügbar.
+Der TreeTagger (\cite{treeTagger2}) der Universität München ist ein Werkzeug zur Annotation eines Textes mittels Part-of-speach Tagging und Lemmata Informationen. Entwickelt wurde er von Helmut Schmidt in dem TC Projekt am Institut für Conputerlinguistik der Universität Stuttgart. Er kann erfolgreich Deutsch, Englisch, Französisch und viele weitere Sprachen taggen. Er besitzt einen handtrainierten Textkorpus, der individuell erweiterbar ist. Einsetzbar ist er unter Windows, Linux und Mac-OS. Der TreeTagger (\cite{treeTagger1}) und das Trainingsprogramm ist frei verfügbar für Forschung, Bildung und Evaluation. Zusätzlich ist unter Windows ein graphisches Interface verfügbar.
 
 **Funktionsweise:**
 
@@ -112,9 +112,10 @@ Anhand der umliegenden Wörter kann der TreeTagger genauere Zuordnungen treffen.
 Das erste Problem ist, dass der TreeTagger besser mit ganzen Sätzen arbeitet. Der weiteren bedeutetet Wahrscheinlichkeit nicht Sicherheit. Bei 20.000 Wörtern ordnet der TreeTagger zu 97,53% die richtige Wortart zum jeweiligen Wort zu. Die größte Schwachstelle, die die Studenten im TreeTagger sahen, war die Tatsache, dass er nicht hauptsächlich zur Findung der Lemmata dient, sondern Wortarten zuordnen soll. Das der TreeTagger zusätzlich anhand seines Korpus auch Lemmata ausgeben kann, ist nur ein schöner Zusatz.
 Würden die Studenten den TreeTagger für ihre o.g. Aufgabe einsetzen wollen, müssten sie den Textkorpus mittels des Trainingsprogrammes erweitern, d.h. händisch Wortarten und Lemmata zuordnen. Daraus wurde geschlossen, dass die Tagliste für das ERP-System händisch geführt werden kann. Der Aufwand wäre der Gleiche.
 
-## Wortschatzprojekt Uni Leipzig
+## Wortschatzprojekt Uni Leipzig (\cite{webservices})
 
-Das Wortschatzprojekt der Universität Leipzig beinhaltet korpusbasierte monolinguale Wörterbücher für unter anderem die deutsche Sprache. Es wird seit 1998 von Gerhard Heyer und Uwe Quasthoff an der Universität Leipzig entwickelt.
+Das Wortschatzprojekt der Universität Leipzig 
+(\cite{wortschatzLeipzigApi)beinhaltet korpusbasierte monolinguale Wörterbücher für unter anderem die deutsche Sprache. Es wird seit 1998 von Gerhard Heyer und Uwe Quasthoff an der Universität Leipzig entwickelt.
 Es wurde ein umfassender Korpus des deutschen Wortschatzes als Vollformlexikon erstellt. Die über Jahre aufgebaute Lexikondatenbank wurde über das Internet zur Nutzung verfügbar gemacht und zur Bearbeitung und Ergänzung zur Verfügung gestellt. Seitdem wurde es beständig erweitert.
 Das Lexikon umfasst aktuell ca. 35 Millionen Beispielsätze mit 500 Millionen laufenden Wörtern.
 Der Zweck des Projektes soll vor allem der Sprachverarbeitung und Texttechnologie dienen.
@@ -126,7 +127,7 @@ Da das Ziel aus der Ermittlung der Lemmata der Worte des Beschreibungsfeldes bes
 Die Universität Leipzig stellt u.a. einige SOAP-Webservices zur Verfügung, mit denen ein direkter Datenzugriff sowie gezielte Abfragen möglich sind. Zu jedem Webservice wird ein Beispielclient mit Quellen zur Verfügung gestellt. Dies ermöglicht die Kombination sowie das Einbauen der Webservices in eigene Programme.
 Die Zugriffsvoraussetzungen unterscheiden sich je nach Abfrageumfang.
 Für einfache Abfragen kann das login \enquote{anonymous} mit dem Passwort \enquote{anonymous} verwendet werden. Eine Registrierung ist für komplexere Abfragen allerdings erforderlich, um bei Problemen kontaktiert werden zu können. Massendatenabfragen sind lediglich Kooperationspartnern vorbehalten.
-Da der Verwendung des Wortschatzprojektes vorerst lediglich ein \enquote{Versuch} durchgeführt werden sollte, wurde sich auf das allgemeine Login für einfache Abfragen beschränkt. Nach einigen Recherchen mit dem Ziel einen bereits bestehenden und benutzbaren Code zur Abfrage des Lemmata zu erhalten, sind die Studenten auf eine C#-API zur Abfrage des Thesaurus  gestoßen. Diese API wurde von Raffael Herrmann im Juli 2013 entwickelt.
+Da der Verwendung des Wortschatzprojektes vorerst lediglich ein \enquote{Versuch} durchgeführt werden sollte, wurde sich auf das allgemeine Login für einfache Abfragen beschränkt. Nach einigen Recherchen mit dem Ziel einen bereits bestehenden und benutzbaren Code zur Abfrage des Lemmata zu erhalten, sind die Studenten auf eine C#-API (\cite{cSharpApi}) zur Abfrage des Thesaurus  gestoßen. Diese API wurde von Raffael Herrmann im Juli 2013 entwickelt.
 
 *Die Funktionsweise und der Aufbau des Codes wurde in \cite{onl:herrmann} ausführlich erklärt, so dass hier nicht weiter darauf eingegangen wird.*
 
@@ -136,7 +137,7 @@ Nach Start der API öffnet sich ein Konsolenfenster. Nun ist es möglich ein Wor
 
 ![\label{abb:EingabeCSharpAPIThesaurus} Eingabe C# - API Thesaurus](img/EingabeCAPIThesaurus.jpg)
 
-Als Rückgabe erhält man alle gefundenen Thesauri, sowie die Anzahl.
+Als Rückgabe erhält man alle gefundenen Thesauri, sowie die Anzahl der Synonyme.
 
 \autoref{abb:RueckgabeCSharpAPIThesaurus}
 
@@ -207,7 +208,9 @@ Bei einer Eingabe von 199 Wörtern aus einem Abschnitt eines Zahnmedizinischen K
 
 ## Fazit
 
-Zusammengefasst wurde der TreeTagger und das Wortschatzprojekt miteinander verglichen. Dazu haben die Studenten das Buch \enquote{Volkserzählung} aus dem Gutenbergprojekt und Katalogdaten aus dem zahnärztlichen und kieferorthopädischen Bereich durch beide Programme laufen lassen. Aufgrund des begrenzten Abfragekontingentes des Wortschatzprojektes mussten die übergebenen Wörter stark begrenzt werden. Aus dem Buch \enquote{Volkserzählungen} von Lew Tolstoi wurden 263 Wörter des ersten Kapitels übergeben. Hier lag der TreeTagger mit 97 \% (255) richtig zugeordneten Lemmata besser, als das Wortschatzprojekt mit 92 \% (241) richtigen Lemmata. Wie es auch im folgenden Diagramm veranschaulicht dargestellt wurde. Bei den Katalogdaten lag das Wortschatzprojekt mit 65 % (130) richtig zugeordneten Lemmata vor dem TreeTagger mit nur 59 \% (117) richtiger Zuordnung. Hier sieht man deutlich, dass der TreeTagger mit umliegenden Wörtern in einem Satz arbeitet, was bei den Katalogdaten nicht gegeben war. Es handelt sich bei den Katalogdaten um einen Auszug auf einer Artikeldatenbank, der aus insgesamt 199 Wörtern bestand.
+Zusammengefasst wurde der TreeTagger und das Wortschatzprojekt miteinander verglichen. Dazu haben die Studenten das Buch \enquote{Volkserzählung}
+(\cite{volkszaehlungen}) aus dem Gutenbergprojekt und Katalogdaten aus dem zahnärztlichen und kieferorthopädischen Bereich durch beide Programme laufen lassen. Aufgrund des begrenzten Abfragekontingentes des Wortschatzprojektes mussten die übergebenen Wörter stark begrenzt werden. Aus dem Buch 
+\enquote{Volkserzählungen} von Lew Tolstoi wurden 263 Wörter des ersten Kapitels übergeben. Hier lag der TreeTagger mit 97 \% (255) richtig zugeordneten Lemmata besser, als das Wortschatzprojekt mit 92 \% (241) richtigen Lemmata. Wie es auch im folgenden Diagramm veranschaulicht dargestellt wurde. Bei den Katalogdaten lag das Wortschatzprojekt mit 65 % (130) richtig zugeordneten Lemmata vor dem TreeTagger mit nur 59 \% (117) richtiger Zuordnung. Hier sieht man deutlich, dass der TreeTagger mit umliegenden Wörtern in einem Satz arbeitet, was bei den Katalogdaten nicht gegeben war. Es handelt sich bei den Katalogdaten um einen Auszug auf einer Artikeldatenbank, der aus insgesamt 199 Wörtern bestand.
 
 \autoref{abb:TreeTaggerWortschatzprojekt}
 
