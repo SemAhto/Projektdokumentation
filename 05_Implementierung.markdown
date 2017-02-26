@@ -118,19 +118,22 @@ Um das generieren des SQL Strings zu vereinfachen und ein nachträgliches Erweit
 
 Das ViewModel ist das `PpsNavigatorModel`. Es sind folgende Komponenten hinzugekommen
 
-+------------------+---------------------------------------------------------------------------------------------------------------------------------------------+
-|Name              |Funktion                                                                                                                                     |
-+==================+=============================================================================================================================================+
-|Tags              |Beinhaltet alle in Relation stehenden Tags                                                                                                   |
-+------------------+---------------------------------------------------------------------------------------------------------------------------------------------+
-|SelectedTags      |Beinhaltet alle Tags nach denen gefiltert werden soll                                                                                        |
-+------------------+---------------------------------------------------------------------------------------------------------------------------------------------+
-|SelectTagCommand  |Wird ausgeführt, wenn in der TagCloud auf ein Tag geklickt wird. Fügt dieses der SelectTags Liste hinzu.                                     |
-+------------------+---------------------------------------------------------------------------------------------------------------------------------------------+
-|UnselectTagCommand|Wird ausgeführt, wenn auf ein Tag in der Liste der ausgewählten Tags geklickt wird. Entfernt dieses aus der SelectedTags Liste               |
-+------------------+---------------------------------------------------------------------------------------------------------------------------------------------+
-|TagFilter         |Generiert ein ExpressionObjekt, welches vom System in einen logischen Ausdruck umgewandelt wird und so zur Filterung der Objektliste beiträgt|
-+------------------+---------------------------------------------------------------------------------------------------------------------------------------------+
++----------------------------+-----------------------------------------------------------------------------------+
+| \mbox{Name der Komponente} | Funktion                                                                          |
++============================+===================================================================================+
+| `Tags`                     | Beinhaltet alle in Relation stehenden Tags                                        |
++----------------------------+-----------------------------------------------------------------------------------+
+| `SelectedTags`             | Beinhaltet alle Tags nach denen gefiltert werden soll                             |
++----------------------------+-----------------------------------------------------------------------------------+
+| `SelectTagCommand`         | Wird ausgeführt, wenn in der TagCloud auf ein Tag geklickt wird.                  |
+|                            | Fügt dieses der SelectTags Liste hinzu.                                           |
++----------------------------+-----------------------------------------------------------------------------------+
+| `UnselectTagCommand`       | Wird ausgeführt, wenn auf ein Tag in der Liste der ausgewählten                   |
+|                            | Tags geklickt wird. Entfernt dieses aus der SelectedTags Liste                    |
++----------------------------+-----------------------------------------------------------------------------------+
+| `TagFilter`                | Generiert ein ExpressionObjekt, welches vom System in einen                       |
+|                            | logischen Ausdruck umgewandelt wird und so zur Filterung der Objektliste beiträgt |
++----------------------------+-----------------------------------------------------------------------------------+
 
 \autoref{abb:PpsNavigatorModel}
 
