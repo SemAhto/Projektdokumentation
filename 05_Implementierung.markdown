@@ -1,12 +1,52 @@
-# Implementierung (PPsn)
+# Implementierung
 
-## Beschreibung
+## WordCloud Komponente
 
-## Layout
+### Beschreibung
 
-## Implementierung der WordCloud Komponente
+### Aufbau
 
-### Komponenten
+#### Contract
+
+##### IWeigtedWord
+
+##### IWord
+
+##### VisualizedWord
+
+##### WeightedWord
+
+##### Range
+
+#### WordCloudCalculator
+
+##### Contract
+
+###### IWordCloudCalculator
+
+###### IWordCloudAppearenceArguments
+
+##### WordCloudControl
+
+###### CommandProxy
+###### WeightedWordToVisualizedWordConverter
+###### WordCloudGui
+###### WordCloudPanel
+###### WordSizeCalculatorFactory
+### Verteilung
+#### Nuget
+#### Paket
+#### Verwendung
+
+
+## Implementierung im PPSn System
+### Beschreibung
+
+### Layout
+
+### Implementierung der WordCloud Komponente
+
+#### Komponenten
 
 \autoref{abb:PpsObjectGenerator}
 
@@ -20,7 +60,7 @@
 
 ![\label{abb:PpsNavigatorModel} PpsNavigatorModel](img/PpsNavigatorModel.jpg)
 
-### Abläufe
+#### Abläufe
 
 \autoref{abb:AblaufPpsNavigatorModel}
 
