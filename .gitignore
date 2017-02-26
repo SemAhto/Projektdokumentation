@@ -4,3 +4,6 @@ pub/*
 *.log
 .bcf
 .run.xml
+img/htw-logo.pdf
+*.bib.bak
+*.bib.sav
