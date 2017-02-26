@@ -37,12 +37,11 @@ Algorithmus Pseudocode & Fallbeispiele
 \input{08_Fazit}
 
 
+<!--       %Beginn des Anhangs
 \appendix
 \clearpage
-<!--       %Beginn des Anhangs
 \chapter*{Anhange}
 \addcontentsline{toc}{chapter}{Anhang}
-\pagenumbering{Alph}
 \newpage
 \stepcounter{page}
  -->
@@ -58,8 +57,8 @@ Algorithmus Pseudocode & Fallbeispiele
 
 \input{Glossar}
 
-\newpage
 -->
+
 
 <!--
 s.a. http://www.suedraum.de/latex/stammtisch/degenkolb_latex_biblatex_folien-final.pdf
@@ -67,5 +66,5 @@ s.a. http://www.suedraum.de/latex/stammtisch/degenkolb_latex_biblatex_folien-fin
 \printbibliography[
 	title={Quellennachweise}
 ]
-
-\addcontentsline{toc}{section}{Quellennachweise}
+\pagenumbering{Alph}
+\addcontentsline{toc}{chapter}{Quellennachweise}
