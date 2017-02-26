@@ -17,54 +17,44 @@ In der oben gezeigten Abbildung sind der Wachstumsfaktor mit 0,1 und die Größe
 
 # Umsetzung im Algorithmus
 
-Damit die folgenden Anweisungen funktionieren müssen die Namespaces `System.Diagnostics` und `System.IO` in den Algorithmus eingebunden werden. 
-Als Erstes wird die Stoppuhr für die Zeitmessung deklariert: 
+Damit die Anweisungen funktionieren müssen die Namespaces `System.Diagnostics` und `System.IO` in den Algorithmus eingebunden werden. 
+Als Erstes wird die Stoppuhr (\autoref{code:ZeitMethode}) für die Zeitmessung deklariert.
 
-```
-public System.Diagnostics.Stopwatch Zeit()
-{
-	var watch = System.Diagnostics.Stopwatch.StartNew();
-	return watch;
-}
-```
+\begin{figure}
 
-Eine Funktion Stopp mit den Aufrufparametern für die Stoppuhr `watch`, den zu messenden Wert `messwert` und eine Zählvariable `lauf` ist ebenfalls wichtig. In dieser Methode wird die Stoppuhr gestoppt. Die Übergabe der Zeit, der Anzahl der Durchläufe und des Messwertes an die Methode Append sind weitere Inhalte dieser Methode.
+\lstinputlisting[basicstyle=\ttfamily, numbers=none, caption={}, title={}, label={}, language=]{06_ZeitMethode.cs}
 
-```
-public long Stopp(System.Diagnostics.Stopwatch watch, string messwert, int lauf)
-{
-	watch.Stop();
-	var elapsedMs = watch.ElapsedMilliseconds;
-	string dateiname = speicherort;
-	string neueZeile = messwert + ": " + elapsedMs + ", " + lauf + "\r\n";
-	Append(dateiname, neueZeile);
-	return elapsedMs;
-}
-```
+\caption{\label{code:ZeitMethode} Funktion Zeit}
+\end{figure}
 
-Mit der Methode `Append` werden die übergebenen Daten in eine Textdatei für die Auswertung exportiert. 
+Eine Funktion `Stopp` (\autoref{code:StoppMethode}) mit den Aufrufparametern für die Stoppuhr `watch`, den zu messenden Wert `messwert` und eine Zählvariable `lauf` ist ebenfalls wichtig. In dieser Methode wird die Stoppuhr gestoppt. Die Übergabe der Zeit, der Anzahl der Durchläufe und des Messwertes an die Methode Append sind weitere Inhalte dieser Methode.
 
-```
-public void Append(string sFilename, string sLines)
-{
-	StreamWriter myFile = new StreamWriter(sFilename, true);
-	myFile.Write(sLines);
-	myFile.Close();
-}
-```
+\begin{figure}
 
-Innerhalb der Methode `CalculateWordAppearence` muss als erste Anweisung die Stoppuhr gestartet werden. Danach wird die Zählvariable `dlauf` deklariert und mit dem Wert `0` initiiert.
+\lstinputlisting[basicstyle=\ttfamily, numbers=none, caption={}, title={}, label={}, language=]{06_StoppMethode.cs}
 
-```
-var stoppzeit = Zeit();
-var dlauf = 0;
-```
+\caption{\label{code:StoppMethode} Funktion Stopp}
+\end{figure}
 
-In der Do-While-Schleife in der das Tag positioniert wird, muss die Zählvariable bei jedem Durchlauf um eins erhöht werden. Am Ende der `CalculateWordAppearence`-Methode muss noch die Methode `Stopp` aufgerufen werden, damit die Stoppuhr angehalten wird.
+Mit der Funktion `Append` (\autoref{code:AppendMethode}) werden die übergebenen Daten in eine Textdatei für die Auswertung exportiert. 
 
-```
-Stopp(stoppzeit, "CalcWordAppear", dlauf);
-```
+\begin{figure}
+
+\lstinputlisting[basicstyle=\ttfamily, numbers=none, caption={}, title={}, label={}, language=]{06_AppendMethode.cs}
+
+\caption{\label{code:AppendMethode} Funktion Append}
+\end{figure}
+
+Innerhalb der Methode `CalculateWordAppearence` muss als erste Anweisung die Stoppuhr gestartet werden. Danach wird die Zählvariable `dlauf` deklariert und mit dem Wert `0` initiiert (\autoref{code:Initiierung}).
+
+\begin{figure}
+
+\lstinputlisting[basicstyle=\ttfamily, numbers=none, caption={}, title={}, label={}, language=]{06_Initiierung.cs}
+
+\caption{\label{code:Initiierung} Deklaration für Messung}
+\end{figure}
+
+In der Do-While-Schleife in der das Tag positioniert wird, muss die Zählvariable bei jedem Durchlauf um eins erhöht werden. Am Ende der `CalculateWordAppearence`-Methode muss noch die Methode `Stopp` mit `Stopp(stoppzeit, "CalcWordAppear", dlauf);` aufgerufen werden, damit die Stoppuhr angehalten wird.
 
 ## Erweiterung des Spiralform-Verfahrens mit dem Halbierungsverfahren
 
