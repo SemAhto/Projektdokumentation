@@ -23,7 +23,7 @@ Algorithmus Pseudocode & Fallbeispiele
 \chapter{Entwurf}
 \input{04_Entwurf}
 
-\chapter{Implementierung (PPsn)}
+\chapter{Implementierung}
 \input{05_Implementierung}
 <!-- PPsn -->
 

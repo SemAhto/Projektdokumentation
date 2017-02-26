@@ -124,7 +124,8 @@ Der `DataGenerationService`
 Der `GraphExportService`
 :	lädt alle Daten der Persistenzschicht und wandelt diese in Cypherkommandos um, die ein Neo4j Graphen Datenbankschema erzeugen. Das Ergebnis wird in eine zuvor ausgewählte Textdatei gepeichert. Dabei stellen die BusinessObjects und die Tags jeweils Knoten dar und deren Beziehungen die Verbindungen. Damit kann sich ein Überblick über das Netz in der Datenbank verschafft werden.
 
-Der `TagLoadingService` generiert und führt die SQL Abfrage für das Laden der in Beziehung stehenden Tags anhand der Suchanfrage aus, welche als Parameter übergeben wird. Dabei werden auch deren Gewichte anhand der Häufigkeit des Vorkommens an den im Suchergebnis gelisteten BusinessObjects berechnet.
+Der `TagLoadingService`
+:	generiert und führt die SQL Abfrage für das Laden der in Beziehung stehenden Tags anhand der Suchanfrage aus, welche als Parameter übergeben wird. Dabei werden auch deren Gewichte anhand der Häufigkeit des Vorkommens an den im Suchergebnis gelisteten BusinessObjects berechnet.
 
 
 Der `DataLoadingService`
