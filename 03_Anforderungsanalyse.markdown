@@ -111,10 +111,10 @@ Zur visuellen Anordnung der unterschiedlich großen Tags/Worte in Tag-Clouds, re
 ![\label{abb:Pseudocode} Pseudocode](img/16002232756924747189.jpg)
 
 
-#Folksonomie, Social Tagging und Tag-Clouds (\cite{onl:socialtaggingandfolksonomies})
+#Folksonomie, Social Tagging und Tag-Clouds 
 
 ##Begriffsklärung
-Bevor auf die Thematik der Folksonomie näher eingegangen wird, sollten ein paar Begriffe zum besseren Verständnis geklärt werden.
+Bevor auf die Thematik der Folksonomie (\cite{onl:socialtaggingandfolksonomies}) näher eingegangen wird, sollten ein paar Begriffe zum besseren Verständnis geklärt werden.
 
 ###Social Network
 Ein Social Network oder zu deutsch ein soziales Netzwerk wird in diesem Zusammenhang als eine Zusammenkunft verschiedener Nutzer im Internet bezeichnet.
@@ -134,7 +134,7 @@ Ein Tag oder auch Schlagwort, Deskriptor oder Etikett ist in diesem Zusammenhang
 ###Unscharfe Suche
 Eine unscharfe Suche ist die Möglichkeit eine bestimmte Ressource innerhalb eines Social Networks zu suchen, von welcher noch keine genaue Vorstellung besteht. Dabei werden die Suchergebnisse nur immer weiter eingegrenzt und es wird sich Stück für Stück an das gewünschte Ergebnis heran gearbeitet.
 
-##Social Tagging
+##Social Tagging (\cite{wiki:socialtagging})
 Als Tagging oder auch taggen wird der Prozess des Tag an eine Ressource anhängen beschrieben (Indexieren). Beim Social Tagging geschieht dies innerhalb eines Social Networks durch die User. Dabei werden an verschiedene Ressourcen durch verschieden User verschiedene Tags angehängt. Dadurch können User wiederum andere Ressourcen finden und die Ressourcen mit weiteren Tags versehen.
 Dadurch ist die Grundlage für eine unscharfe Suche geschaffen.
 
