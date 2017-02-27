@@ -5,21 +5,21 @@ Während den ersten zwei Gruppenmeetings wurden der Entwurf von Anwendungsfälle
 Tagging und Tag-Clouds im ERP-System ausgearbeitet. Dabei wurde sich an der Satzschablone von Chris Rupp (vgl. \cite{Sophist:Schablonen})
 orientiert. Anhand dessen wurden folgende Prinzipsskizzen erstellt, wie auch Anforderungen schriftlich formuliert. Folgene Ergebnisse wurden dabei erzielt:
 
-## Prinzipskizzen:
+## Prinzipskizzen
 
-\autoref{abb:Prinzipskizze1}
+Die Oberfläche von PPsn wurde im Groben nachempfunden (\autoref{abb:Prinzipskizze1}).
 
 ![\label{abb:Prinzipskizze1} 1. Prinzipskizze](img/01Prinzipienskizze.png)
 
-\autoref{abb:Prinzipskizze2}
+Durch Auswahl von Kathegoien soll die TagCloud beeinflusst werden (\autoref{abb:Prinzipskizze2}) können.
 
 ![\label{abb:Prinzipskizze2} 2. Prinzipskizze](img/02Prinzipienskizze.png)
 
-\autoref{abb:Prinzipskizze3}
+Durch die Auswahl von Tags soll die TagCloud neu berechnet werden (\autoref{abb:Prinzipskizze3}).
 
 ![\label{abb:Prinzipskizze3} 3. Prinzipskizze](img/03Prinzipienskizze.png)
 
-## Anforderungen:
+## Anforderungen
 
 Wir unterscheiden die folgenden Begriffe bei der Festlegung der Anforderungen.
 
