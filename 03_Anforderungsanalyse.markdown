@@ -201,6 +201,7 @@ Anders als bei der engen Folksonomie besteht bei der breiten Folksonomie die Mö
 
 ![\label{abb:broadfolksonomy} Broad Folksonomy](img/broadfolksonomy.jpg)
 
+
 ### Vorteile und Nachteile von Folksonomien
 
 | Vorteile der Folksonomie    | Nachteile der Folksonomie   							 | 
