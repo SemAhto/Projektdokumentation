@@ -9,17 +9,14 @@ Ein Ziel des Projektes war es, die berechneten Folksonomien mit Hilfe einer Word
 
 ### Contract
 
-In diesem Teil wird die Schnittstelle für die Verwendung in anderen Projekten definiert. Das `IWord`-Interface stellt die kleinste Einheit der WordCloud dar. Die implementierende Klasse muss eine Text-Property anbieten die das anzuzeigende Wort als String beinhaltet. Das `IWeightedWord`-Interface erweitert `IWord` um einen beliebig Gewichtswert. Es stellt eine Schnittstelle für die Eingabedaten dar. Die `VisualizedWord`-Klasse implementiert `IWord` und stellt das Ergebnis, welches aus der Berechnung der Visualierung entsteht, dar. Es enthält alle wichtigen Parameter, die für eine Darstellung in dem Panel wichtig sind. Die `Range` Klasse stellt einen Zahlenbereich dar und kann relative Werte zu einem anderen Zahlenbereich berechnen. 
-
-### WordCloudCalculator
-
-Der WordCloudCalculator wandelt die übergebenen, gewichteten Wörter des Typs `IWeightedWord` in anzeigbare Wörter des Typs `VisualizedWord` anhand von Rahmenbedingungen, die durch die Bereiche der Freiheitsgrade (Schriftgröße und Transparenz), der Größe des Anzeigefensters und einer Methode zur Berechnung der Anzeigegröße eines Wortes, dargestellt werden.
-Die Schnittstelle für die Rahmenbedingungen ist in `IWordCloudAppearenceArguments` festgelegt. Die Schnittstelle für die Implementierung eines WordCloudCalculators ist in `IWordCloudCalculator` festgelegt.
-
-\autoref{abb:WordCloudContractClasses}
+In diesem Teil wird die Schnittstelle für die Verwendung in anderen Projekten definiert. Das `IWord`-Interface stellt die kleinste Einheit der WordCloud dar. Die implementierende Klasse muss eine Text-Property anbieten die das anzuzeigende Wort als String beinhaltet. Das `IWeightedWord`-Interface erweitert `IWord` um einen beliebig Gewichtswert. Es stellt eine Schnittstelle für die Eingabedaten dar. Die `VisualizedWord`-Klasse (\autoref{abb:WordCloudContractClasses}) implementiert `IWord` und stellt das Ergebnis, welches aus der Berechnung der Visualierung entsteht, dar. Es enthält alle wichtigen Parameter, die für eine Darstellung in dem Panel wichtig sind. Die `Range` Klasse stellt einen Zahlenbereich dar und kann relative Werte zu einem anderen Zahlenbereich berechnen. 
 
 ![\label{abb:WordCloudContractClasses} Klassen im Contract der WordCloud](img/WordCloud_Contract_Classes.jpg)
 
+### WordCloudCalculator
+
+Der `WordCloudCalculator` wandelt die übergebenen, gewichteten Wörter des Typs `IWeightedWord` (\autoref{abb:WordCloudContractClasses}) in anzeigbare Wörter des Typs `VisualizedWord` anhand von Rahmenbedingungen, die durch die Bereiche der Freiheitsgrade (Schriftgröße und Transparenz), der Größe des Anzeigefensters und einer Methode zur Berechnung der Anzeigegröße eines Wortes, dargestellt werden.
+Die Schnittstelle für die Rahmenbedingungen ist in `IWordCloudAppearenceArguments` festgelegt. Die Schnittstelle für die Implementierung eines WordCloudCalculators ist in `IWordCloudCalculator` festgelegt.
 
 Eine Möglichkeit wurde in `ExtractingWordCloudCalculator` implementiet.
 Dieser besitzt eine weitere Methode vom Typ `IWordAppearenceCalculationMethod`, die ein gewichtetes Wort als Eingabe bekommt und dieses in eine visualisiertes Wort umwandelt. Der Calculator an sich sortiert die Gewichte der übergeben gewichteten Wörter zuerst absteigend und übergibt dann jedes einzelne Wort solange der Umwandlungsmethode bis diese signalisiert, dass kein Wort mehr auf den anzeigbaren Bereich passt. Zum Schluss werden die anzeigbaren visualisierten Wörter zurückgegeben.
@@ -38,7 +35,7 @@ Desweiteren wurde in der `WordSizeCalculatorFactory` eine statische Methode entw
 
 ### Nuget
 
-Da diese Komponente wie bereuts ewähnt wiederverwendbar ist, wurde für den für C# entwickelten Paketmanager ein Paket erstellt und auf nuget https://www.nuget.org/packages/WordCloudCalculator veröffentlicht.
+Da diese Komponente wie bereuts ewähnt wiederverwendbar ist, wurde für den für C# entwickelten Paketmanager ein Paket erstellt und auf nuget\footnote{ermöglicht einfaches Einbinden in Visual Studio von \href{https://www.nuget.org/packages/WordCloudCalculator}{https://www.nuget.org/packages/WordCloudCalculator}} veröffentlicht.
 
 ### Verwendung
 
@@ -48,29 +45,32 @@ Um diese Komponente in einem neuen Projekt zu verwenden, musst das Paket per nug
 Install-Package WordCloudCalculator
 ```
 
-Wenn das Paket dann erfolgreich installiert wurde, muss das Interface `IWordCloudAppearenceArguments` implementiert, um die Rahmenbedingungen für die Darstellung festzulegen und als Statische Ressource instanziert werden.
+Nachdem das Paket erfolgreich installiert ist, dolgt die Implementation des Interfaces `IWordCloudAppearenceArguments`, um die Rahmenbedingungen für die Darstellung festzulegen und als Statische Ressource instanziert werden.
 
 ```
 <Window.Resources>
-      <wordCloud:SomeWordCloudAppearenceArguments x:Key="AppearenceArguments" />
+  <wordCloud:SomeWordCloudAppearenceArguments
+    x:Key="AppearenceArguments" />
 </Window.Resources>
 ```
 
 Außerdem muss in der `App.xaml` folgendes `RessourceDictionary` zu `Application.Resources` hinzugefügt werden, um die Styles der WordCloud der neuen Applikation bekannt zu machen:
 
 ```
-<ResourceDictionary Source="/WordCloudCalculator;component/WPF/WordCloudGui.xaml"/>
+<ResourceDictionary
+  Source="/WordCloudCalculator;component/WPF/WordCloudGui.xaml"/>
 ```
 
 Nun kann das WordCloudControl in das Layout eingefügt werden
 
 ```
 <wpf:WordCloud 
-          AppearenceArguments="{StaticResource AppearenceArguments}"
-          Words="{Binding Tags}"
-          WordAppearenceCalculationMethodType="extractingWordCloudCalculator:SpiralAppearenceCalculationMethod"
-          WordSelectedCommand="{Binding SelectTag}" 
-          />
+  AppearenceArguments="{StaticResource AppearenceArguments}"
+  Words="{Binding Tags}"
+  WordAppearenceCalculationMethodType=
+    "extractingWordCloudCalculator:SpiralAppearenceCalculationMethod"
+  WordSelectedCommand="{Binding SelectTag}" 
+  />
 ```
 
 # Implementierung im PPSn System
@@ -81,17 +81,13 @@ Das PPSn System der Firma TechWare ist eine Client-Server ERP-Lösung für klein
 
 Im Hintergrund arbeitet eine Lua Interpreter Engine, mit der sich, alternativ zu C#, das System erweitern lässt.
 
-Eine Neuerung im System ist die Nutzung einer TagCloud zur unscharfen Suche in der Datenbank. 
-
-\autoref{abb:PpsnScreenshot}
+Eine Neuerung im System ist die Nutzung einer TagCloud (\autoref{abb:PpsnScreenshot}, unten rechts) zur unscharfen Suche in der Datenbank. 
 
 ![\label{abb:PpsnScreenshot} PPSn Softwaresystem](img/ppsn_screenshot.jpg)
 
 ## Layout
 
-Die Benutzeroberfläche besteht aus einer Objektliste, in der alle Datensätze der Datenbank angezeigt werden. Diese können mit Filtern, welche um dieser List platziert sind verkleinert werden. Anhand dieser Liste wird die TagCloud berechnet. Durch die Auswahl eines Tags wird eine neue Filterbedingung hinzugefügt und sodass die Objektliste aktualisiert wird und so die TagCloud neu berechnet. Durch diesen iterativen Prozess ist eine Suche anhand von Schlagworten möglich.
-
-\autoref{abb:PpsnLayout}
+Die Benutzeroberfläche (\autoref{abb:PpsnLayout}, schematisch) besteht aus einer Objektliste, in der alle Datensätze der Datenbank angezeigt werden. Diese können mit Filtern, welche um dieser List platziert sind verkleinert werden. Anhand dieser Liste wird die TagCloud berechnet. Durch die Auswahl eines Tags wird eine neue Filterbedingung hinzugefügt und sodass die Objektliste aktualisiert wird und so die TagCloud neu berechnet. Durch diesen iterativen Prozess ist eine Suche anhand von Schlagworten möglich.
 
 ![\label{abb:PpsnLayout} Layout von PPsn: Beeinflussungsübersicht. Dunkelgrau: Filterelemente; Hellgrau: Datenpräsentation](img/ppsn_layout.jpg)
 
@@ -103,58 +99,76 @@ Aufgrund der sehr komplexen Systemarchitektur, wird im Folgenden nur auf die Tei
 
 ### Komponenten
 
-Das `PPsEnvironment` enthält den `PpsObjectGenerator`, welcher in der Lage ist SQL zu erzeugen und das Ergebnis als `IEnumerable` bereitzustellen, sodass es mit LINQ weiter verarbeitet werden kann. Da allerdings der bestehende Generator nicht in der Lage war Tags abzufragen und deren Gewichte zu berechnen, musste ein weiterer entwickelt werden. Um die Basisfunktionalität aber beizubehalten, wurde dieser zu `AbstractPpsObjectGenerator` abstrahiert und ohne Änderung wieder von `PpsObjectGenerator` abgeleitet um das Interface zu äbhängigen Komponenten nicht zu ändern. Die `AbstractPpsObjectGenerator` Klasse wurde um zwei virtuelle Methoden erweitert. `ExtendCommand` dient dazu, dass abgeleitete Klassen das Kommando über die Factory erweitern können. Durch Implementierung von `GenerateCommandSql` hingegen muss das gesamte Kommando als String neu implementiert werden.
-Für die TagCloud wurde dann der neue `WordCloudObjectGenerator` eingeführt, welcher die in Relastion stehenden Tags und deren Gewichte wie im Prototypen berechnet und abfragt.
+Das `PPsEnvironment` (\autoref{abb:PpsObjectGenerator}) enthält den `PpsObjectGenerator`, welcher in der Lage ist SQL zu erzeugen und das Ergebnis als `IEnumerable` bereitzustellen, sodass es mit LINQ weiter verarbeitet werden kann. Da allerdings der bestehende Generator nicht in der Lage war Tags abzufragen und deren Gewichte zu berechnen, musste ein weiterer entwickelt werden. Um die Basisfunktionalität aber beizubehalten, wurde dieser zu `AbstractPpsObjectGenerator` abstrahiert und ohne Änderung wieder von `PpsObjectGenerator` abgeleitet um das Interface zu äbhängigen Komponenten nicht zu ändern. Die `AbstractPpsObjectGenerator` Klasse wurde um zwei virtuelle Methoden erweitert. `ExtendCommand` dient dazu, dass abgeleitete Klassen das Kommando über die Factory erweitern können. Durch Implementierung von `GenerateCommandSql` hingegen muss das gesamte Kommando als String neu implementiert werden.
 
-\autoref{abb:PpsObjectGenerator}
+Für die TagCloud wurde dann der neue `WordCloudObjectGenerator` eingeführt, welcher die in Relastion stehenden Tags und deren Gewichte wie im Prototypen berechnet und abfragt.
 
 ![\label{abb:PpsObjectGenerator} PpsObjectGenerator](img/PpsObjectGenerator.jpg)
 
-Um das generieren des SQL Strings zu vereinfachen und ein nachträgliches Erweitern zu ermöglichen wurde die `SelectStatementFactory` entwickelt. Sie enthält Methoden, die die einzelnen Teile einer Select Abfrage unabhängig von einander aufnimmt und zum Schluss zusammenführt. 
-
-\autoref{abb:SelectStatementFactory}
+Um das generieren des SQL Strings zu vereinfachen und ein nachträgliches Erweitern zu ermöglichen wurde die `SelectStatementFactory` (\autoref{abb:SelectStatementFactory}) entwickelt. Sie enthält Methoden, die die einzelnen Teile einer Select Abfrage unabhängig von einander aufnimmt und zum Schluss zusammenführt. 
 
 ![\label{abb:SelectStatementFactory} SelectStatementFactory](img/SelectStatementFactory.jpg)
 
-Das ViewModel ist das `PpsNavigatorModel`. Es sind folgende Komponenten hinzugekommen
+Das ViewModel ist das `PpsNavigatorModel` (\autoref{abb:PpsNavigatorModel}). Es sind die Komponenten gem. \autoref{abb:neueKomponenten} hinzugekommen.
 
-+----------------------------+-----------------------------------------------------------------------------------+
-| \mbox{Name der Komponente} | Funktion                                                                          |
-+============================+===================================================================================+
-| `Tags`                     | Beinhaltet alle in Relation stehenden Tags                                        |
-+----------------------------+-----------------------------------------------------------------------------------+
-| `SelectedTags`             | Beinhaltet alle Tags nach denen gefiltert werden soll                             |
-+----------------------------+-----------------------------------------------------------------------------------+
-| `SelectTagCommand`         | Wird ausgeführt, wenn in der TagCloud auf ein Tag geklickt wird.                  |
-|                            | Fügt dieses der SelectTags Liste hinzu.                                           |
-+----------------------------+-----------------------------------------------------------------------------------+
-| `UnselectTagCommand`       | Wird ausgeführt, wenn auf ein Tag in der Liste der ausgewählten                   |
-|                            | Tags geklickt wird. Entfernt dieses aus der SelectedTags Liste                    |
-+----------------------------+-----------------------------------------------------------------------------------+
-| `TagFilter`                | Generiert ein ExpressionObjekt, welches vom System in einen                       |
-|                            | logischen Ausdruck umgewandelt wird und so zur Filterung der Objektliste beiträgt |
-+----------------------------+-----------------------------------------------------------------------------------+
-
-\autoref{abb:PpsNavigatorModel}
+\begin{figure}
+\begin{longtable}[]{@{}ll@{}}
+\toprule
+\begin{minipage}[b]{0.24\columnwidth}\raggedright\strut
+\mbox{Name der Komponente}\strut
+\end{minipage} & \begin{minipage}[b]{0.70\columnwidth}\raggedright\strut
+Funktion\strut
+\end{minipage}\tabularnewline
+\midrule
+\endhead
+\begin{minipage}[t]{0.24\columnwidth}\raggedright\strut
+\texttt{Tags}\strut
+\end{minipage} & \begin{minipage}[t]{0.70\columnwidth}\raggedright\strut
+Beinhaltet alle in Relation stehenden Tags\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.24\columnwidth}\raggedright\strut
+\texttt{SelectedTags}\strut
+\end{minipage} & \begin{minipage}[t]{0.70\columnwidth}\raggedright\strut
+Beinhaltet alle Tags nach denen gefiltert werden soll\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.24\columnwidth}\raggedright\strut
+\texttt{SelectTagCommand}\strut
+\end{minipage} & \begin{minipage}[t]{0.70\columnwidth}\raggedright\strut
+Wird ausgeführt, wenn in der TagCloud auf ein Tag geklickt wird. Fügt
+dieses der SelectTags Liste hinzu.\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.24\columnwidth}\raggedright\strut
+\texttt{UnselectTagCommand}\strut
+\end{minipage} & \begin{minipage}[t]{0.70\columnwidth}\raggedright\strut
+Wird ausgeführt, wenn auf ein Tag in der Liste der ausgewählten Tags
+geklickt wird. Entfernt dieses aus der SelectedTags Liste\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.24\columnwidth}\raggedright\strut
+\texttt{TagFilter}\strut
+\end{minipage} & \begin{minipage}[t]{0.70\columnwidth}\raggedright\strut
+Generiert ein ExpressionObjekt, welches vom System in einen logischen
+Ausdruck umgewandelt wird und so zur Filterung der Objektliste
+beiträgt\strut
+\end{minipage}\tabularnewline
+\bottomrule
+\end{longtable}
+\caption{\label{abb:neueKomponenten} Hinzugefügte Komponenten}
+\end{figure}
 
 ![\label{abb:PpsNavigatorModel} PpsNavigatorModel](img/PpsNavigatorModel.jpg)
 
+\newpage
+
 ### Abläufe
 
-Im Folgenden wird beschrieben wie die Daten für die WordCloud geladen werden.
-
-\autoref{abb:AblaufPpsEnvironment}
+Im Diagramm (\autoref{abb:AblaufPpsEnvironment}) wird beschrieben wie die Daten für die WordCloud geladen werden.
 
 ![\label{abb:AblaufPpsEnvironment} Daten laden](img/AblaufPpsEnvironment.jpg)
 
 Durch den Aufruf der zentralen Datenladefunktion `RefreshDataAsync` werden die Daten in die Objektliste geladen. Dabei wird der Tagfilter anhand der ausgewählten Tags generiert (3) und mit den bereits existierenden Filter mit `und` verknüpft. Die daraus entstehenden `DataSource` wird genutzt, um die in Relation stehenden Tags zu laden. Dafür wird im `PpsEnvironment` die `CreateTagCloudFilter` Methode gerufen, welche ein `WordCloudObjectGenerator`-Objekt erstellt und das daraus resultierende `IEnumerable` zurückgibt (5-8). Anschließend werden mit LINQ die benötigten Tagdaten aus dem `IEnumerable` Ergebnis extrahiert und der `Tags`-Property zugewiesen (9). Dadurch wird die WordCloud neu erstellt.
 
-Zusätzlich zu den bereits vorhandenen Aufrufen von `RefreshDataAsync`, wird diese Method nun auch ausgeführt, wenn ein Tag dem Filter hinzugefügt oder vom Filter entfernt wird. 
-
-\autoref{abb:Pps_SelectTag}
+Zusätzlich zu den bereits vorhandenen Aufrufen von `RefreshDataAsync`, wird diese Method nun auch ausgeführt, wenn ein Tag dem Filter hinzugefügt (\autoref{abb:Pps_SelectTag}) oder vom Filter entfernt (\autoref{abb:Pps_UnselectTag}) wird. 
 
 ![\label{abb:Pps_SelectTag} Ablauf: Tag auswählen](img/image18.jpg)
-
-\autoref{abb:Pps_UnselectTag}
 
 ![\label{abb:Pps_UnselectTag}Ablauf: Tag aus Auswahl entfernen](img/AblaufPpsNavigatorModel.jpg)

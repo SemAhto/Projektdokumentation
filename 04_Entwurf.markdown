@@ -79,35 +79,27 @@ In diesem Teilabschnitt werden die Komponenten zur Funktionsbereitstellung techn
 
 ### Model \label{abschn:Model}
 
-Das Modell für die Datenhaltung ist dem des realen Systems nachempfunden, beschränkt aber sich auf die wesentlichen Elemente zur Generierung einer Folksonomie. Zur Visualisierung für die Präsentation wurde zusätzlich noch ein Bild hinzugefügt.
-
-<!--
-Abb. \ref{abb:KlassendiagrammDatenmodell} TESTEN
-
-Abb. \nameref{abb:KlassendiagrammDatenmodell} TESTEN
--->
-
-\autoref{abb:KlassendiagrammDatenmodell}
+Das Modell für die Datenhaltung (\autoref{abb:KlassendiagrammDatenmodell}) ist dem des realen Systems nachempfunden, beschränkt aber sich auf die wesentlichen Elemente zur Generierung einer Folksonomie. Zur Visualisierung für die Präsentation wurde zusätzlich noch ein Bild hinzugefügt.
 
 ![\label{abb:KlassendiagrammDatenmodell} Klassendiagramm des Datenmodells](img/KlassendiagrammDatenmodell.jpg)
 
 Das Bild wird base64 Codiert als Text in dem data Attribut des Business Objects gespeichert.
 
-\autoref{abb:EntityRelationshipDiagram}
+Die \autoref{abb:EntityRelationshipDiagram} verdeutlicht die Bezieungen in der Datenbank.
 
 ![\label{abb:EntityRelationshipDiagram} Entity Relationship Diagram](img/EntityRelationshipDiagram.jpg)
 
 ### DataAccess
 
-Die Klasse SqliteDatabaseConnection abstrahiert die systemeigene Schnittstelle und erstellt Abfragen verschiedener Rückgabegranularität (Nur Ausführen, Skalarer Wert, Alle Werte). Außerdem wird die Funktionalität um weitere Hilfsmethoden wie Tabellenexistenz prüfen erweitert. Die Klasse Repository stellt die Datenobjektzugriffsmethoden bereit und bietet so einen abstrakten und objektorientierten Zugriff auf die Persistenzschicht.
-
-\autoref{abb:KlassendiagrammDatenbankzugriff}
+Die Klasse `SqliteDatabaseConnection` abstrahiert die systemeigene Schnittstelle und erstellt Abfragen verschiedener Rückgabegranularität (Nur Ausführen, Skalarer Wert, Alle Werte). Außerdem wird die Funktionalität um weitere Hilfsmethoden wie Tabellenexistenz prüfen erweitert. Die Klasse Repository stellt die Datenobjektzugriffsmethoden (\autoref{abb:KlassendiagrammDatenbankzugriff}) bereit und bietet so einen abstrakten und objektorientierten Zugriff auf die Persistenzschicht.
 
 ![\label{abb:KlassendiagrammDatenbankzugriff} Klassendiagramm von Datenbankzugriff](img/KlassendiagrammDatenbankzugriff.jpg)
 
 ### Service
 
-In dieser Komponente ist die gesamte Logik implementiert. 
+In dieser Komponente (\autoref{abb:KlassendiagrammServices}) ist die gesamte Logik implementiert. 
+
+![\label{abb:KlassendiagrammServices} Klassendiagramm von Services](img/KlassendiagrammServices.jpg)
 
 Der `DatabaseService`
 :	initialisiert und leert die Datenbank.
@@ -127,13 +119,8 @@ Der `GraphExportService`
 Der `TagLoadingService`
 :	generiert und führt die SQL Abfrage für das Laden der in Beziehung stehenden Tags anhand der Suchanfrage aus, welche als Parameter übergeben wird. Dabei werden auch deren Gewichte anhand der Häufigkeit des Vorkommens an den im Suchergebnis gelisteten BusinessObjects berechnet.
 
-
 Der `DataLoadingService`
 :	generiert und führt die SQL Anfrage aus, welche anhand der Suchanfrage die entsprechenden BusinessObjects aus der Persistenzschicht lädt.
-
-\autoref{abb:KlassendiagrammServices}
-
-![\label{abb:KlassendiagrammServices} Klassendiagramm von Services](img/KlassendiagrammServices.jpg)
 
 ### Klassen
 
@@ -166,17 +153,15 @@ Der `TagCollectionToStringConverter`
 
 ## Benutzeroberfläche
 
-Die Benutzeroberfläche ist wie für einen Prototyp typisch schlicht gehalten. Zur besseren Benutzbarkeit sind die Grenzen rechts und unterhalb der Gefundenen BusinessObjects frei verschiebbar.
-
-\autoref{abb:InitialzustandPrototyp}
+Die Benutzeroberfläche ist wie für einen Prototyp (\autoref{abb:InitialzustandPrototyp}) typisch schlicht gehalten. Zur besseren Benutzbarkeit sind die Grenzen rechts und unterhalb der Gefundenen BusinessObjects frei verschiebbar.
 
 ![\label{abb:InitialzustandPrototyp} Initialzustand des Prototyps (Datenbank geladen)](img/InitialzustandPrototyp.jpg)
 
-# Konstruktion eines nachvollziehbaren Beispiels für die Präsentation
+# Konstruktion eines nachvollziehbaren Beispiels zur Präsentation
 
 Da geographische Daten für die Präsentation für den Zuhörer eher uninteressant und nicht unbedingt nachvollziehbar sind wurde beschlossen, unser erworbenes Verständnis einer guten Folksonomie zu anzuwenden und ein simples Beispiel zu erstellen, sodass der Zuhörer das Interesse während der Präsentation nicht verliert. Dabei wurde sich auf den Themenbereich Disney geeinigt, da davon ausgegangen wurde, dass jeder einen Großteil dieser Figuren kennt und so die Beziehungen deutlicher und somit verständlicher werden.
 
-## Beispielhafter Filter-/Suchprozess
+**Beispielhafter Filter-/Suchprozess**
 
 Um ein Verständnis für den Ablauf einer Such- bzw. Filteraktion durch den Nutzer und den Zusammenhang zwischen WordCloud, Ergebnisliste und Datenbankabfrage zu erlangen, wird der Prozess exemplarisch anhand der selbst erstellten Datenbank beschrieben.
 
@@ -190,49 +175,58 @@ Tags | Auswahl (mit Ziel \enquote{Munkelt})
 2    | Mutig
 3    | Clever
 
+\newpage 
+
 **Schritt 1: Benutzer klickt auf das Tag \enquote{stark} in der WordCloud.**
 
-Dadurch wird im Hintergrund folgende SQL Query ausgeführt:
+Dadurch wird im Hintergrund das SQL Query gem. \autoref{abb:sql1} generiert und ausgeführt.
 
-\lstinputlisting[numbers=none, caption={}, title={}, label={}, language=]{04_SQL1.sql}
+\begin{figure}
+
+\lstinputlisting[basicstyle=\ttfamily, numbers=none, caption={}, title={}, label={}, language=]{04_SQL1.sql}
+
+\caption{\label{abb:sql1} 1. Abfrage}
+\end{figure}
 
 Pro angeklickten Tag wird jeweils ein zusätzlicher JOIN über die Tabelle der Businessobjekte und der Tags durchgeführt um die Filterung anhand des Tags zu ermöglichen.
 
-Es werden nun alle Objekte mit dem entsprechenden Tag \enquote{stark} herausgefiltert und angezeigt.
-
-\autoref{abb:FilterergebnisStark}
+Es werden nun alle Objekte mit dem entsprechenden Tag \enquote{stark} herausgefiltert und angezeigt (\autoref{abb:FilterergebnisStark}).
 
 ![\label{abb:FilterergebnisStark} Filterergebnis Tag \enquote{stark}](img/FilterergebnisStark.jpg)
 
-Als Resultat wird ebenfalls die WordCloud entsprechend des neuen Filterergebnis neu erstellt. Im Vergleich zur Ausgangs-WordCloud wird sie kleiner, da die Filtermenge eingeschränkt wurde.
-
-\autoref{abb:WordCloudFilterung1}
+Als Resultat wird ebenfalls die WordCloud entsprechend des neuen Filterergebnis neu erstellt. Im Vergleich zur Ausgangs-WordCloud wird sie kleiner, da die Filtermenge eingeschränkt wurde (\autoref{abb:WordCloudFilterung1}).
 
 ![\label{abb:WordCloudFilterung1} WordCloud nach 1. Filterung](img/WordCloudFilterung1.jpg)
 
 **Schritt 2: Benutzer klickt auf das Tag \enquote{mutig} in der WordCloud.**
 
-Dadurch wird im Hintergrund folgende SQL Query ausgeführt:
+Dadurch wird im Hintergrund das SQL Query gem. \autoref{abb:sql2} ausgeführt.
 
-\lstinputlisting[numbers=none, caption={}, title={}, label={}, language=]{04_SQL2.sql}
+\begin{figure}
 
-Es werden nun alle Objekte mit den entsprechenden Tags \enquote{stark} und \enquote{mutig} herausgefiltert und angezeigt.
+\lstinputlisting[basicstyle=\ttfamily, numbers=none, caption={}, title={}, label={}, language=]{04_SQL2.sql}
 
-\autoref{abb:FilterergebnisStarkMutig}
+\caption{\label{abb:sql2} 2. Abfrage}
+\end{figure}
+
+Es werden nun alle Objekte mit den entsprechenden Tags \enquote{stark} und \enquote{mutig} herausgefiltert und angezeigt (\autoref{abb:FilterergebnisStarkMutig}).
 
 ![\label{abb:FilterergebnisStarkMutig} Filterergebnis Tags \enquote{stark} & \enquote{mutig}](img/FilterergebnisStarkMutig.jpg)
 
-Als Resultat wird die WordCloud analog zum Schritt 1 entsprechend des neuen Filterergebnis neu erstellt.
-
-\autoref{abb:WordCloudFilterung2}
+Als Resultat wird die WordCloud analog zum Schritt 1 entsprechend des neuen Filterergebnis neu erstellt (\autoref{abb:WordCloudFilterung2}).
 
 ![\label{abb:WordCloudFilterung2} WordCloud nach 2. Filterung](img/WordCloudFilterung2.jpg)
 
 **Schritt 3: Benutzer klickt auf das Tag \enquote{clever} in der WordCloud.**
 
-Dadurch wird im Hintergrund folgende SQL Query ausgeführt:
+Dadurch wird im Hintergrund das SQL Query gem \autoref{abb:sql3} ausgeführt.
 
-\lstinputlisting[numbers=none, caption={}, title={}, label={}, language=]{04_SQL3.sql}
+\begin{figure}
+
+\lstinputlisting[basicstyle=\ttfamily, numbers=none, caption={}, title={}, label={}, language=]{04_SQL3.sql}
+
+\caption{\label{abb:sql3} 3. Abfrage}
+\end{figure}
 
 Es werden nun alle Objekte mit den entsprechenden Tags \enquote{stark}, \enquote{mutig} und \enquote{clever} herausgefiltert und angezeigt. Die Ergebnise in den resultierenden Objekten bleiben in diesem Fall allerdings im Vergleuch zu Schritt zwei gleich.
 
@@ -244,27 +238,26 @@ gleiches Bild wie zuvor!
 ![\label{abb:FilterergebnisStarkMutigClever} Filterergebnis Tags \enquote{stark}, \enquote{mutig} & \enquote{clever}](img/FilterergebnisStarkMutigClever.jpg)
 -->
 
-Die WordCloud wird analog zum Schritt 1 entsprechend des neuen Filterergebnis neu erstellt.
-
-\autoref{abb:WordCloudFilterung3}
+Die WordCloud wird analog zum Schritt 1 entsprechend des neuen Filterergebnis neu erstellt (\autoref{abb:WordCloudFilterung3}).
 
 ![\label{abb:WordCloudFilterung3} WordCloud nach 3. Filterung](img/WordCloudFilterung3.jpg)
 
 **Schritt 4: Benutzer sucht nach dem Begriff \enquote{Munkelt}.**
 
-Dadurch wird im Hintergrund folgende SQL Query ausgeführt:
+Dadurch wird im Hintergrund das SQL Query gem. \autoref{abb:sql4} ausgeführt.
 
-\lstinputlisting[numbers=none, caption={}, title={}, label={}, language=]{04_SQL4.sql}
+\begin{figure}
 
-Durch eine zusätzliche `WHERE`-Klausel werden nun alle Objekte mit den entsprechenden Tags \enquote{stark}, \enquote{mutig} & \enquote{clever} sowie den Namen, welche \enquote{Munkelt} enthalten, herausgefiltert und angezeigt.
+\lstinputlisting[basicstyle=\ttfamily, numbers=none, caption={}, title={}, label={}, language=]{04_SQL4.sql}
 
-\autoref{abb:FilterergebnisFinal}
+\caption{\label{abb:sql4} 4. Abfrage}
+\end{figure}
+
+Durch eine zusätzliche `WHERE`-Klausel werden nun alle Objekte mit den entsprechenden Tags \enquote{stark}, \enquote{mutig} & \enquote{clever} sowie den Namen, welche \enquote{Munkelt} enthalten, herausgefiltert und angezeigt (\autoref{abb:FilterergebnisFinal}).
 
 ![\label{abb:FilterergebnisFinal} Einzelnes Objekt nach 4. Filterung](img/FilterergebnisFinal.jpg)
 
-Als Resultat wird die WordCloud analog zum Schritt 1 entsprechend des neuen Filterergebnis neu erstellt. 
-
-\autoref{abb:WordCloudFilterung4}
+Als Resultat wird die WordCloud analog zum Schritt 1 entsprechend des neuen Filterergebnis neu erstellt (\autoref{abb:WordCloudFilterung4}).
 
 ![\label{abb:WordCloudFilterung4} WordCloud nach 4. Filterung](img/WordCloudFilterung4.jpg)
 
