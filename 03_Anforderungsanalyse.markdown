@@ -74,38 +74,38 @@ verkleinern, nachdem nach einem bestimmten Tag gefiltert wurde.
 Um eine Vorstellung von der zukünftigen Eingabe von Tags im ERP-System zu bekommen, wurden von den Studenten grafisch fünf GUIs
 entworfen. Diese sollten der Eingabe von Tags für sogenannte Datenobjekte dienen.
 Die Aufgabe der Studenten bestand darin, sich eine Form der Eingabemöglichkeit für Tags zu überlegen, wobei auch neue
-Dialoge entstehen können. Die Ergebnisse wurden im Gruppenmeeting präsentiert und deren Verwendung, im Austausch mit Herrn
+Dialoge entstehen können. Dabei Wurden sowohl eine \nameref{abb:BeispielmaskeOhneTagEingabe} als auch  eine \nameref{abb:BeispielmaskeMitTagEingabe} entworfen. Es wurde außerdem in \autoref{abb:Inline-vs-PopupEditor} ein Inline-Editor gegenüber einen Popup-Editor gestellt und eine \nameref{abb:BeispielmaskeMitPopupTagEingabe} vorgestellt. Des Weiteren kümmerten sich die Studenten um Benutzereingabemöglichkeiten, wie eine \nameref{abb:Twitter-likeTextbox},einen \nameref{abb:IDE-likeEditor} und eine \nameref{abb:Evernote-likeTagbox}. Eine Klassische Ansicht, wie in \autoref{abb:ClassicListbox} wurde ebenfalls entworfen. Die Ergebnisse wurden im Gruppenmeeting präsentiert und deren Verwendung, im Austausch mit Herrn
 Stein  diskutiert. 
 
-\autoref{abb:Inline-vs-PopupEditor}
+
 
 ![\label{abb:Inline-vs-PopupEditor} Inline vs. Popup-Editor](img/InlVSPopup.png)
 
-\autoref{abb:BeispielmaskeOhneTagEingabe}
 
-![\label{abb:BeispielmaskeOhneTagEingabe} Beispielmaske (ohne Tag Eingabe)](img/BeispielMaskeOhneTE.png)
 
-\autoref{abb:BeispielmaskeMitTagEingabe}
+![\label{abb:BeispielmaskeOhneTagEingabe} Beispielmaske ohne Tag Eingabe](img/BeispielMaskeOhneTE.png)
 
-![\label{abb:BeispielmaskeMitTagEingabe} Beispielmaske (mit Inline-Tag Eingabe)](img/SAPmitInline.png)
 
-\autoref{abb:BeispielmaskeMitPopupTagEingabe}
 
-![\label{abb:BeispielmaskeMitPopupTagEingabe} Beispielmaske (mit Popup – Tag Eingabe)](img/SAPmitPopUpPNG.png)
+![\label{abb:BeispielmaskeMitTagEingabe} Beispielmaske mit Inline-Tag Eingabe](img/SAPmitInline.png)
 
-\autoref{abb:Twitter-likeTextbox}
+
+
+![\label{abb:BeispielmaskeMitPopupTagEingabe} Beispielmaske mit Popup – Tag Eingabe](img/SAPmitPopUpPNG.png)
+
+
 
 ![\label{abb:Twitter-likeTextbox} Twitter-like Textbox (Inline)](img/TwitterLIke.png)
 
-\autoref{abb:IDE-likeEditor}
+
 
 ![\label{abb:IDE-likeEditor} IDE-like Editor (Inline)](img/IDELike.png)
 
-\autoref{abb:Evernote-likeTagbox}
+
 
 ![\label{abb:Evernote-likeTagbox} Evernote-like Tagbox (Inline)](img/EvernoteLike.png)
 
-\autoref{abb:ClassicListbox}
+
 
 ![\label{abb:ClassicListbox} Classic Listbox (Popup)](img/ClassikListBox.png)
 
