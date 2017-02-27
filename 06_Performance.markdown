@@ -56,7 +56,7 @@ Innerhalb der Methode `CalculateWordAppearence` muss als erste Anweisung die Sto
 
 In der Do-While-Schleife in der das Tag positioniert wird, muss die Zählvariable bei jedem Durchlauf um eins erhöht werden. Am Ende der `CalculateWordAppearence`-Methode muss noch die Methode `Stopp` mit `Stopp(stoppzeit, "CalcWordAppear", dlauf);` aufgerufen werden, damit die Stoppuhr angehalten wird.
 
-## Erweiterung des Spiralform-Verfahrens mit dem Halbierungsverfahren
+# Erweiterung des Spiralform-Verfahrens mit dem Halbierungsverfahren
 
 Für dieses Verfahren wurde ein Performance-Test durchgeführt. Es wurde ein ca. 3 Jahre alter, handelsüblicher Desktop PC im Labor der HTW eingesetzt um Vergleichbarkeit zu einem Bürorechner herzustellen.
 
