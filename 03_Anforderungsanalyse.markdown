@@ -116,10 +116,8 @@ Auf der \autoref{abb:FB_Szenario}
 
 ![\label{abb:FB_Szenario} Fallbeispiel Szenario](img/FB_Szenario.png)
 
-ist folgensed Szenario dargestellt:
-
-Drei verschiedene Personen, namens Karl, Max und Sabine geben für drei 
-unterschiedliche Obstsorten Tags ihrer Wahl ein.  
+ist folgendes Szenario dargestellt:
+Drei verschiedene Personen, namens Karl, Max und Sabine geben für drei unterschiedliche Obstsorten Tags ihrer Wahl ein.  
 
 Für die Apfelsorte: ``#Rot, #Süß, #Apfel``.
 
