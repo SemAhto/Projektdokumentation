@@ -10,6 +10,9 @@ Entwicklungsvoraussetzungen
 -->
 
 \chapter{Anforderungsanalyse}
+
+
+\input{03.1_Lizenzen}
 \input{03_Anforderungsanalyse}
 <!--
 Prinzipskizzen
@@ -17,7 +20,6 @@ Anforderungen
 Entwurf der GUI zur Eingabe von Tags
 Algorithmus Pseudocode & Fallbeispiele
 -->
-
 \input{03.0_VerfahrenTagCloudErstellung}
 
 \chapter{Entwurf}
