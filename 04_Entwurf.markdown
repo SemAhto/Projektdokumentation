@@ -165,7 +165,7 @@ Da geographische Daten für die Präsentation für den Zuhörer eher uninteressa
 
 Um ein Verständnis für den Ablauf einer Such- bzw. Filteraktion durch den Nutzer und den Zusammenhang zwischen WordCloud, Ergebnisliste und Datenbankabfrage zu erlangen, wird der Prozess exemplarisch anhand der selbst erstellten Datenbank beschrieben.
 
-**Ausgangslage**
+## Ausgangslage
 
 Ein Benutzer sucht nach einem Objekt, was er nicht genau kennt. Ihm sind lediglich einige Eigenschaften bekannt. Die zugehörige Datenbank wurde bereits geladen.
 
@@ -175,9 +175,7 @@ Tags | Auswahl (mit Ziel \enquote{Munkelt})
 2    | Mutig
 3    | Clever
 
-\newpage 
-
-**Schritt 1: Benutzer klickt auf das Tag \enquote{stark} in der WordCloud.**
+## Schritt 1: Benutzer klickt auf das Tag \enquote{stark} in der WordCloud.
 
 Dadurch wird im Hintergrund das SQL Query gem. \autoref{abb:sql1} generiert und ausgeführt.
 
@@ -198,7 +196,7 @@ Als Resultat wird ebenfalls die WordCloud entsprechend des neuen Filterergebnis 
 
 ![\label{abb:WordCloudFilterung1} WordCloud nach 1. Filterung](img/WordCloudFilterung1.jpg)
 
-**Schritt 2: Benutzer klickt auf das Tag \enquote{mutig} in der WordCloud.**
+## Schritt 2: Benutzer klickt auf das Tag \enquote{mutig} in der WordCloud.
 
 Dadurch wird im Hintergrund das SQL Query gem. \autoref{abb:sql2} ausgeführt.
 
@@ -217,7 +215,7 @@ Als Resultat wird die WordCloud analog zum Schritt 1 entsprechend des neuen Filt
 
 ![\label{abb:WordCloudFilterung2} WordCloud nach 2. Filterung](img/WordCloudFilterung2.jpg)
 
-**Schritt 3: Benutzer klickt auf das Tag \enquote{clever} in der WordCloud.**
+## Schritt 3: Benutzer klickt auf das Tag \enquote{clever} in der WordCloud.
 
 Dadurch wird im Hintergrund das SQL Query gem \autoref{abb:sql3} ausgeführt.
 
@@ -242,7 +240,7 @@ Die WordCloud wird analog zum Schritt 1 entsprechend des neuen Filterergebnis ne
 
 ![\label{abb:WordCloudFilterung3} WordCloud nach 3. Filterung](img/WordCloudFilterung3.jpg)
 
-**Schritt 4: Benutzer sucht nach dem Begriff \enquote{Munkelt}.**
+## Schritt 4: Benutzer sucht nach dem Begriff \enquote{Munkelt}.
 
 Dadurch wird im Hintergrund das SQL Query gem. \autoref{abb:sql4} ausgeführt.
 
@@ -261,6 +259,6 @@ Als Resultat wird die WordCloud analog zum Schritt 1 entsprechend des neuen Filt
 
 ![\label{abb:WordCloudFilterung4} WordCloud nach 4. Filterung](img/WordCloudFilterung4.jpg)
 
-**Ergebnis**
+## Ergebnis
 
 ![\label{abb:FilterergebnisFinalGesamt}Gesamtbild Endresultat](img/FilterergebnisFinal.jpg)
