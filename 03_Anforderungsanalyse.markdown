@@ -117,7 +117,7 @@ Zur visuellen Anordnung der unterschiedlich großen Tags/Worte in Tag-Clouds, re
 Bevor auf die Thematik der Folksonomie (\cite{onl:socialtaggingandfolksonomies}) näher eingegangen wird, sollten ein paar Begriffe zum besseren Verständnis geklärt werden.
 
 ###Social Network
-Ein Social Network oder zu deutsch ein soziales Netzwerk wird in diesem Zusammenhang als eine Zusammenkunft verschiedener Nutzer im Internet bezeichnet.
+Ein Social Network (\cite{onl:socialnetwork})oder zu deutsch ein soziales Netzwerk wird in diesem Zusammenhang als eine Zusammenkunft verschiedener Nutzer im Internet bezeichnet.
 Diese Nutzer können miteinander interagieren und die Aktionen der anderen Nutzer nachvollziehen. Diese Community (eng. Gemeinschaft, Vereinigung) gibt es zum Teil mit sehr allgemeinen Interessen (z.B. Facebook)
 oder aber auch mit einem speziellen Ziel (z.B. XING zu Jobsuche und zum herstellen von Geschäftskontakten).
 
@@ -146,9 +146,9 @@ Dadurch ist die Grundlage für eine unscharfe Suche geschaffen.
 Beispiele für Social Networks welche das Social Tagging unterstützen gibt es viele, wie z.B. *Instagram*, *Youtube*, *del.icio.us*, etc..
 
 ## Folksonomie
-Das Kofferwort Folksonomie ist aus folgenden Bestandteilen zusammengesetzt: Folk - das Volk oder auch die Laien; Taxis - die Klassifikation; Nomos - das Managment.
+Das Kofferwort Folksonomie (\cite{onl:folksonomy})ist aus folgenden Bestandteilen zusammengesetzt: Folk - das Volk oder auch die Laien; Taxis - die Klassifikation; Nomos - das Managment.
 Es bedeutet also soviel wie das Klassifikationsmanagment durch oder vom Volk aus. Der Begriff wurde erstmalig 2003 durch Van der Wal in einem Artikel erwähnt und maßgeblich durch Ihn geprägt. Fast alle Artikel oder Quellen beziehen sich auf seine Theorie.
-Bei der Folksonomie handelt es sich also, um die Beziehung von Tags, Ressourcen und Nutzern. Diese Verbindungen werden innerhalb eines Social Networks oder mittels einer sozialen Software erstellt und unterliegen keinen Regeln. Folksonomien entstehen durch den Prozess des Social Taggings und werden in immer mehr Systemen verwendet um den Nutzern eine zusätzliche Möglichkeit der Inhaltserschließung zu ermöglichen.
+Bei der Folksonomie (\cite{onl:folksonomiesccc}) handelt es sich also, um die Beziehung von Tags, Ressourcen und Nutzern. Diese Verbindungen werden innerhalb eines Social Networks oder mittels einer sozialen Software erstellt und unterliegen keinen Regeln. Folksonomien entstehen durch den Prozess des Social Taggings und werden in immer mehr Systemen verwendet um den Nutzern eine zusätzliche Möglichkeit der Inhaltserschließung zu ermöglichen.
 
 \autoref{abb:folksonomy}
 
@@ -157,7 +157,7 @@ Bei der Folksonomie handelt es sich also, um die Beziehung von Tags, Ressourcen 
 Die einzelnen Beziehungen zwischen Objekten, Nutzern und Tags können auf verschiedene Arten entstehen. Dabei unterscheidet man zwischen den Formen der Engen (Narrow) und der Breiten (Broad) Folksonomie.
 
 ###Narrow Folkyonomy / Enge Folksonomie
-Die enge Folksonomie wird heute am häufigsten verwendet, zum Beispiel bei Social Networks wie *Twitter* und *Instagram*. Hier wird ein Objekt von einem Nutzer erstellt und in das Netzwerk gestellt. Er versieht das Objekt mit initialen Tags über welche es von anderen Nutzern mit verschiedenen Vokabularen gefunden werden kann. Diese können nun weitere Tags an das Objekt anhängen und ermöglichen es nun eventuell weiteren Nutzern dieses Objekt zufinden und zu *betaggen*. Dabei ist das besondere, dass Tags nur einmalig an ein Objekt vergeben werden können. In der nachfolgenden Abbildung wird dies noch einmal verdeutlicht.
+Die enge Folksonomie (\cite{onl:unibielefeldfolksonomie}) wird heute am häufigsten verwendet, zum Beispiel bei Social Networks wie *Twitter* und *Instagram*. Hier wird ein Objekt von einem Nutzer erstellt und in das Netzwerk gestellt. Er versieht das Objekt mit initialen Tags über welche es von anderen Nutzern mit verschiedenen Vokabularen gefunden werden kann. Diese können nun weitere Tags an das Objekt anhängen und ermöglichen es nun eventuell weiteren Nutzern dieses Objekt zufinden und zu *betaggen*. Dabei ist das besondere, dass Tags nur einmalig an ein Objekt vergeben werden können. In der nachfolgenden Abbildung wird dies noch einmal verdeutlicht.
 
 \autoref{abb:narrowfolksonomy}
 
