@@ -48,7 +48,8 @@ for i in $(ls *.${mdext}); do
 	#~ ${sed} -i 's/{Shaded}/{shaded}/g' ${x}.tex
 	#~ ${sed} -i 's/\begin{Highlighting}\[\]//g' ${x}.tex
 	#~ ${sed} -i 's/\end{Highlighting}//g' ${x}.tex
-	#~ ${sed} -i 's/\[htbp\]/\[\!H\]/g' ${x}.tex
+	#~ ${sed} -i 's/\[htbp\]/\[\!htbp\]/g' ${x}.tex
+	${sed} -i 's/\[htbp\]//g' ${x}.tex
 done
 #~ cp ${doc}/${wrapper}.tex ./
 #cp ${doc}/${inv}.tex ./
