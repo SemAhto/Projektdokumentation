@@ -198,3 +198,4 @@ Bei einer Eingabe von 199 Wörtern aus einem Abschnitt eines Zahnmedizinischen K
 
 \pagebreak
 
+![\label{abb:TreeTaggerWortschatzprojekt} TreeTagger vs. Wortschatzprojekt](img/TreeTaggerWortschatzprojekt.png)
