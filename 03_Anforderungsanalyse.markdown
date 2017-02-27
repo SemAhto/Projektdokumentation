@@ -244,7 +244,7 @@ Abbildung wird auch die Breite Folksonomie noch einmal verdeutlicht.
 
 ![\label{abb:broadfolksonomy} Broad Folksonomy](img/broadfolksonomy.jpg)
 
-<!--BREAK-->
+
 
 ### Vorteile und Nachteile von Folksonomien
 | Vorteile der Folksonomie    | Nachteile der Folksonomie   							 | 
@@ -261,7 +261,9 @@ Deshalb gibt es in vielen Systemen Klassifikationen oder ähnliches um den Nutze
 Folksonomien und dem Social Tagging ist es möglich dem Nutzer eine unscharfe Suche zu ermöglichen. Dies
 bietet den Vorteil das der Nutzer sich *stöbernd* durch die Objekte bewegen kann und seine Auswahl immer mehr eingrenzt, bis er
 nur noch eine überschaubare Menge an Ressourcen übrig hat und in dieser sich sein gesuchtes Objekt
-befindet. Dabei wird er auch sensibilisiert auf den Inhalt oder die thematischen Verbindungen der Ressource, da er die Tags
+befindet. 
+<!--BREAK-->
+Dabei wird er auch sensibilisiert auf den Inhalt oder die thematischen Verbindungen der Ressource, da er die Tags
 liest und mit dem Objekt verbindet.
 Je mehr User die Tags *betaggen*, desto authentischer wird die
 Folksonomie.Doch dadurch entstehen auch die Probleme mit Folksonomien
