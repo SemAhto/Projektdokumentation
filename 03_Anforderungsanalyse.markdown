@@ -1,6 +1,6 @@
-
 Während den ersten zwei Gruppenmeetings wurden der Entwurf von Anwendungsfällen für Folksonomien, Social
-Tagging und Tag-Clouds im ERP-System ausgearbeitet. Dabei wurde sich an der Satzschablone von Chris Rupp (vgl. \cite{Sophist:Schablonen})
+Tagging und Tag-Clouds im ERP-System ausgearbeitet. Dabei wurde sich an der Satzschablone von Chris Rupp (vgl.
+\cite{Sophist:Schablonen})
 orientiert. Anhand dessen wurden folgende Prinzipsskizzen erstellt, wie auch Anforderungen schriftlich formuliert. Folgene Ergebnisse wurden dabei erzielt:
 
 # Prinzipskizzen:
@@ -245,6 +245,10 @@ Abbildung wird auch die Breite Folksonomie noch einmal verdeutlicht.
 ![\label{abb:broadfolksonomy} Broad Folksonomy](img/broadfolksonomy.jpg)
 
 
+
+
+
+
 ### Vorteile und Nachteile von Folksonomien
 | Vorteile der Folksonomie    | Nachteile der Folksonomie   							 | 
 | :--------------------------|:--------------------------------------------------------------------------------  | 
@@ -261,21 +265,8 @@ Folksonomien und dem Social Tagging ist es möglich dem Nutzer eine unscharfe Su
 bietet den Vorteil das der Nutzer sich *stöbernd* durch die Objekte bewegen kann und seine Auswahl immer mehr eingrenzt, bis er
 nur noch eine überschaubare Menge an Ressourcen übrig hat und in dieser sich sein gesuchtes Objekt
 befindet. Dabei wird er auch sensibilisiert auf den Inhalt oder die thematischen Verbindungen der Ressource, da er die Tags
-liest und mit dem Objekt verbindet.
-Je mehr User die Tags *betaggen*, desto authentischer wird die
-Folksonomie.Doch dadurch entstehen auch die Probleme mit Folksonomien
-denn durch die fehlende Kontrolle und durch fehlende Regeln können
-schlechte oder irritierende  Tags das Ergebnis verfälschen. Zum Beispiel
-können Tags mit der gleichen Bedeutung in verschiedenen Zeitformen oder
-Wortbeugungen an die Ressource angehangen werden oder es können Spam-
-oder auch *Troll-* Tags angehangen werden. Und das natürlich auch in
-allen erdenklichen Sprachen.
-Das alles ist auf ein fehlendes Vokabular und die fehlenden Standards
-zurückzuführen.
-Möglichkeiten zur Ausbesserung dieser Nachteile wäre zum Beispiel eine
-automatische Suchvervollständigung, welche schon vorhandene Tags
-vorschlägt. Eine weitere Verbesserung wäre die Wortstammfindung, welche
-in Kapitel \label{Lemmatisierung}  näher beschrieben wird.
+liest und mit dem Objekt verbindet. Je mehr User die Tags *betaggen*, desto authentischer wird die Folksonomie.Doch dadurch entstehen auch die Probleme mit Folksonomien denn durch die fehlende Kontrolle und durch fehlende Regeln können schlechte oder irritierende  Tags das Ergebnis verfälschen. Zum Beispielkönnen Tags mit der gleichen Bedeutung in verschiedenen Zeitformen oder
+Wortbeugungen an die Ressource angehangen werden oder es können Spam-oder auch *Troll-* Tags angehangen werden. Und das natürlich auch in allen erdenklichen Sprachen. Das alles ist auf ein fehlendes Vokabular und die fehlenden Standards zurückzuführen. Möglichkeiten zur Ausbesserung dieser Nachteile wäre zum Beispiel eine automatische Suchvervollständigung, welche schon vorhandene Tags vorschlägt. Eine weitere Verbesserung wäre die Wortstammfindung, welche in Kapitel \label{Lemmatisierung}  näher beschrieben wird.
 
 
 
