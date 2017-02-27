@@ -261,7 +261,9 @@ Deshalb gibt es in vielen Systemen Klassifikationen oder ähnliches um den Nutze
 Folksonomien und dem Social Tagging ist es möglich dem Nutzer eine unscharfe Suche zu ermöglichen. Dies
 bietet den Vorteil das der Nutzer sich *stöbernd* durch die Objekte bewegen kann und seine Auswahl immer mehr eingrenzt, bis er
 nur 
+
 \pagebreak
+
 noch eine überschaubare Menge an Ressourcen übrig hat und in dieser sich sein gesuchtes Objekt
 befindet. 
 
