@@ -209,6 +209,14 @@ Anders als bei der engen Folksonomie besteht bei der breiten Folksonomie die Mö
 | Masseninformation können gesammelt werden	           | Keine Eindeutigkeit /  fehlendes Vokabular		 | 
 |Sensibilisieren Nutzer für Inhaltserschließung |								 |
 
+Das Suchen von Objekten und Ressourcen ist kein triviales Phänomen in der Informatik oder in Social Networks. Das Problem dabei ist, dass der Suchende meist nicht ganz exakt weis wonach er eigentlich sucht.
+Entweder fehlt dem Suchenden die genaue Bezeichnung oder er hat nur eine wage Richtung in welcher die Ressource vermutet wird.
+Deshalb gibt es in vielen Systemen Klassifikationen oder ähnliches um den Nutzer bei seiner Suche zu unterstützen. Mittels Folksonomien und dem Social Tagging ist es möglich dem Nutzer eine unscharfe Suche zu ermöglichen. Dies bietet den Vorteil das der Nutzer sich *stöbernd* durch die Objekte bewegen kann und seine Auswahl immer mehr eingrenzt, bis er nur noch eine überschaubare Menge an Ressourcen übrig hat und in dieser sich sein gesuchtes Objekt befindet. Dabei wird er auch sensibilisiert auf den Inhalt oder die thematischen Verbindungen der Ressource, da er die Tags liest und mit dem Objekt verbindet.
+Je mehr User die Tags *betaggen*, desto authentischer wird die Folksonomie. Doch dadurch entstehen auch die Probleme mit Folksonomien denn durch die fehlende Kontrolle und durch fehlende Regeln können schlechte oder irritierende  Tags das Ergebnis verfälschen. Zum Beispiel können Tags mit der gleichen Bedeutung in verschiedenen Zeitformen oder Wortbeugungen an die Ressource angehangen werden oder es können Spam- oder auch *Troll-* Tags angehangen werden. Und das natürlich auch in allen erdenklichen Sprachen.
+Das alles ist auf ein fehlendes Vokabular und die fehlenden Standards zurückzuführen.
+Möglichkeiten zur Ausbesserung dieser Nachteile wäre zum Beispiel eine automatische Suchvervollständigung, welche schon vorhandene Tags vorschlägt. Eine weitere Verbesserung wäre die Wortstammfindung, welche in Kapitel \label{Lemmatisierung}  näher beschrieben wird.
+
+
 
 ##Tag-Clouds
 
