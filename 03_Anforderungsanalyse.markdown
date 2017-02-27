@@ -150,6 +150,8 @@ Das Kofferwort Folksonomie ist aus folgenden Bestandteilen zusammengesetzt: Folk
 Es bedeutet also soviel wie das Klassifikationsmanagment durch oder vom Volk aus. Der Begriff wurde erstmalig 2003 durch Van der Wal in einem Artikel erwähnt und maßgeblich durch Ihn geprägt. Fast alle Artikel oder Quellen beziehen sich auf seine Theorie.
 Bei der Folksonomie handelt es sich also, um die Beziehung von Tags, Ressourcen und Nutzern. Diese Verbindungen werden innerhalb eines Social Networks oder mittels einer sozialen Software erstellt und unterliegen keinen Regeln. Folksonomien entstehen durch den Prozess des Social Taggings und werden in immer mehr Systemen verwendet um den Nutzern eine zusätzliche Möglichkeit der Inhaltserschließung zu ermöglichen.
 
+\autoref{folksonomy}
+
 ![\label{abb:folksonomy} Zusammenhang zw. User, Tags & Ressourcen](img/folksonomy.png)
 
 Die einzelnen Beziehungen zwischen Objekten, Nutzern und Tags können auf verschiedene Arten entstehen. Dabei unterscheidet man zwischen den Formen der Engen (Narrow) und der Breiten (Broad) Folksonomie.
@@ -157,10 +159,14 @@ Die einzelnen Beziehungen zwischen Objekten, Nutzern und Tags können auf versch
 ###Narrow Folkyonomy / Enge Folksonomie
 Die enge Folksonomie wird heute am häufigsten verwendet, zum Beispiel bei Social Networks wie *Twitter* und *Instagram*. Hier wird ein Objekt von einem Nutzer erstellt und in das Netzwerk gestellt. Er versieht das Objekt mit initialen Tags über welche es von anderen Nutzern mit verschiedenen Vokabularen gefunden werden kann. Diese können nun weitere Tags an das Objekt anhängen und ermöglichen es nun eventuell weiteren Nutzern dieses Objekt zufinden und zu *betaggen*. Dabei ist das besondere, dass Tags nur einmalig an ein Objekt vergeben werden können. In der nachfolgenden Abbildung wird dies noch einmal verdeutlicht.
 
+\autoref{narrowfolksonomy}
+
 ![\label{abb:narrowfolksonomy} Narrow Folksonomy](img/narrowfolksonomy.jpg)
 
 ###Broad Folksonomy / Breite Folksonomie
 Anders als bei der engen Folksonomie besteht bei der breiten Folksonomie die Möglichkeit, dass die User Tags mehrfach an ein Objekt anhängen. Dadurch besteht die Möglichkeit die Popularität (die *Beliebtheit*) eines Tags auf einem Objekt zu bestimmten und auszuwerten. Ein Beispiel für die breite Folksonomie ist die Website del.icio.us. In der nachstehenden Abbildung wird auch die Breite Folksonomie noch einmal verdeutlicht.
+
+\autoref{broadfolksonomy}
 
 ![\label{abb:broadfolksonomy} Broad Folksonomy](img/broadfolksonomy.jpg)
 
@@ -169,6 +175,8 @@ Anders als bei der engen Folksonomie besteht bei der breiten Folksonomie die Mö
 
 
 ##Tag-Clouds
+
+\autoref{tagCloud}
 
 ![\label{abb:tagCloud} Tag-Cloud](img/tagCloud.png)
 
