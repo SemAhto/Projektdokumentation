@@ -196,3 +196,5 @@ der Wortart eines Wortes. Bei einer Eingabe von 263 Wörtern aus einem Buchabsch
 Da es sich um sehr fachspezifische Daten handelt, welche als Eingabe erfolgen würden, ist das Wortschatzprojekt nicht geeignet. Bei unbekannten Wörtern erfolgt keine Rückgabe.
 Bei einer Eingabe von 199 Wörtern aus einem Abschnitt eines Zahnmedizinischen Katalogs lag die Genauigkeit nunmehr bei 62%. Darüber hinaus führt die Eingabe von Zahlen zu einer Überflutung an Rückgaben.
 
+\pagebreak
+
