@@ -137,7 +137,7 @@ Eine unscharfe Suche ist die Möglichkeit eine bestimmte Ressource innerhalb ein
 ##Social Tagging
 Als Tagging oder auch taggen wird der Prozess des Tag an eine Ressource anhängen beschrieben (Indexieren). Beim Social Tagging geschieht dies innerhalb eines Social Networks durch die User. Dabei werden an verschiedene Ressourcen durch verschieden User verschiedene Tags angehängt. Dadurch können User wiederum andere Ressourcen finden und die Ressourcen mit weiteren Tags versehen.
 Dadurch ist die Grundlage für eine unscharfe Suche geschaffen.
-
+\autoref{abb:socialtagging}
 ![\label{abb:socialtagging} Social Tagging](img/socialtagging.png)
 
 
