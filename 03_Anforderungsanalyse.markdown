@@ -243,6 +243,7 @@ Abbildung wird auch die Breite Folksonomie noch einmal verdeutlicht.
 \autoref{abb:broadfolksonomy}
 
 ![\label{abb:broadfolksonomy} Broad Folksonomy](img/broadfolksonomy.jpg)
+
 <!--BREAK-->
 
 ### Vorteile und Nachteile von Folksonomien
