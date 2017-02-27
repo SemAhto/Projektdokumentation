@@ -26,3 +26,10 @@ Zur Verwaltung des Quellcodes wird aufgrund des bestehenden Projektes der Firma 
 Zur Verwaltung der Aufgaben wurde am ersten Termin *Trello*\footnote{\href{https://trello.com/}{https://trello.com/}} festgelegt. Damit sind Notizen für alle Teilnehmer auch mobil erreichbar und auch für Ungeübte im Umgang mit Git zugänglich.
 
 Im Raum A111 stand uns ein Rechner mit Möglichkeit zur Installation des ERP neben der Entwicklungsumgebung bereit. Dieser wurde insb. durch die Aufgaben zum Textmining auch via Remote Desktop (RDP) genutzt, die Entwicklung in C# auf lokalen Maschinen u.a. im Laborbereich oder dem eigenen Notebook leichter zu handhaben ist.
+
+<!--
+
+Entsprechend GitHub wurde Markdown\footnote{Einfache Markupsprache von John Gruber: \href{daringfireball.net/projects/markdown/}{daringfireball.net/projects/markdown/}} für die Dokumentation ausgewählt.
+Bei zeitnaher Dokumentation der einzelnen Vorgänge lassen sich so die abzugebenden Dokumente vergleichbar ad-hoc über Pandoc in LaTeX umwandeln und abgabebereit aufbereiten.
+
+-->
