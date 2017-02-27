@@ -131,9 +131,8 @@ Diese eingegebenen Tags werden in einer Datentabelle erfasst.
 
 ![\label{abb:FB_Daten} Fallbeispiel Szenario](img/FB_Daten.png)
 
-In einer weiteren Tabelle, werden die eingegebenen Tags sowohl aufgelistet als auch festgehalten, wie oft ein Tag eingegeben wurde. An der Häufigkeit eines eingegebenen Tags, wird außerdem seine Größe, wi er letztendlich in der Tag-Cloud abgebildet werden sollbestimmt.
+In einer weiteren Tabelle, werden die eingegebenen Tags sowohl aufgelistet als auch festgehalten, wie oft ein Tag eingegeben wurde. An der in \autoref{abb:FB_Rahmenbedingungen} abgebilteten Formel, wird außerdem seine Größe, mit der er letztendlich in der Tag-Cloud abgebildet werden soll bestimmt.
 
-\autoref{abb:FB_Rahmenbedingungen}
 
 ![\label{abb:FB_Rahmenbedingungen} Fallbeispiel Szenario](img/FB_Rahmenbedingungen.png)
 
