@@ -65,12 +65,12 @@ BusinessObject anzeigen und editieren
 
 ### WordCloud
 
-Die folgenden Funktionen dienen zur Modifikation des Filters über die WordCloud.
+Die folgenden Funktionen dienen zur Modifikation des Filters bezogen auf die Tags zum Filter über die WordCloud.
 
-Tag dem Filter hinzufügen
+Hinzufügen
 :	Um ein Tag zum Filter hinzuzufügen, ist lediglich ein Klick auf das gewünschte Tag in der WordCloud nötig. Dieses wird dann sofort zum Filter hinzugefügt. Sofort darauffolgend aktualisiert sich auch die WordCloud und die Anzeige der gefundenen BussinessObjects, da diese direkt von dem Filter abhängen.
 
-Tag vom Filter entfernen
+Entfernen
 :	Einen Tag vom Filter zu entfernen ist ähnlich simpel, wie einen Tag zum Filter hinzuzufügen. Zum Entfernen ist ebenfalls nur ein Klick auf das zu entfernende Tag im Filter nötig. Darauffolgend wird, analog zum Tag hinzufügen, die WordCloud sowie die Anzeige der BussinessObjects aktualisiert.
 
 ## Komponenten
@@ -83,7 +83,7 @@ Das Modell für die Datenhaltung (\autoref{abb:KlassendiagrammDatenmodell}) ist 
 
 ![\label{abb:KlassendiagrammDatenmodell} Klassendiagramm des Datenmodells](img/KlassendiagrammDatenmodell.jpg)
 
-Das Bild wird base64 Codiert als Text in dem data Attribut des Business Objects gespeichert.
+Das Bild wird base64-codiert als Text in dem Attribut `data` des Business Objects gespeichert.
 
 Die \autoref{abb:EntityRelationshipDiagram} verdeutlicht die Bezieungen in der Datenbank.
 
@@ -101,54 +101,54 @@ In dieser Komponente (\autoref{abb:KlassendiagrammServices}) ist die gesamte Log
 
 ![\label{abb:KlassendiagrammServices} Klassendiagramm von Services](img/KlassendiagrammServices.jpg)
 
-Der `DatabaseService`
+`DatabaseService`
 :	initialisiert und leert die Datenbank.
 
-Der `OpenFileService`
+`OpenFileService`
 :	sorgt für eine geordnete Auswahl einer Datei, indem er Eigenschaften anbietet, die die Dateien an Endungen filtert und prüft ob die Datei wirklich existiert und so entweder nichtexistierende Dateien verbietet, erlaubt oder erfordert.
 
-Der `TerraConvertionService`
+`TerraConvertionService`
 :	lädt die Terra Xml Datei und wandelt diese in eine SQLite Datenbank um.
 
-Der `DataGenerationService`
+`DataGenerationService`
 :	lädt diese Datenbank wieder und wandelt deren Elemente und Beziehungen in BusinessObjects und Tags um und speichert diese in der Persistenzschicht. Die im Service enthaltene Entity Klasse enthält dabei die Eigenschaften eines Elementtyps, um die Daten aus der Datenbank zu extrahieren und zu transformieren.
 
-Der `GraphExportService`
+`GraphExportService`
 :	lädt alle Daten der Persistenzschicht und wandelt diese in Cypherkommandos um, die ein Neo4j Graphen Datenbankschema erzeugen. Das Ergebnis wird in eine zuvor ausgewählte Textdatei gepeichert. Dabei stellen die BusinessObjects und die Tags jeweils Knoten dar und deren Beziehungen die Verbindungen. Damit kann sich ein Überblick über das Netz in der Datenbank verschafft werden.
 
-Der `TagLoadingService`
+`TagLoadingService`
 :	generiert und führt die SQL Abfrage für das Laden der in Beziehung stehenden Tags anhand der Suchanfrage aus, welche als Parameter übergeben wird. Dabei werden auch deren Gewichte anhand der Häufigkeit des Vorkommens an den im Suchergebnis gelisteten BusinessObjects berechnet.
 
-Der `DataLoadingService`
+`DataLoadingService`
 :	generiert und führt die SQL Anfrage aus, welche anhand der Suchanfrage die entsprechenden BusinessObjects aus der Persistenzschicht lädt.
 
 ### Klassen
 
-Die WordCloud Klasse `TerraDbWordCloudAppearenceArguments`
+`TerraDbWordCloudAppearenceArguments` (WordCloud Klasse)
 :	definiert die für die WordClouddarstellung benötigten Parameter.
 
-Die Klasse `Logger`
+`Logger`
 :	dient zu Demonstrationszwecken und bieten dem Nutzer einen Einblick, wie die Berechnungsalgorithmen für die Folksonomien funktionieren.
 
 ### MVVM
 
 Das Model-View-ViewModel (MVVM) Pattern ist zentraler Bestandteil der Windows Presentaion Foundation (WPF), dem aktuellen Applicationframework für die Windowsprogrammierung. Es dient der strikten Trennung der Oberfläche (View) von der Logik (ViewModel) und den Daten (Model).
 
-Die `ViewModel`
+`ViewModel`
 :	enthalten, wie bereits erwähnt, die Logik der Benutzeroberfläche der Applikation. Das heißt sie stellt Daten zur Darstellung und Kommandos zur Interaktion bereit. Das `MainViewModel` ist für das Hauptfenster, das `BusinessObjectEditorViewModel` für das Popup, das angezeigt wird wenn ein gefundenes `BusinessObject` per Klick geöffnet wird und das `TagCollectionViewModel` für das Popup, das angezeigt wird, wenn Tags eines `BusinessObject` per `OldSchool` Methode bearbeitet werden zuständig. Diese wurden an die Jeweiligen Views als `DataContext` gebunden.
 
-Das `RelayCommand`
+`RelayCommand`
 :	ist eine Helferklasse, die das ICommand Inferface implementiert und die Methoden CanExecute und Execute als Delegat-Typen bereitstellt, sodass diese Logik direkt im ViewModel implementiert werden kann ohne dass eine Extra Klasse für Kommandos angelegt werden muss und gegebenenfalls Kontexte umständlich übergeben werden müssen.
 
 ### Converter
 
-Der `Converter`
+`Converter`
 :	dienen als Übersetzer der Daten in ein angemessenes Format für die View. Sie werden an eine Datenbindung angehangen über konvertieren die Daten bei jeder Änderung. So kann diese Konvertierungslogik aus dem ViewModel entfernt werden und ist wiederverwendbar
 
-Der `BooleanToVisibilityContainer`
+`BooleanToVisibilityContainer`
 :	überträgt einen Wahrheitswert in die VisibiltyEnumeration.
 
-Der `TagCollectionToStringConverter`
+`TagCollectionToStringConverter`
 :	serialisiert die TagCollection in eine Zeichenkette und parst diese nach Änderung wieder in eine TagCollection zurück. Somit ist eine sehr einfache Tageingabe möglich, da dieser an jede beliebige Texteingabe gebunden werden kann.
 
 ## Benutzeroberfläche
@@ -164,6 +164,8 @@ Da geographische Daten für die Präsentation für den Zuhörer eher uninteressa
 **Beispielhafter Filter-/Suchprozess**
 
 Um ein Verständnis für den Ablauf einer Such- bzw. Filteraktion durch den Nutzer und den Zusammenhang zwischen WordCloud, Ergebnisliste und Datenbankabfrage zu erlangen, wird der Prozess exemplarisch anhand der selbst erstellten Datenbank beschrieben.
+
+\newpage
 
 ## Ausgangslage
 
@@ -259,6 +261,10 @@ Als Resultat wird die WordCloud analog zum Schritt 1 entsprechend des neuen Filt
 
 ![\label{abb:WordCloudFilterung4} WordCloud nach 4. Filterung](img/WordCloudFilterung4.jpg)
 
+\newpage
+
 ## Ergebnis
+
+Die finale Auswhal ist in \autoref{abb:FilterergebnisFinalGesamt} zu sehen.
 
 ![\label{abb:FilterergebnisFinalGesamt}Gesamtbild Endresultat](img/FilterergebnisFinal.jpg)

@@ -40,8 +40,6 @@ Algorithmus Pseudocode & Fallbeispiele
 
 
 <!--       %Beginn des Anhangs
-\appendix
-\clearpage
 \chapter*{Anhange}
 \addcontentsline{toc}{chapter}{Anhang}
 \newpage
@@ -49,6 +47,9 @@ Algorithmus Pseudocode & Fallbeispiele
  -->
 
 <!--
+\appendix
+\clearpage
+\pagenumbering{Alph}
 \includepdf[pages={1},addtotoc={0,section*,1,Aufgabenstellung,p1}]{img/ProjBeschr-Munkelt.pdf}
 \addcontentsline{toc}{section}{Aufgabenstellung}  \label{sec:Aufgabenstellung}
 
@@ -65,8 +66,8 @@ Algorithmus Pseudocode & Fallbeispiele
 <!--
 s.a. http://www.suedraum.de/latex/stammtisch/degenkolb_latex_biblatex_folien-final.pdf
 -->
+
 \printbibliography[
 	title={Quellennachweise}
-]
-\pagenumbering{Alph}
-\addcontentsline{toc}{chapter}{Quellennachweise}
+] \addcontentsline{toc}{chapter}{Quellennachweise}
+

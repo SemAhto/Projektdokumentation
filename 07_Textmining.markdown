@@ -76,6 +76,8 @@ Sketch Engine (\cite{wiki:sketchEngine}, \cite{onl:sketchEngine}) ist eine seit 
 
 Auch hier sind die Studenten nicht weitergekommen, da die Sketch Engine und nicht ein einzelnes Lemma zurückgeben werden kann.
 
+\newpage
+
 ## TreeTagger
 
 Der TreeTagger (\cite{onl:treeTagger2}) der Universität München ist ein Werkzeug zur Annotation eines Textes mittels Part-of-speach Tagging und Lemmata Informationen. Entwickelt wurde er von Helmut Schmidt in dem TC Projekt am Institut für Conputerlinguistik der Universität Stuttgart. Er kann erfolgreich Deutsch, Englisch, Französisch und viele weitere Sprachen taggen. Er besitzt einen handtrainierten Textkorpus, der individuell erweiterbar ist. Einsetzbar ist er unter Windows, Linux und Mac-OS. Der TreeTagger (\cite{onl:treeTagger1}) und das Trainingsprogramm ist frei verfügbar für Forschung, Bildung und Evaluation. Zusätzlich ist unter Windows ein graphisches Interface verfügbar.
@@ -112,6 +114,8 @@ Anhand der umliegenden Wörter kann der TreeTagger genauere Zuordnungen treffen.
 
 Das erste Problem ist, dass der TreeTagger besser mit ganzen Sätzen arbeitet. Der weiteren bedeutetet Wahrscheinlichkeit nicht Sicherheit. Bei 20.000 Wörtern ordnet der TreeTagger zu 97,53% die richtige Wortart zum jeweiligen Wort zu. Die größte Schwachstelle, die die Studenten im TreeTagger sahen, war die Tatsache, dass er nicht hauptsächlich zur Findung der Lemmata dient, sondern Wortarten zuordnen soll. Das der TreeTagger zusätzlich anhand seines Korpus auch Lemmata ausgeben kann, ist nur ein schöner Zusatz.
 Würden die Studenten den TreeTagger für ihre o.g. Aufgabe einsetzen wollen, müssten sie den Textkorpus mittels des Trainingsprogrammes erweitern, d.h. händisch Wortarten und Lemmata zuordnen. Daraus wurde geschlossen, dass die Tagliste für das ERP-System händisch geführt werden kann. Der Aufwand wäre der Gleiche.
+
+\pagebreak
 
 ## Wortschatzprojekt Uni Leipzig
 
@@ -187,6 +191,8 @@ Zu jedem Wort wird das Lemma sowie die Wortart zurückgegeben. Bei obigem Beispi
 | Guter     | Gut     | A (Adjektiv) |
 | Katzen    | Katze   | N (Nomen)    |
 | Schneller | Schnell | A (Adjektiv) |
+
+\pagebreak
 
 **Auswertung:**
 

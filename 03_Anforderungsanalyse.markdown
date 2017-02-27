@@ -119,22 +119,16 @@ Beispiels wurde die Arbeitsweise des Algorithmus erläutert.
 
 #Fallbeispiel
 
-Auf der \autoref{abb:FB_Szenario}
+Auf der \autoref{abb:FB_Szenario} ist folgendes Szenario dargestellt:
+Drei verschiedene Personen, namens Karl, Max und Sabine geben für drei unterschiedliche Obstsorten Tags ihrer Wahl ein.
 
 ![\label{abb:FB_Szenario} Fallbeispiel Szenario](img/FB_Szenario.png)
 
-ist folgendes Szenario dargestellt:
-Drei verschiedene Personen, namens Karl, Max und Sabine geben für drei unterschiedliche Obstsorten Tags ihrer Wahl ein.  
+* Für die Apfelsorte: `#Rot, #Süß, #Apfel`
+* Für die Birnensorte: `#Birne, #Süß`
+* Für die Kirschsorte: `#Kirsche, #Apfel`
 
-Für die Apfelsorte: ``#Rot, #Süß, #Apfel``.
-
-Für die Birnensorte: ``#Birne, #Süß``.
-
-Für die Kirschsorte: ``#Kirsche, #Apfel``.
-
-Diese eingegebenen Tags werden in einer Datentabelle erfasst.
-
-\autoref{abb:FB_Daten}
+Diese eingegebenen Tags werden in einer Datentabelle (\autoref{abb:FB_Daten}) erfasst.
 
 ![\label{abb:FB_Daten} Fallbeispiel Szenario](img/FB_Daten.png)
 
@@ -142,60 +136,43 @@ In einer weiteren Tabelle, werden die eingegebenen Tags sowohl aufgelistet als a
 wurde. An der in \autoref{abb:FB_Rahmenbedingungen} abgebilteten Formel, wird außerdem seine Größe, mit der
 er letztendlich in der Tag-Cloud abgebildet werden soll bestimmt.
 
-
 ![\label{abb:FB_Rahmenbedingungen} Fallbeispiel Szenario](img/FB_Rahmenbedingungen.png)
 
-In \autoref{abb:FB_Ergebnis} 
-
-wurde der Tag `#Süß` am häufigsten eingegeben, weshalb er auch größer dargestellt wird.
+In \autoref{abb:FB_Ergebnis} wurde der Tag `#Süß` am häufigsten eingegeben, weshalb er auch größer dargestellt wird.
 
 ![\label{abb:FB_Ergebnis} Fallbeispiel Szenario](img/FB_Ergebnis.png)
 
-#Folksonomie, Social Tagging und Tag-Clouds 
+# Folksonomie, Social Tagging und Tag-Clouds 
 
-##Begriffsklärung
-Bevor auf die Thematik der Folksonomie (\cite{onl:socialtaggingandfolksonomies}) näher eingegangen wird, sollten ein paar
-Begriffe zum besseren Verständnis geklärt werden.
+## Begriffsklärung
 
-###Social Network
-Ein Social Network (\cite{onl:socialnetwork})oder zu deutsch ein soziales Netzwerk wird in diesem Zusammenhang als eine
-Zusammenkunft verschiedener Nutzer im Internet bezeichnet.
-Diese Nutzer können miteinander interagieren und die Aktionen der anderen Nutzer nachvollziehen. Diese Community (eng.
-Gemeinschaft, Vereinigung) gibt es zum Teil mit sehr allgemeinen Interessen (z.B. Facebook)
-oder aber auch mit einem speziellen Ziel (z.B. XING zu Jobsuche und zum herstellen von Geschäftskontakten).
+Bevor auf die Thematik der Folksonomie (\cite{onl:socialtaggingandfolksonomies}) näher eingegangen wird, sollten ein paar Begriffe zum besseren Verständnis geklärt werden.
 
-###User
-Ein User oder auch Nutzer ist ein Mitglied eines sozialen Netzwerkes. Dieser kann mit anderen Nutzern in dem social Network
-interagieren und verschiedene Aktionen ausführen. Nutzer können in verschiedene Nutzergruppen mit
-unterschiedlichen Berechtigungen unterteilt werden. So kann es zum Bespiel die normale Nutzer geben, Moderatoren und
-Administratoren. Dabei wären die Moderatoren verantwortlich die Inhalte der Nutzer auf ihre Kon­for­mi­tät mit den
-Regeln des Netzwerks zu prüfen und zum Beispiel Spam zu verhindern. Der Administrator hat in einem solchen Netzwerk meist eine
-eher technische Aufgabe.
-Ein User verfügt immer über ein bestimmtes Vokabular, welches durch sein Umfeld, sein intellektuelles Niveau und seine Kultur,
-etc. geprägt ist.
+### Social Network
 
-###Ressource
-In Social Networks werden verschiedene Objekte / Ressourcen miteinander geteilt und gemeinsam bearbeitet oder verwendet. Solche
-Ressourcen können zum Beispiel Bilder, Musikdateien, aber auch Baupläne oder Lebensläufe sein. Meist sind die Inhalte auf
-bestimmte Ressourcen, welche mit dem Ziel des Social Networks zusammenhängt, beschränkt.
+Ein Social Network (\cite{onl:socialnetwork})oder zu deutsch ein soziales Netzwerk wird in diesem Zusammenhang als eine Zusammenkunft verschiedener Nutzer im Internet bezeichnet.
+Diese Nutzer können miteinander interagieren und die Aktionen der anderen Nutzer nachvollziehen. Diese Community (eng. Gemeinschaft, Vereinigung) gibt es zum Teil mit sehr allgemeinen Interessen (z.B. Facebook) oder aber auch mit einem speziellen Ziel (z.B. XING zu Jobsuche und zum herstellen von Geschäftskontakten).
 
-###Tag
-Ein Tag oder auch Schlagwort, Deskriptor oder Etikett ist in diesem Zusammenhang eine Form der unscharfen Klassifizierung
-beziehungsweise der Beschreibung von Ressourcen. Diese Tags sind meist willkürlich und unterliegen keinen
-strengen oder kontrollierten Regeln. Zum Beispiel bei der Plattform / dem Social Network *Instagram* werden Bilder von Nutzern
-geteilt und mit *Hashtags* beschrieben. Über diese *Hashtags* können andere Bilder mit den gleichen
-Bezeichnungen gefunden werden.
+### User
 
-###Unscharfe Suche
-Eine unscharfe Suche ist die Möglichkeit eine bestimmte Ressource innerhalb eines Social Networks zu suchen, von welcher noch
-keine genaue Vorstellung besteht. Dabei werden die Suchergebnisse nur immer weiter eingegrenzt und es wird sich Stück für Stück
-an das gewünschte Ergebnis heran gearbeitet.
+Ein User oder auch Nutzer ist ein Mitglied eines sozialen Netzwerkes. Dieser kann mit anderen Nutzern in dem social Network interagieren und verschiedene Aktionen ausführen. Nutzer können in verschiedene Nutzergruppen mit unterschiedlichen Berechtigungen unterteilt werden. So kann es zum Bespiel die normale Nutzer geben, Moderatoren und Administratoren. Dabei wären die Moderatoren verantwortlich die Inhalte der Nutzer auf ihre Kon­for­mi­tät mit den Regeln des Netzwerks zu prüfen und zum Beispiel Spam zu verhindern. Der Administrator hat in einem solchen Netzwerk meist eine eher technische Aufgabe.
+Ein User verfügt immer über ein bestimmtes Vokabular, welches durch sein Umfeld, sein intellektuelles Niveau und seine Kultur etc., geprägt ist.
 
-##Social Tagging (\cite{wiki:socialtagging})
-Als Tagging oder auch taggen wird der Prozess des Tag an eine Ressource anhängen beschrieben (Indexieren). Beim Social Tagging
-geschieht dies innerhalb eines Social Networks durch die User. Dabei werden an verschiedene Ressourcen
-durch verschieden User verschiedene Tags angehängt. Dadurch können User wiederum andere Ressourcen finden und die Ressourcen
-mit weiteren Tags versehen.
+### Ressource
+
+In Social Networks werden verschiedene Objekte/Ressourcen miteinander geteilt und gemeinsam bearbeitet oder verwendet. Solche Ressourcen können zum Beispiel Bilder, Musikdateien, aber auch Baupläne oder Lebensläufe sein. Meist sind die Inhalte auf bestimmte Ressourcen, welche mit dem Ziel des Social Networks zusammenhängt, beschränkt.
+
+### Tag
+
+Ein Tag oder auch Schlagwort, Deskriptor oder Etikett ist in diesem Zusammenhang eine Form der unscharfen Klassifizierung beziehungsweise der Beschreibung von Ressourcen. Diese Tags sind meist willkürlich und unterliegen keinen strengen oder kontrollierten Regeln. Zum Beispiel bei der Plattform / dem Social Network *Instagram* werden Bilder von Nutzern geteilt und mit *Hashtags* beschrieben. Über diese *Hashtags* können andere Bilder mit den gleichen Bezeichnungen gefunden werden.
+
+### Unscharfe Suche
+
+Eine unscharfe Suche ist die Möglichkeit eine bestimmte Ressource innerhalb eines Social Networks zu suchen, von welcher noch keine genaue Vorstellung besteht. Dabei werden die Suchergebnisse nur immer weiter eingegrenzt und es wird sich Stück für Stück an das gewünschte Ergebnis heran gearbeitet.
+
+## Social Tagging
+
+Als Tagging oder auch taggen wird der Prozess des Tag an eine Ressource anhängen beschrieben (Indexieren). Beim Social Tagging (\cite{wiki:socialtagging}) geschieht dies innerhalb eines Social Networks durch die User. Dabei werden an verschiedene Ressourcen durch verschieden User verschiedene Tags angehängt. Dadurch können User wiederum andere Ressourcen finden und die Ressourcen mit weiteren Tags versehen.
 Dadurch ist die Grundlage für eine unscharfe Suche geschaffen.
 
 \autoref{abb:socialtagging}
@@ -203,96 +180,61 @@ Dadurch ist die Grundlage für eine unscharfe Suche geschaffen.
 ![\label{abb:socialtagging} Social Tagging](img/socialtagging.png)
 
 
-Beispiele für Social Networks welche das Social Tagging unterstützen gibt es viele, wie z.B. *Instagram*, *Youtube*,
-*del.icio.us*, etc..
+Beispiele für Social Networks welche das Social Tagging unterstützen gibt es viele, wie z.B. *Instagram*, *Youtube*, *del.icio.us*, etc..
 
 ## Folksonomie
-Das Kofferwort Folksonomie (\cite{onl:folksonomy})ist aus folgenden Bestandteilen zusammengesetzt: Folk - das Volk oder auch
-die Laien; Taxis - die Klassifikation; Nomos - das Managment.
-Es bedeutet also soviel wie das Klassifikationsmanagment durch oder vom Volk aus. Der Begriff wurde erstmalig 2003 durch Van
-der Wal in einem Artikel erwähnt und maßgeblich durch Ihn geprägt. Fast alle Artikel oder Quellen beziehen
-sich auf seine Theorie.
-Bei der Folksonomie (\cite{onl:folksonomiesccc}) handelt es sich also, um die Beziehung von Tags, Ressourcen und Nutzern. Diese
-Verbindungen werden innerhalb eines Social Networks oder mittels einer sozialen Software erstellt und
-unterliegen keinen Regeln. Folksonomien entstehen durch den Prozess des Social Taggings und werden in immer mehr Systemen
-verwendet um den Nutzern eine zusätzliche Möglichkeit der Inhaltserschließung zu ermöglichen.
 
-\autoref{abb:folksonomy}
+Das Kofferwort Folksonomie (\autoref{abb:folksonomy}, \cite{onl:folksonomy})ist aus folgenden Bestandteilen zusammengesetzt: Folk - das Volk oder auch die Laien; Taxis - die Klassifikation; Nomos - das Managment.
+Es bedeutet also soviel wie das Klassifikationsmanagment durch oder vom Volk aus. Der Begriff wurde erstmalig 2003 durch Van der Wal in einem Artikel erwähnt und maßgeblich durch Ihn geprägt. Fast alle Artikel oder Quellen beziehen sich auf seine Theorie.
+Bei der Folksonomie (\cite{onl:folksonomiesccc}) handelt es sich also, um die Beziehung von Tags, Ressourcen und Nutzern. Diese Verbindungen werden innerhalb eines Social Networks oder mittels einer sozialen Software erstellt und unterliegen keinen Regeln. Folksonomien entstehen durch den Prozess des Social Taggings und werden in immer mehr Systemen verwendet um den Nutzern eine zusätzliche Möglichkeit der Inhaltserschließung zu ermöglichen.
 
 ![\label{abb:folksonomy} Zusammenhang zw. User, Tags & Ressourcen](img/folksonomy.png)
 
-Die einzelnen Beziehungen zwischen Objekten, Nutzern und Tags können auf verschiedene Arten entstehen. Dabei unterscheidet man
-zwischen den Formen der Engen (Narrow) und der Breiten (Broad) Folksonomie.
+Die einzelnen Beziehungen zwischen Objekten, Nutzern und Tags können auf verschiedene Arten entstehen. Dabei unterscheidet man zwischen den Formen der Engen (Narrow) und der Breiten (Broad) Folksonomie.
 
-###Narrow Folkyonomy / Enge Folksonomie
-Die enge Folksonomie (\cite{onl:unibielefeldfolksonomie}) wird heute am häufigsten verwendet, zum Beispiel bei Social Networks
-wie *Twitter* und *Instagram*. Hier wird ein Objekt von einem Nutzer erstellt und in das Netzwerk
-gestellt. Er versieht das Objekt mit initialen Tags über welche es von anderen Nutzern mit verschiedenen Vokabularen gefunden
-werden kann. Diese können nun weitere Tags an das Objekt anhängen und ermöglichen es nun eventuell
-weiteren Nutzern dieses Objekt zufinden und zu *betaggen*. Dabei ist das besondere, dass Tags nur einmalig an ein Objekt
-vergeben werden können. In der nachfolgenden Abbildung wird dies noch einmal verdeutlicht.
+### Narrow Folkyonomy / Enge Folksonomie
 
-\autoref{abb:narrowfolksonomy}
+Die enge Folksonomie (\autoref{abb:narrowfolksonomy}, \cite{onl:unibielefeldfolksonomie}) wird heute am häufigsten verwendet, zum Beispiel bei Social Networks wie *Twitter* und *Instagram*. Hier wird ein Objekt von einem Nutzer erstellt und in das Netzwerk gestellt. Er versieht das Objekt mit initialen Tags über welche es von anderen Nutzern mit verschiedenen Vokabularen gefunden werden kann. Diese können nun weitere Tags an das Objekt anhängen und ermöglichen es nun eventuell weiteren Nutzern dieses Objekt zufinden und zu *betaggen*. Dabei ist das besondere, dass Tags nur einmalig an ein Objekt vergeben werden können. In der nachfolgenden Abbildung wird dies noch einmal verdeutlicht.
 
-![\label{abb:narrowfolksonomy} Narrow Folksonomy](img/narrowfolksonomy.jpg)
+![\label{abb:narrowfolksonomy} Narrow Folksonomy](img/narrowfolksonomy.png)
 
-###Broad Folksonomy / Breite Folksonomie
-Anders als bei der engen Folksonomie besteht bei der breiten Folksonomie die Möglichkeit, dass die User Tags mehrfach an ein
-Objekt anhängen. Dadurch besteht die Möglichkeit die Popularität (die *Beliebtheit*) eines Tags auf einem
-Objekt zu bestimmten und auszuwerten. Ein Beispiel für die breite Folksonomie ist die Website del.icio.us. In der nachstehenden
-Abbildung wird auch die Breite Folksonomie noch einmal verdeutlicht.
+### Broad Folksonomy / Breite Folksonomie
 
-\autoref{abb:broadfolksonomy}
+Anders als bei der engen Folksonomie besteht bei der breiten Folksonomie (\autoref{abb:broadfolksonomy}) die Möglichkeit, dass die User Tags mehrfach an ein Objekt anhängen. Dadurch besteht die Möglichkeit die Popularität (die *Beliebtheit*) eines Tags auf einem Objekt zu bestimmten und auszuwerten. Ein Beispiel für die breite Folksonomie ist die Website del.icio.us. In der nachstehenden Abbildung wird auch die Breite Folksonomie noch einmal verdeutlicht.
 
-![\label{abb:broadfolksonomy} Broad Folksonomy](img/broadfolksonomy.jpg)
+![\label{abb:broadfolksonomy} Broad Folksonomy](img/broadfolksonomy.png)
 
-\pagebreak
+\newpage
 
 ### Vorteile und Nachteile von Folksonomien
-| Vorteile der Folksonomie    | Nachteile der Folksonomie   							 | 
-| :--------------------------|:--------------------------------------------------------------------------------  | 
-| Stöbern / unscharfe Suche wird ermöglicht   		   | Fehlende Kontrolle / Regeln                         | 
-| Authentisch  		     | Spam / Troll-Tags								 |
-| Masseninformation können gesammelt werden	           | Keine Eindeutigkeit /  fehlendes Vokabular		 | 
-|Sensibilisieren Nutzer für Inhaltserschließung |								 |
 
-Das Suchen von Objekten und Ressourcen ist kein triviales Phänomen in der Informatik oder in Social Networks. Das Problem dabei
-ist, dass der Suchende meist nicht ganz exakt weis wonach er eigentlich sucht.
+Es wurden die Vor- und Nachteile gegenübergestellt.
+
++------------------------------------------------+---------------------------------------------+
+| Vorteile                                       | Nachteile                                   | 
++================================================+=============================================+
+| Stöbern / unscharfe Suche wird ermöglicht      | Fehlende Kontrolle / Regeln                 |
++------------------------------------------------+---------------------------------------------+
+| Authentisch                                    | Spam / Troll-Tags                           |
++------------------------------------------------+---------------------------------------------+
+| Masseninformation können gesammelt werden	     | Datenschutz / Erfassung von Nutzerverhalten | 
++------------------------------------------------+---------------------------------------------+
+| Sensibilisieren Nutzer für Inhaltserschließung | Keine Eindeutigkeit / fehlendes Vokabular   |
++------------------------------------------------+---------------------------------------------+
+
+Das Suchen von Objekten und Ressourcen ist kein triviales Phänomen in der Informatik oder in Social Networks. Das Problem dabei ist, dass der Suchende meist nicht ganz exakt weis wonach er eigentlich sucht.
 Entweder fehlt dem Suchenden die genaue Bezeichnung oder er hat nur eine wage Richtung in welcher die Ressource vermutet wird.
-Deshalb gibt es in vielen Systemen Klassifikationen oder ähnliches um den Nutzer bei seiner Suche zu unterstützen. Mittels
-Folksonomien und dem Social Tagging ist es möglich dem Nutzer eine unscharfe Suche zu ermöglichen. Dies
-bietet den Vorteil das der Nutzer sich *stöbernd* durch die Objekte bewegen kann und seine Auswahl immer mehr eingrenzt, bis er
-nur 
+Deshalb gibt es in vielen Systemen Klassifikationen oder ähnliches um den Nutzer bei seiner Suche zu unterstützen. Mittels Folksonomien und dem Social Tagging ist es möglich dem Nutzer eine unscharfe Suche zu ermöglichen. Dies bietet den Vorteil das der Nutzer sich *stöbernd* durch die Objekte bewegen kann und seine Auswahl immer mehr eingrenzt, bis er nur noch eine überschaubare Menge an Ressourcen übrig hat und in dieser sich sein gesuchtes Objekt befindet. 
 
-\pagebreak
+\newpage
 
-noch eine überschaubare Menge an Ressourcen übrig hat und in dieser sich sein gesuchtes Objekt
-befindet. 
+Dabei wird er auch sensibilisiert auf den Inhalt oder die thematischen Verbindungen der Ressource, da er die Tags liest und mit dem Objekt verbindet.
+Je mehr User die Tags *betaggen*, desto authentischer wird die Folksonomie.Doch dadurch entstehen auch die Probleme mit Folksonomien denn durch die fehlende Kontrolle und durch fehlende Regeln können schlechte oder irritierende  Tags das Ergebnis verfälschen. Zum Beispiel können Tags mit der gleichen Bedeutung in verschiedenen Zeitformen oder Wortbeugungen an die Ressource angehangen werden oder es können Spam- oder auch *Troll-* Tags angehangen werden. Und das natürlich auch in allen erdenklichen Sprachen.
+Das alles ist auf ein fehlendes Vokabular und die fehlenden Standards zurückzuführen.
+Möglichkeiten zur Ausbesserung dieser Nachteile wäre zum Beispiel eine automatische Suchvervollständigung, welche schon vorhandene Tags vorschlägt. Eine weitere Verbesserung wäre die Wortstammfindung, welche in Kapitel \label{Lemmatisierung}  näher beschrieben wird.
 
+## Tag-Clouds
 
-Dabei wird er auch sensibilisiert auf den Inhalt oder die thematischen Verbindungen der Ressource, da er die Tags
-liest und mit dem Objekt verbindet.
-Je mehr User die Tags *betaggen*, desto authentischer wird die
-Folksonomie.Doch dadurch entstehen auch die Probleme mit Folksonomien
-denn durch die fehlende Kontrolle und durch fehlende Regeln können
-schlechte oder irritierende  Tags das Ergebnis verfälschen. Zum Beispiel
-können Tags mit der gleichen Bedeutung in verschiedenen Zeitformen oder
-Wortbeugungen an die Ressource angehangen werden oder es können Spam-
-oder auch *Troll-* Tags angehangen werden. Und das natürlich auch in
-allen erdenklichen Sprachen.
-Das alles ist auf ein fehlendes Vokabular und die fehlenden Standards
-zurückzuführen.
-Möglichkeiten zur Ausbesserung dieser Nachteile wäre zum Beispiel eine
-automatische Suchvervollständigung, welche schon vorhandene Tags
-vorschlägt. Eine weitere Verbesserung wäre die Wortstammfindung, welche
-in Kapitel \label{Lemmatisierung}  näher beschrieben wird.
-
-
-
-##Tag-Clouds
-
-\autoref{abb:tagCloud}
+Die Darstellung der zueinander gehörigen Tag nach einer Visualisierung in Form einer Wolke (z.B. \autoref{abb:tagCloud}) ist vielfältig denkbar. Uns wurde für unsere Umsetzug vorgegeben zunächst keine Rotation, Farben oder Schriftarten einzusetzen. Stattdessen sollen wir uns auf einen Gewichtungsfaktor der auf die Positionierung Einfluss nimmt konzentrieren.
 
 ![\label{abb:tagCloud} Tag-Cloud](img/tagCloud.png)
-
-
