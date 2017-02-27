@@ -74,22 +74,22 @@ verkleinern, nachdem nach einem bestimmten Tag gefiltert wurde.
 Um eine Vorstellung von der zukünftigen Eingabe von Tags im ERP-System zu bekommen, wurden von den Studenten grafisch fünf GUIs
 entworfen. Diese sollten der Eingabe von Tags für sogenannte Datenobjekte dienen.
 Die Aufgabe der Studenten bestand darin, sich eine Form der Eingabemöglichkeit für Tags zu überlegen, wobei auch neue
-Dialoge entstehen können. Dabei Wurden sowohl \nameref{abb:BeispielmaskeOhneTagEingabe} als auch \nameref{abb:BeispielmaskeMitTagEingabe}entworfen. Die Ergebnisse wurden im Gruppenmeeting präsentiert und deren Verwendung, im Austausch mit Herrn
+Dialoge entstehen können. Dabei Wurden sowohl \nameref{abb:BeispielmaskeOhneTagEingabe} als auch \nameref{abb:BeispielmaskeMitTagEingabe} entworfen.Es wurde außerdem in \autoref{abb:Inline-vs-PopupEditor} ein Inline-Editor gegenüber einen Popup-Editor gestellt und ein \nameref{abb:BeispielmaskeMitPopupTagEingabe} vorgestellt. Die Ergebnisse wurden im Gruppenmeeting präsentiert und deren Verwendung, im Austausch mit Herrn
 Stein  diskutiert. 
 
-\autoref{abb:Inline-vs-PopupEditor}
+
 
 ![\label{abb:Inline-vs-PopupEditor} Inline vs. Popup-Editor](img/InlVSPopup.png)
 
 
 
-![\label{abb:BeispielmaskeOhneTagEingabe} Beispielmaske (ohne Tag Eingabe)](img/BeispielMaskeOhneTE.png)
+![\label{abb:BeispielmaskeOhneTagEingabe} Beispielmaske ohne Tag Eingabe](img/BeispielMaskeOhneTE.png)
 
 
 
 ![\label{abb:BeispielmaskeMitTagEingabe} Beispielmaske (mit Inline-Tag Eingabe)](img/SAPmitInline.png)
 
-\autoref{abb:BeispielmaskeMitPopupTagEingabe}
+
 
 ![\label{abb:BeispielmaskeMitPopupTagEingabe} Beispielmaske (mit Popup – Tag Eingabe)](img/SAPmitPopUpPNG.png)
 
