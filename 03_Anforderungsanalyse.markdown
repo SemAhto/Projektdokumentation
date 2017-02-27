@@ -151,20 +151,23 @@ wurde der Tag `#Süß` am häufigsten eingegeben, weshalb er auch größer darge
 
 ![\label{abb:FB_Ergebnis} Fallbeispiel Szenario](img/FB_Ergebnis.png)
 
-#Folksonomie, Social Tagging und Tag-Clouds 
+# Folksonomie, Social Tagging und Tag-Clouds 
 
-##Begriffsklärung
+## Begriffsklärung
+
 Bevor auf die Thematik der Folksonomie (\cite{onl:socialtaggingandfolksonomies}) näher eingegangen wird, sollten ein paar
 Begriffe zum besseren Verständnis geklärt werden.
 
-###Social Network
+### Social Network
+
 Ein Social Network (\cite{onl:socialnetwork})oder zu deutsch ein soziales Netzwerk wird in diesem Zusammenhang als eine
 Zusammenkunft verschiedener Nutzer im Internet bezeichnet.
 Diese Nutzer können miteinander interagieren und die Aktionen der anderen Nutzer nachvollziehen. Diese Community (eng.
 Gemeinschaft, Vereinigung) gibt es zum Teil mit sehr allgemeinen Interessen (z.B. Facebook)
 oder aber auch mit einem speziellen Ziel (z.B. XING zu Jobsuche und zum herstellen von Geschäftskontakten).
 
-###User
+### User
+
 Ein User oder auch Nutzer ist ein Mitglied eines sozialen Netzwerkes. Dieser kann mit anderen Nutzern in dem social Network
 interagieren und verschiedene Aktionen ausführen. Nutzer können in verschiedene Nutzergruppen mit
 unterschiedlichen Berechtigungen unterteilt werden. So kann es zum Bespiel die normale Nutzer geben, Moderatoren und
@@ -174,24 +177,28 @@ eher technische Aufgabe.
 Ein User verfügt immer über ein bestimmtes Vokabular, welches durch sein Umfeld, sein intellektuelles Niveau und seine Kultur,
 etc. geprägt ist.
 
-###Ressource
+### Ressource
+
 In Social Networks werden verschiedene Objekte / Ressourcen miteinander geteilt und gemeinsam bearbeitet oder verwendet. Solche
 Ressourcen können zum Beispiel Bilder, Musikdateien, aber auch Baupläne oder Lebensläufe sein. Meist sind die Inhalte auf
 bestimmte Ressourcen, welche mit dem Ziel des Social Networks zusammenhängt, beschränkt.
 
-###Tag
+### Tag
+
 Ein Tag oder auch Schlagwort, Deskriptor oder Etikett ist in diesem Zusammenhang eine Form der unscharfen Klassifizierung
 beziehungsweise der Beschreibung von Ressourcen. Diese Tags sind meist willkürlich und unterliegen keinen
 strengen oder kontrollierten Regeln. Zum Beispiel bei der Plattform / dem Social Network *Instagram* werden Bilder von Nutzern
 geteilt und mit *Hashtags* beschrieben. Über diese *Hashtags* können andere Bilder mit den gleichen
 Bezeichnungen gefunden werden.
 
-###Unscharfe Suche
+### Unscharfe Suche
+
 Eine unscharfe Suche ist die Möglichkeit eine bestimmte Ressource innerhalb eines Social Networks zu suchen, von welcher noch
 keine genaue Vorstellung besteht. Dabei werden die Suchergebnisse nur immer weiter eingegrenzt und es wird sich Stück für Stück
 an das gewünschte Ergebnis heran gearbeitet.
 
-##Social Tagging (\cite{wiki:socialtagging})
+## Social Tagging (\cite{wiki:socialtagging})
+
 Als Tagging oder auch taggen wird der Prozess des Tag an eine Ressource anhängen beschrieben (Indexieren). Beim Social Tagging
 geschieht dies innerhalb eines Social Networks durch die User. Dabei werden an verschiedene Ressourcen
 durch verschieden User verschiedene Tags angehängt. Dadurch können User wiederum andere Ressourcen finden und die Ressourcen
@@ -234,9 +241,10 @@ vergeben werden können. In der nachfolgenden Abbildung wird dies noch einmal ve
 
 \autoref{abb:narrowfolksonomy}
 
-![\label{abb:narrowfolksonomy} Narrow Folksonomy](img/narrowfolksonomy.jpg)
+![\label{abb:narrowfolksonomy} Narrow Folksonomy](img/narrowfolksonomy.png)
 
-###Broad Folksonomy / Breite Folksonomie
+### Broad Folksonomy / Breite Folksonomie
+
 Anders als bei der engen Folksonomie besteht bei der breiten Folksonomie die Möglichkeit, dass die User Tags mehrfach an ein
 Objekt anhängen. Dadurch besteht die Möglichkeit die Popularität (die *Beliebtheit*) eines Tags auf einem
 Objekt zu bestimmten und auszuwerten. Ein Beispiel für die breite Folksonomie ist die Website del.icio.us. In der nachstehenden
@@ -244,17 +252,18 @@ Abbildung wird auch die Breite Folksonomie noch einmal verdeutlicht.
 
 \autoref{abb:broadfolksonomy}
 
-![\label{abb:broadfolksonomy} Broad Folksonomy](img/broadfolksonomy.jpg)
+![\label{abb:broadfolksonomy} Broad Folksonomy](img/broadfolksonomy.png)
 
-\pagebreak
+\newpage
 
 ### Vorteile und Nachteile von Folksonomien
-| Vorteile der Folksonomie    | Nachteile der Folksonomie   							 | 
-| :--------------------------|:--------------------------------------------------------------------------------  | 
-| Stöbern / unscharfe Suche wird ermöglicht   		   | Fehlende Kontrolle / Regeln                         | 
-| Authentisch  		     | Spam / Troll-Tags								 |
-| Masseninformation können gesammelt werden	           | Keine Eindeutigkeit /  fehlendes Vokabular		 | 
-|Sensibilisieren Nutzer für Inhaltserschließung |								 |
+
+| Vorteile der Folksonomie                       | Nachteile der Folksonomie                  | 
+| :--------------------------------------------- | :----------------------------------------- |
+| Stöbern / unscharfe Suche wird ermöglicht      | Fehlende Kontrolle / Regeln                |
+| Authentisch  		                             | Spam / Troll-Tags                          |
+| Masseninformation können gesammelt werden	     | Keine Eindeutigkeit /  fehlendes Vokabular | 
+| Sensibilisieren Nutzer für Inhaltserschließung |                                            |
 
 Das Suchen von Objekten und Ressourcen ist kein triviales Phänomen in der Informatik oder in Social Networks. Das Problem dabei
 ist, dass der Suchende meist nicht ganz exakt weis wonach er eigentlich sucht.
@@ -268,7 +277,6 @@ nur
 
 noch eine überschaubare Menge an Ressourcen übrig hat und in dieser sich sein gesuchtes Objekt
 befindet. 
-
 
 Dabei wird er auch sensibilisiert auf den Inhalt oder die thematischen Verbindungen der Ressource, da er die Tags
 liest und mit dem Objekt verbindet.
@@ -287,12 +295,8 @@ automatische Suchvervollständigung, welche schon vorhandene Tags
 vorschlägt. Eine weitere Verbesserung wäre die Wortstammfindung, welche
 in Kapitel \label{Lemmatisierung}  näher beschrieben wird.
 
-
-
-##Tag-Clouds
+## Tag-Clouds
 
 \autoref{abb:tagCloud}
 
 ![\label{abb:tagCloud} Tag-Cloud](img/tagCloud.png)
-
-
