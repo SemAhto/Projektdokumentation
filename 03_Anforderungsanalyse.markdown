@@ -1,9 +1,11 @@
 
+# Ermittlung der Anforderungen
+
 Während den ersten zwei Gruppenmeetings wurden der Entwurf von Anwendungsfällen für Folksonomien, Social
 Tagging und Tag-Clouds im ERP-System ausgearbeitet. Dabei wurde sich an der Satzschablone von Chris Rupp (vgl. \cite{Sophist:Schablonen})
 orientiert. Anhand dessen wurden folgende Prinzipsskizzen erstellt, wie auch Anforderungen schriftlich formuliert. Folgene Ergebnisse wurden dabei erzielt:
 
-# Prinzipskizzen:
+## Prinzipskizzen:
 
 \autoref{abb:Prinzipskizze1}
 
@@ -17,7 +19,7 @@ orientiert. Anhand dessen wurden folgende Prinzipsskizzen erstellt, wie auch Anf
 
 ![\label{abb:Prinzipskizze3} 3. Prinzipskizze](img/03Prinzipienskizze.png)
 
-# Anforderungen:
+## Anforderungen:
 
 **Glossar**:
 
@@ -66,7 +68,7 @@ Klassifikation:
 
 1. Der Administrator muss in der Lage sein, Tags zu ändern / löschen.
 
-# Entwurf der GUIs zur Eingabe von Tags:
+# Entwurf der GUIs zur Eingabe von Tags
 
 Um eine Vorstellung von der zukünftigen Eingabe von Tags im ERP-System zu bekommen, wurden von den Studenten grafisch fünf GUIs entworfen. Diese sollten der Eingabe von Tags für sogenannte Datenobjekte dienen.
 Die Aufgabe der Studenten bestand darin, sich eine Form der Eingabemöglichkeit für Tags zu überlegen, wobei auch neue
