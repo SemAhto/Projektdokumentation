@@ -21,7 +21,7 @@ orientiert. Anhand dessen wurden folgende Prinzipsskizzen erstellt, wie auch Anf
 
 ## Anforderungen:
 
-**Glossar**:
+Wir unterscheiden die folgenden Begriffe bei der Festlegung der Anforderungen.
 
 <!-- hier ein Bsp. mit Definitionslisten -->
 
