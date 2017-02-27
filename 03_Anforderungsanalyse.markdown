@@ -171,11 +171,11 @@ Anders als bei der engen Folksonomie besteht bei der breiten Folksonomie die Mö
 ![\label{abb:broadfolksonomy} Broad Folksonomy](img/broadfolksonomy.jpg)
 
 ### Vorteile und Nachteile von Folksonomien
- Vorteile der Folksonomie    | Nachteile der Folksonomie   | 
-| :---     		     | :-----------------------    | 
+ Vorteile der Folksonomie    | Nachteile der Folksonomie   							 | 
+| :---     		     |:--------------------------------------------------------------------------------  | 
 | Stöbern / unscharfe Suche wird ermöglicht   		   | Fehlende Kontrolle / Regeln                         | 
-| Authentisch  		     | Katze 			   | Spam / Troll-Tags
-| Masseninformation können gesammelt werden	           | Keine Eindeutigkeit /  fehlendes Vokabular			   | 
+| Authentisch  		     | Spam / Troll-Tags								 |
+| Masseninformation können gesammelt werden	           | Keine Eindeutigkeit /  fehlendes Vokabular		 | 
 |Sensibilisieren Nutzer für Inhaltserschließung |
 
 
