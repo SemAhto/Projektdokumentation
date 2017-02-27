@@ -104,12 +104,45 @@ Dialoge entstehen können. Die Ergebnisse wurden im Gruppenmeeting präsentiert 
 
 ![\label{abb:ClassicListbox} Classic Listbox (Popup)](img/ClassikListBox.png)
 
-# Algorithmus Pseudocode & Fallbeispiel
+# Algorithmus Pseudocode
 
 Zur visuellen Anordnung der unterschiedlich großen Tags/Worte in Tag-Clouds, recherchierten die Studenten nach verschiedenen Algorithmen. Ein Algorithmus wurde anhand eines \nameref{abb:Pseudocode}s präsentiert. Anhand eines kleinen Beispiels wurde die Arbeitsweise des Algorithmus erläutert. 
 
 ![\label{abb:Pseudocode} Pseudocode](img/16002232756924747189.jpg)
 
+#Fallbeispiel
+
+Auf der Abbildung \autoref{abb:FB_Szenario}
+
+![\label{abb:FB_Szenario} Fallbeispiel Szenario](img/FB_Szenario.png)
+
+ist folgensed Szenario dargestellt:
+
+Drei verschiedene Personen, namens Karl, Max und Sabine geben für drei unterschiedliche Obstsorten Tags ihrer Wahl ein.  
+
+Für die Apfelsorte: ``#Rot, #Süß, #Apfel``.
+
+Für die Birnensorte: ``#Birne, #Süß``.
+
+Für die Kirschsorte: ``#Kirsche, #Apfel``.
+
+Diese eingegebenen Tags werden in einer Datentabelle erfasst.
+
+\autoref{abb:FB_Daten}
+
+![\label{abb:FB_Daten} Fallbeispiel Szenario](img/FB_Daten.png)
+
+In einer weiteren Tabelle, werden die eingegebenen Tags sowohl aufgelistet als auch festgehalten, wie oft ein Tag eingegeben wurde. An der Häufigkeit eines eingegebenen Tags, wird außerdem seine Größe, wi er letztendlich in der Tag-Cloud abgebildet werden sollbestimmt.
+
+\autoref{abb:FB_Rahmenbedingungen}
+
+![\label{abb:FB_Rahmenbedingungen} Fallbeispiel Szenario](img/FB_Rahmenbedingungen.png)
+
+In \autoref{abb:FB_Ergebnis} 
+
+wurde der Tag `#Süß` am häufigsten eingegeben, weshalb er auch größer dargestellt wird.
+
+![\label{abb:FB_Ergebnis} Fallbeispiel Szenario](img/FB_Ergebnis.png)
 
 #Folksonomie, Social Tagging und Tag-Clouds 
 
