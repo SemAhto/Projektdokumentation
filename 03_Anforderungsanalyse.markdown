@@ -111,7 +111,7 @@ Zur visuellen Anordnung der unterschiedlich großen Tags/Worte in Tag-Clouds, re
 ![\label{abb:Pseudocode} Pseudocode](img/16002232756924747189.jpg)
 
 
-#Folksonomie, Social Tagging und Tag-Clouds
+#Folksonomie, Social Tagging und Tag-Clouds (\cite{onl:socialtaggingandfolksonomies})
 
 ##Begriffsklärung
 Bevor auf die Thematik der Folksonomie näher eingegangen wird, sollten ein paar Begriffe zum besseren Verständnis geklärt werden.
