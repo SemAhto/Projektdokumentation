@@ -109,3 +109,64 @@ Dialoge entstehen können. Die Ergebnisse wurden im Gruppenmeeting präsentiert 
 Zur visuellen Anordnung der unterschiedlich großen Tags/Worte in Tag-Clouds, recherchierten die Studenten nach verschiedenen Algorithmen. Ein Algorithmus wurde anhand eines \nameref{abb:Pseudocode}s präsentiert. Anhand eines kleinen Beispiels wurde die Arbeitsweise des Algorithmus erläutert. 
 
 ![\label{abb:Pseudocode} Pseudocode](img/16002232756924747189.jpg)
+
+
+#Folksonomie, Social Tagging und Tag-Clouds
+
+##Begriffsklärung
+Bevor auf die Thematik der Folksonomie näher eingegangen wird, sollten ein paar Begriffe zum besseren Verständnis geklärt werden.
+
+###Social Network
+Ein Social Network oder zu deutsch ein soziales Netzwerk wird in diesem Zusammenhang als eine Zusammenkunft verschiedener Nutzer im Internet bezeichnet.
+Diese Nutzer können miteinander interagieren und die Aktionen der anderen Nutzer nachvollziehen. Diese Community (eng. Gemeinschaft, Vereinigung) gibt es zum Teil mit sehr allgemeinen Interessen (z.B. Facebook)
+oder aber auch mit einem speziellen Ziel (z.B. XING zu Jobsuche und zum herstellen von Geschäftskontakten).
+
+###User
+Ein User oder auch Nutzer ist ein Mitglied eines sozialen Netzwerkes. Dieser kann mit anderen Nutzern in dem social Network interagieren und verschiedene Aktionen ausführen. Nutzer können in verschiedene Nutzergruppen mit unterschiedlichen Berechtigungen unterteilt werden. So kann es zum Bespiel die normale Nutzer geben, Moderatoren und Administratoren. Dabei wären die Moderatoren verantwortlich die Inhalte der Nutzer auf ihre Kon­for­mi­tät mit den Regeln des Netzwerks zu prüfen und zum Beispiel Spam zu verhindern. Der Administrator hat in einem solchen Netzwerk meist eine eher technische Aufgabe.
+Ein User verfügt immer über ein bestimmtes Vokabular, welches durch sein Umfeld, sein intellektuelles Niveau und seine Kultur, etc. geprägt ist.
+
+###Ressource
+In Social Networks werden verschiedene Objekte / Ressourcen miteinander geteilt und gemeinsam bearbeitet oder verwendet. Solche Ressourcen können zum Beispiel Bilder, Musikdateien, aber auch Baupläne oder Lebensläufe sein. Meist sind die Inhalte auf bestimmte Ressourcen, welche mit dem Ziel des Social Networks zusammenhängt, beschränkt.
+
+###Tag
+Ein Tag oder auch Schlagwort, Deskriptor oder Etikett ist in diesem Zusammenhang eine Form der unscharfen Klassifizierung beziehungsweise der Beschreibung von Ressourcen. Diese Tags sind meist willkürlich und unterliegen keinen strengen oder kontrollierten Regeln. Zum Beispiel bei der Plattform / dem Social Network *Instagram* werden Bilder von Nutzern geteilt und mit *Hashtags* beschrieben. Über diese *Hashtags* können andere Bilder mit den gleichen Bezeichnungen gefunden werden.
+
+###Unscharfe Suche
+Eine unscharfe Suche ist die Möglichkeit eine bestimmte Ressource innerhalb eines Social Networks zu suchen, von welcher noch keine genaue Vorstellung besteht. Dabei werden die Suchergebnisse nur immer weiter eingegrenzt und es wird sich Stück für Stück an das gewünschte Ergebnis heran gearbeitet.
+
+##Social Tagging
+Als Tagging oder auch taggen wird der Prozess des Tag an eine Ressource anhängen beschrieben (Indexieren). Beim Social Tagging geschieht dies innerhalb eines Social Networks durch die User. Dabei werden an verschiedene Ressourcen durch verschieden User verschiedene Tags angehängt. Dadurch können User wiederum andere Ressourcen finden und die Ressourcen mit weiteren Tags versehen.
+Dadurch ist die Grundlage für eine unscharfe Suche geschaffen.
+
+![Social Tagging](socialtagging.png)
+
+Beispiele für Social Networks welche das Social Tagging unterstützen gibt es viele, wie z.B. *Instagram*, *Youtube*, *del.icio.us*, etc..
+
+## Folksonomie
+Das Kofferwort Folksonomie ist aus folgenden Bestandteilen zusammengesetzt: Folk - das Volk oder auch die Laien; Taxis - die Klassifikation; Nomos - das Managment.
+Es bedeutet also soviel wie das Klassifikationsmanagment durch oder vom Volk aus. Der Begriff wurde erstmalig 2003 durch Van der Wal in einem Artikel erwähnt und maßgeblich durch Ihn geprägt. Fast alle Artikel oder Quellen beziehen sich auf seine Theorie.
+Bei der Folksonomie handelt es sich also, um die Beziehung von Tags, Ressourcen und Nutzern. Diese Verbindungen werden innerhalb eines Social Networks oder mittels einer sozialen Software erstellt und unterliegen keinen Regeln. Folksonomien entstehen durch den Prozess des Social Taggings und werden in immer mehr Systemen verwendet um den Nutzern eine zusätzliche Möglichkeit der Inhaltserschließung zu ermöglichen.
+
+![Zusammenhang zw. User, Tags & Ressourcen](folksonomy.png)
+
+Die einzelnen Beziehungen zwischen Objekten, Nutzern und Tags können auf verschiedene Arten entstehen. Dabei unterscheidet man zwischen den Formen der Engen (Narrow) und der Breiten (Broad) Folksonomie.
+
+###Narrow Folkyonomy / Enge Folksonomie
+Die enge Folksonomie wird heute am häufigsten verwendet, zum Beispiel bei Social Networks wie *Twitter* und *Instagram*. Hier wird ein Objekt von einem Nutzer erstellt und in das Netzwerk gestellt. Er versieht das Objekt mit initialen Tags über welche es von anderen Nutzern mit verschiedenen Vokabularen gefunden werden kann. Diese können nun weitere Tags an das Objekt anhängen und ermöglichen es nun eventuell weiteren Nutzern dieses Objekt zufinden und zu *betaggen*. Dabei ist das besondere, dass Tags nur einmalig an ein Objekt vergeben werden können. In der nachfolgenden Abbildung wird dies noch einmal verdeutlicht.
+
+![Narrow Folksonomy](narrowfolksonomy.jpg)
+
+###Broad Folksonomy / Breite Folksonomie
+Anders als bei der engen Folksonomie besteht bei der breiten Folksonomie die Möglichkeit, dass die User Tags mehrfach an ein Objekt anhängen. Dadurch besteht die Möglichkeit die Popularität (die *Beliebtheit*) eines Tags auf einem Objekt zu bestimmten und auszuwerten. Ein Beispiel für die breite Folksonomie ist die Website del.icio.us. In der nachstehenden Abbildung wird auch die Breite Folksonomie noch einmal verdeutlicht.
+
+![Broad Folksonomy](broadfolksonomy.jpg)
+
+### Vorteile und Nachteile von Folksonomien
+
+
+
+##Tag-Clouds
+
+![Tag-Cloud](tagCloud.png)
+
+
