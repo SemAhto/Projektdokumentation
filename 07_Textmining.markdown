@@ -61,7 +61,8 @@ Da die Studenten für die gestellte Aufgabe die Lemmata eines Wortes ermitteln w
 
 ### GermaNet
 
-GermaNet (\cite{wiki:germaNet},  \cite{onl:germanetstructure}) ist eine elektronische, lexikographische Referenzdatenbank für den deutschen Wortsinn. Es stammt von der Universität Tübingen. Für GermaNet wurde eine Nutzungslizenz über die HTW Dresden erworben. Die Möglichkeit für ein eingegebenes Wort, das Lemma zurück zu erhalten, wurde von den Studenten getestet. Da GermaNet für den semantischen Zusammenhang von Worten gedacht ist, war es nicht möglich nur das Lemma für ein Wort zu erfragen.
+GermaNet (\cite{wiki:germaNet},  \cite{onl:germanetstructure}) ist eine elektronische, lexikographische Referenzdatenbank für den deutschen Wortsinn. Es stammt von der Universität Tübingen. Für GermaNet wurde eine Nutzungslizenz über 
+die HTW Dresden erworben. Die Möglichkeit für ein eingegebenes Wort, das Lemma zurück zu erhalten, wurde von den Studenten getestet. Da GermaNet für den semantischen Zusammenhang von Worten gedacht ist, war es nicht möglich nur das Lemma für ein Wort zu erfragen.
 
 ### Sketch Engine
 
@@ -128,7 +129,7 @@ Die Zugriffsvoraussetzungen unterscheiden sich je nach Abfrageumfang.
 Für einfache Abfragen kann das login \enquote{anonymous} mit dem Passwort \enquote{anonymous} verwendet werden. Eine Registrierung ist für komplexere Abfragen allerdings erforderlich, um bei Problemen kontaktiert werden zu können. Massendatenabfragen sind lediglich Kooperationspartnern vorbehalten.
 Da der Verwendung des Wortschatzprojektes vorerst lediglich ein \enquote{Versuch} durchgeführt werden sollte, wurde sich auf das allgemeine Login für einfache Abfragen beschränkt. Nach einigen Recherchen mit dem Ziel einen bereits bestehenden und benutzbaren Code zur Abfrage des Lemmata zu erhalten, sind die Studenten auf eine C#-API (\cite{onl:herrmann}) zur Abfrage des Thesaurus  gestoßen. Diese API wurde von Raffael Herrmann im Juli 2013 entwickelt.
 
-*Die Funktionsweise und der Aufbau des Codes wurde in ausführlich erklärt, so dass hier nicht weiter darauf eingegangen wird.*
+*Die Funktionsweise und der Aufbau des Codes wurde in (\cite{onl:herrmann}) ausführlich erklärt, so dass hier nicht weiter darauf eingegangen wird.*
 
 Nach Start der API öffnet sich ein Konsolenfenster (\autoref{abb:EingabeCSharpAPIThesaurus}). Nun ist es möglich ein Wort einzugeben von welchem man den zugehörigen Thesaurus als Rückgabewert erhalten möchte.
 
