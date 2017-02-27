@@ -196,28 +196,3 @@ der Wortart eines Wortes. Bei einer Eingabe von 263 Wörtern aus einem Buchabsch
 Da es sich um sehr fachspezifische Daten handelt, welche als Eingabe erfolgen würden, ist das Wortschatzprojekt nicht geeignet. Bei unbekannten Wörtern erfolgt keine Rückgabe.
 Bei einer Eingabe von 199 Wörtern aus einem Abschnitt eines Zahnmedizinischen Katalogs lag die Genauigkeit nunmehr bei 62%. Darüber hinaus führt die Eingabe von Zahlen zu einer Überflutung an Rückgaben.
 
-## Fazit
-
-Zusammengefasst wurde der TreeTagger und das Wortschatzprojekt miteinander verglichen. Dazu haben die Studenten das Buch
-\enquote{Volkserzählung} (\cite{onl:volkszaehlungen}) aus dem Gutenbergprojekt und Katalogdaten aus dem zahnärztlichen und
-kieferorthopädischen Bereich durch beide Programme laufen lassen. Aufgrund des begrenzten Abfragekontingentes des
-Wortschatzprojektes mussten die übergebenen Wörter stark begrenzt werden. Aus dem Buch \enquote{Volkserzählungen} von Lew
-Tolstoi wurden 263 Wörter des ersten Kapitels übergeben. Hier lag der TreeTagger mit 97 \% (255) richtig zugeordneten Lemmata
-besser, als das Wortschatzprojekt mit 92 \% (241) richtigen Lemmata. Wie es auch im folgenden Diagramm veranschaulicht
-dargestellt wurde. Bei den Katalogdaten lag das Wortschatzprojekt mit 65 % (130) richtig zugeordneten Lemmata vor dem
-TreeTagger mit nur 59 \% (117) richtiger Zuordnung. Es ist deutlich zu erkennen, dass der TreeTagger
-(\autoref{abb:TreeTaggerWortschatzprojekt}) mit umliegenden Wörtern in einem Satz arbeitet, was bei den Katalogdaten nicht
-gegeben war. Es handelt sich bei den Katalogdaten um einen Auszug auf einer Artikeldatenbank, der aus insgesamt 199 Wörtern
-bestand.
-
-![\label{abb:TreeTaggerWortschatzprojekt} TreeTagger vs. Wortschatzprojekt](img/TreeTaggerWortschatzprojekt.png)
-
-Sollte Lemmatisierung in dem ERP-System umgesetzt werden, würde sich eine Mischung aus dem Wortschatzprojekt und dem TreeTagger
-empfehlen. Da die Daten im ERP-System eher wie die Katalogdaten aufgebaut sind, hat das Wortschatzprojekt mit seinem breiten
-Wörterstamm einen klaren Vorteil, was die Zuordnung bei einzelnen Worten vereinfacht.
-
-Identifizierter Lösungsansatz:
-Alle anderen Felder bei der Anlage eines Artikels werden zu Tags, damit können die Wörter im Beschreibungsfeld erst mit den
-vorhandenen Tag abgeglichen werden. Mittels einer Füllwörterliste können nicht relevante Wörter wie (für, ein, und, usw.)
-herausgefiltert werden und nur bei den noch verbleibenden Wörtern, könnte mit Hilfe des Wortschatzprojektes oder auch des
-TreeTaggers das Lemma gefunden und als Tag hinzugefügt werden.
