@@ -81,13 +81,13 @@ Das PPSn System der Firma TechWare ist eine Client-Server ERP-Lösung für klein
 
 Im Hintergrund arbeitet eine Lua Interpreter Engine, mit der sich, alternativ zu C#, das System erweitern lässt.
 
-Eine Neuerung im System ist die Nutzung einer TagCloud (\autoref{abb:PpsnScreenshot}, unten rechts) zur unscharfen Suche in der Datenbank. 
+Eine Neuerung im System ist die Nutzung einer Tag-Cloud (\autoref{abb:PpsnScreenshot}, unten rechts) zur unscharfen Suche in der Datenbank. 
 
 ![\label{abb:PpsnScreenshot} PPSn Softwaresystem](img/ppsn_screenshot.jpg)
 
 ## Layout
 
-Die Benutzeroberfläche (\autoref{abb:PpsnLayout}, schematisch) besteht aus einer Objektliste, in der alle Datensätze der Datenbank angezeigt werden. Diese können mit Filtern, welche um dieser List platziert sind verkleinert werden. Anhand dieser Liste wird die TagCloud berechnet. Durch die Auswahl eines Tags wird eine neue Filterbedingung hinzugefügt und sodass die Objektliste aktualisiert wird und so die TagCloud neu berechnet. Durch diesen iterativen Prozess ist eine Suche anhand von Schlagworten möglich.
+Die Benutzeroberfläche (\autoref{abb:PpsnLayout}, schematisch) besteht aus einer Objektliste, in der alle Datensätze der Datenbank angezeigt werden. Diese können mit Filtern, welche um dieser List platziert sind verkleinert werden. Anhand dieser Liste wird die Tag-Cloud berechnet. Durch die Auswahl eines Tags wird eine neue Filterbedingung hinzugefügt und sodass die Objektliste aktualisiert wird und so die Tag-Cloud neu berechnet. Durch diesen iterativen Prozess ist eine Suche anhand von Schlagworten möglich.
 
 ![\label{abb:PpsnLayout} Layout von PPsn: Beeinflussungsübersicht. Dunkelgrau: Filterelemente; Hellgrau: Datenpräsentation](img/ppsn_layout.jpg)
 
@@ -101,7 +101,7 @@ Aufgrund der sehr komplexen Systemarchitektur, wird im Folgenden nur auf die Tei
 
 Das `PPsEnvironment` (\autoref{abb:PpsObjectGenerator}) enthält den `PpsObjectGenerator`, welcher in der Lage ist SQL zu erzeugen und das Ergebnis als `IEnumerable` bereitzustellen, sodass es mit LINQ weiter verarbeitet werden kann. Da allerdings der bestehende Generator nicht in der Lage war Tags abzufragen und deren Gewichte zu berechnen, musste ein weiterer entwickelt werden. Um die Basisfunktionalität aber beizubehalten, wurde dieser zu `AbstractPpsObjectGenerator` abstrahiert und ohne Änderung wieder von `PpsObjectGenerator` abgeleitet um das Interface zu äbhängigen Komponenten nicht zu ändern. Die `AbstractPpsObjectGenerator` Klasse wurde um zwei virtuelle Methoden erweitert. `ExtendCommand` dient dazu, dass abgeleitete Klassen das Kommando über die Factory erweitern können. Durch Implementierung von `GenerateCommandSql` hingegen muss das gesamte Kommando als String neu implementiert werden.
 
-Für die TagCloud wurde dann der neue `WordCloudObjectGenerator` eingeführt, welcher die in Relastion stehenden Tags und deren Gewichte wie im Prototypen berechnet und abfragt.
+Für die Tag-Cloud wurde dann der neue `WordCloudObjectGenerator` eingeführt, welcher die in Relastion stehenden Tags und deren Gewichte wie im Prototypen berechnet und abfragt.
 
 ![\label{abb:PpsObjectGenerator} PpsObjectGenerator](img/PpsObjectGenerator.jpg)
 
@@ -134,7 +134,7 @@ Beinhaltet alle Tags nach denen gefiltert werden soll\strut
 \begin{minipage}[t]{0.24\columnwidth}\raggedright\strut
 \texttt{SelectTagCommand}\strut
 \end{minipage} & \begin{minipage}[t]{0.70\columnwidth}\raggedright\strut
-Wird ausgeführt, wenn in der TagCloud auf ein Tag geklickt wird. Fügt
+Wird ausgeführt, wenn in der Tag-Cloud auf ein Tag geklickt wird. Fügt
 dieses der SelectTags Liste hinzu.\strut
 \end{minipage}\tabularnewline
 \begin{minipage}[t]{0.24\columnwidth}\raggedright\strut

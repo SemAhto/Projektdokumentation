@@ -11,11 +11,11 @@ Die Oberfläche von PPsn wurde im Groben nachempfunden (\autoref{abb:Prinzipskiz
 
 ![\label{abb:Prinzipskizze1} 1. Prinzipskizze](img/01Prinzipienskizze.png)
 
-Durch Auswahl von Kathegoien soll die TagCloud beeinflusst werden (\autoref{abb:Prinzipskizze2}) können.
+Durch Auswahl von Kathegoien soll die Tag-Cloud beeinflusst werden (\autoref{abb:Prinzipskizze2}) können.
 
 ![\label{abb:Prinzipskizze2} 2. Prinzipskizze](img/02Prinzipienskizze.png)
 
-Durch die Auswahl von Tags soll die TagCloud neu berechnet werden (\autoref{abb:Prinzipskizze3}).
+Durch die Auswahl von Tags soll die Tag-Cloud neu berechnet werden (\autoref{abb:Prinzipskizze3}).
 
 ![\label{abb:Prinzipskizze3} 3. Prinzipskizze](img/03Prinzipienskizze.png)
 
@@ -233,6 +233,6 @@ Möglichkeiten zur Ausbesserung dieser Nachteile wäre zum Beispiel eine automat
 
 ## Tag-Clouds
 
-Die Darstellung der zueinander gehörigen Tag nach einer Visualisierung in Form einer Wolke (z.B. \autoref{abb:tagCloud}) ist vielfältig denkbar. Uns wurde für unsere Umsetzug vorgegeben zunächst keine Rotation, Farben oder Schriftarten einzusetzen. Stattdessen sollen wir uns auf einen Gewichtungsfaktor der auf die Positionierung Einfluss nimmt konzentrieren.
+Die Darstellung der zueinander gehörigen Tag nach einer Visualisierung in Form einer Wolke (z.B. \autoref{abb:TagCloud}) ist vielfältig denkbar. Uns wurde für unsere Umsetzug vorgegeben zunächst keine Rotation, Farben oder Schriftarten einzusetzen. Stattdessen sollen wir uns auf einen Gewichtungsfaktor der auf die Positionierung Einfluss nimmt konzentrieren.
 
-![\label{abb:tagCloud} Tag-Cloud](img/tagCloud.png)
+![\label{abb:TagCloud} Tag-Cloud](img/tagCloud.png)
