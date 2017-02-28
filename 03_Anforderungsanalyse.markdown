@@ -227,7 +227,7 @@ Deshalb gibt es in vielen Systemen Klassifikationen oder ähnliches um den Nutze
 Dabei wird er auch sensibilisiert auf den Inhalt oder die thematischen Verbindungen der Ressource, da er die Tags liest und mit dem Objekt verbindet.
 Je mehr User die Tags *betaggen*, desto authentischer wird die Folksonomie. Doch dadurch entstehen auch die Probleme mit Folksonomien denn durch die fehlende Kontrolle und durch fehlende Regeln können schlechte oder irritierende  Tags das Ergebnis verfälschen. Zum Beispiel können Tags mit der gleichen Bedeutung in verschiedenen Zeitformen oder Wortbeugungen an die Ressource angehangen werden oder es können Spam- oder auch *Troll-* Tags angehangen werden. Und das natürlich auch in allen erdenklichen Sprachen.
 Das alles ist auf ein fehlendes Vokabular und die fehlenden Standards zurückzuführen.
-Möglichkeiten zur Ausbesserung dieser Nachteile wäre zum Beispiel eine automatische Suchvervollständigung, welche schon vorhandene Tags vorschlägt. Eine weitere Verbesserung wäre die Wortstammfindung, welche in Kapitel \autoref{Lemmatisierung}  näher beschrieben wird.
+Möglichkeiten zur Ausbesserung dieser Nachteile wäre zum Beispiel eine automatische Suchvervollständigung, welche schon vorhandene Tags vorschlägt. Eine weitere Verbesserung wäre die Wortstammfindung, welche in Kapitel \autoref{sec:Lemmatisierung}  näher beschrieben wird.
 
 ## Tag-Clouds
 
