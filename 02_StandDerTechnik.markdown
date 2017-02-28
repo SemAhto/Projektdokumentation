@@ -8,7 +8,7 @@ Das noch in Entwicklung befindliche ERP-System\footnote{\href{https://github.com
 3. *Volltextfilter*: Anhand dessen kann der Nutzer ein Textfragment eingeben.
 
 
-# Entwicklungsvoraussetzungen
+# Entwicklungsvoraussetzungen 
 
 Um an dem ERP-System arbeiten zu können, sind folgende Voraussetzungen für die Entwicklungsumgebung gegeben:
 
