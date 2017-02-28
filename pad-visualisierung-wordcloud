@@ -1,0 +1,59 @@
+src:https://pad.fsfw-dresden.de/p/visualisierung-wordcloud
+
+Auftrag: Algorithmen genauer aufschreiben
+
+## Problemzerlegung für Ziel einer hübschen Wortwolke
+
+1. Darstellunsgart (Algorithmus/Visualisierungsstrategie)
+2. Vorgaben auslesen (Schriftgrad, Schriftart, Stile[], Farben[], Abstände)
+3. Wortliste
+4. Sortierte Wortliste (ggf. schon Filter)
+5. Lemmata ermitteln (ggf. extern)
+6. Dimensionierung für Einträge ermitteln (W, H, Parameter[])
+7. Positionierung ermitteln (X, Y)
+8. Visualisieung mit Position, Link setzen
+
+## Alternativ Dynamisch
+
+1. Zentrale Senke bestimmen
+2. Abstoßung von Nachbarn
+3. Gravitation bestimmen
+4. items droppen
+
+## Was noch zu klären wäre:
+    1. (wichtig) Position des Nullpunkt im WPF (mittig, oben links, unten links) => auf cli: oben links
+    
+    mögliche Quellen für nützliche Infos
+        http://stackoverflow.com/questions/342687/algorithm-to-implement-a-word-cloud-like-wordle/1478314#1478314
+
+## Schnittstelle
+
+Eingabe
+
+    RANGE: min:double, max:double
+
+    PANELSIZE:Size
+
+    DENSITY RAGE 
+
+    WeightedWORDLIST:IEnumerable<IDATAROW>               IDATAROW  Index //Daten können elm oder row wise abgerufen werden; movenext=>nächstes item holen, current=>aktuelles item, dispose=>abbruch des Vorgangs
+
+    Size WORDSIZECALCULATOR( IDouble )
+
+    WORDMARGIN:Margin(double,double)
+
+Rückgabe
+
+    WORDARRAY Type< x:double, y:double, w:double, h:double, alpha:double >
+
+
+Interface TagCloudCalkculator
+
+    function 
+
+Class 
+
+### Interessantes
+
+* yield statt switch for bessere wartbarkeit über methoden
+* 
