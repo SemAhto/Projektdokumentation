@@ -11,7 +11,7 @@ Die Oberfläche von PPsn wurde im Groben nachempfunden (\autoref{abb:Prinzipskiz
 
 ![\label{abb:Prinzipskizze1} 1. Prinzipskizze](img/01Prinzipienskizze.png)
 
-Durch Auswahl von Kathegoien soll die Tag-Cloud beeinflusst werden (\autoref{abb:Prinzipskizze2}) können.
+Durch Auswahl von Kategoien soll die Tag-Cloud beeinflusst werden (\autoref{abb:Prinzipskizze2}) können.
 
 ![\label{abb:Prinzipskizze2} 2. Prinzipskizze](img/02Prinzipienskizze.png)
 
@@ -80,7 +80,7 @@ Es wurde außerdem in \autoref{abb:Inline-vs-PopupEditor} ein Inline-Editor gege
 
 \newpage
 
-Die Aufgabe der Studenten bestand darin, sich eine Form der Eingabemöglichkeit für Tags zu überlegen, wobei auch neue Dialoge entstehen können. Dabei Wurden sowohl eine \nameref{abb:BeispielmaskeOhneTagEingabe} als auch  eine \nameref{abb:BeispielmaskeMitTagEingabe} entworfen.
+Die Aufgabe der Studenten bestand darin, sich eine Form der Eingabemöglichkeit für Tags zu überlegen, wobei auch neue Dialoge entstehen können. Dabei wurden sowohl eine \nameref{abb:BeispielmaskeOhneTagEingabe} als auch  eine \nameref{abb:BeispielmaskeMitTagEingabe} entworfen.
 
 ![\label{abb:BeispielmaskeOhneTagEingabe} Beispielmaske ohne Tag Eingabe](img/BeispielMaskeOhneTE.png)
 
@@ -132,7 +132,7 @@ Diese eingegebenen Tags werden in einer Datentabelle (\autoref{abb:FB_Daten}) er
 ![\label{abb:FB_Daten} Fallbeispiel Szenario](img/FB_Daten.png)
 
 In einer weiteren Tabelle, werden die eingegebenen Tags sowohl aufgelistet als auch festgehalten, wie oft ein Tag eingegeben
-wurde. An der in \autoref{abb:FB_Rahmenbedingungen} abgebilteten Formel, wird außerdem seine Größe, mit der
+wurde. An der in \autoref{abb:FB_Rahmenbedingungen} abgebildeten Formel, wird außerdem seine Größe, mit der
 er letztendlich in der Tag-Cloud abgebildet werden soll bestimmt.
 
 ![\label{abb:FB_Rahmenbedingungen} Fallbeispiel Szenario](img/FB_Rahmenbedingungen.png)
@@ -156,12 +156,12 @@ Diese Nutzer können miteinander interagieren und die Aktionen der anderen Nutze
 
 ### User
 
-Ein User oder auch Nutzer ist ein Mitglied eines sozialen Netzwerkes. Dieser kann mit anderen Nutzern in dem social Network interagieren und verschiedene Aktionen ausführen. Nutzer können in verschiedene Nutzergruppen mit unterschiedlichen Berechtigungen unterteilt werden. So kann es zum Bespiel die normale Nutzer geben, Moderatoren und Administratoren. Dabei wären die Moderatoren verantwortlich die Inhalte der Nutzer auf ihre Kon­for­mi­tät mit den Regeln des Netzwerks zu prüfen und zum Beispiel Spam zu verhindern. Der Administrator hat in einem solchen Netzwerk meist eine eher technische Aufgabe.
+Ein User oder auch Nutzer ist ein Mitglied eines sozialen Netzwerkes. Dieser kann mit anderen Nutzern in dem social Network interagieren und verschiedene Aktionen ausführen. Nutzer können in verschiedene Nutzergruppen mit unterschiedlichen Berechtigungen unterteilt werden. So kann es zum Bespiel die normalen Nutzer geben, Moderatoren und Administratoren. Dabei wären die Moderatoren verantwortlich die Inhalte der Nutzer auf ihre Kon­for­mi­tät mit den Regeln des Netzwerks zu prüfen und zum Beispiel Spam zu verhindern. Der Administrator hat in einem solchen Netzwerk meist eine eher technische Aufgabe.
 Ein User verfügt immer über ein bestimmtes Vokabular, welches durch sein Umfeld, sein intellektuelles Niveau und seine Kultur etc., geprägt ist.
 
 ### Ressource
 
-In Social Networks werden verschiedene Objekte/Ressourcen miteinander geteilt und gemeinsam bearbeitet oder verwendet. Solche Ressourcen können zum Beispiel Bilder, Musikdateien, aber auch Baupläne oder Lebensläufe sein. Meist sind die Inhalte auf bestimmte Ressourcen, welche mit dem Ziel des Social Networks zusammenhängt, beschränkt.
+In Social Networks werden verschiedene Objekte/Ressourcen miteinander geteilt und gemeinsam bearbeitet oder verwendet. Solche Ressourcen können zum Beispiel Bilder, Musikdateien, aber auch Baupläne oder Lebensläufe sein. Meist sind die Inhalte auf bestimmte Ressourcen, welche mit dem Ziel des Social Networks zusammenhängen, beschränkt.
 
 ### Tag
 
@@ -231,6 +231,6 @@ Möglichkeiten zur Ausbesserung dieser Nachteile wäre zum Beispiel eine automat
 
 ## Tag-Clouds
 
-Die Darstellung der zueinander gehörigen Tag nach einer Visualisierung in Form einer Wolke (z.B. \autoref{abb:TagCloud}) ist vielfältig denkbar. Uns wurde für unsere Umsetzug vorgegeben zunächst keine Rotation, Farben oder Schriftarten einzusetzen. Stattdessen sollen wir uns auf einen Gewichtungsfaktor der auf die Positionierung Einfluss nimmt konzentrieren.
+Die Darstellung der zueinander gehörigen Tags nach einer Visualisierung in Form einer Wolke (z.B. \autoref{abb:TagCloud}) ist vielfältig denkbar. Für die Umsetzug wurde den Studenten vorgegeben, zunächst keine Rotation, Farben oder Schriftarten einzusetzen. Stattdessen sollen sie sich auf einen Gewichtungsfaktor der auf die Positionierung Einfluss nimmt konzentrieren.
 
 ![\label{abb:TagCloud} Tag-Cloud](img/tagCloud.png)
