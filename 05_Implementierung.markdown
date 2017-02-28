@@ -19,7 +19,7 @@ Der `WordCloudCalculator` wandelt die übergebenen, gewichteten Wörter des Typs
 Die Schnittstelle für die Rahmenbedingungen ist in `IWordCloudAppearenceArguments` festgelegt. Die Schnittstelle für die Implementierung eines WordCloudCalculators ist in `IWordCloudCalculator` festgelegt.
 
 Eine Möglichkeit wurde in `ExtractingWordCloudCalculator` implementiet.
-Dieser besitzt eine weitere Methode vom Typ `IWordAppearenceCalculationMethod`, die ein gewichtetes Wort als Eingabe bekommt und dieses in eine visualisiertes Wort umwandelt. Der Calculator an sich sortiert die Gewichte der übergeben,  gewichteten Wörter zuerst absteigend und übergibt dann jedes einzelne Wort solange der Umwandlungsmethode bis diese signalisiert, dass kein Wort mehr auf den anzeigbaren Bereich passt. Zum Schluss werden die anzeigbaren visualisierten Wörter zurückgegeben.
+Dieser besitzt eine weitere Methode vom Typ `IWordAppearenceCalculationMethod`, die ein gewichtetes Wort als Eingabe bekommt und dieses in eine visualisiertes Wort umwandelt. Der Calculator an sich sortiert die Gewichte der übergeben gewichteten Wörter zuerst absteigend und übergibt dann jedes einzelne Wort solange der Umwandlungsmethode bis diese signalisiert, dass kein Wort mehr auf den anzeigbaren Bereich passt. Zum Schluss werden die anzeigbaren visualisierten Wörter zurückgegeben.
 
 Mit Hilfe dieser Klasse war es Möglich verschiede Methoden der Anordnung auszuprobieren. Die `SimpleAppearenceCalculationMethod` ordenet die ersten 5 Wörter diagonal untereinander an und dient als Einstieg für die Erforschung neuer Methoden. Die `SpiralAppearenceCalculationMethod` ordnet die Wörter in der bereits beschriebenen Spiralform an. 
 
@@ -35,7 +35,7 @@ Desweiteren wurde in der `WordSizeCalculatorFactory` eine statische Methode entw
 
 ### Nuget
 
-Da diese Komponente wie bereits ewähnt wiederverwendbar ist, wurde für den für C# entwickelten Paketmanager ein Paket erstellt und auf nuget\footnote{ermöglicht einfaches Einbinden in Visual Studio von \href{https://www.nuget.org/packages/WordCloudCalculator}{https://www.nuget.org/packages/WordCloudCalculator}} veröffentlicht.
+Da diese Komponente wie bereuts ewähnt wiederverwendbar ist, wurde für den für C# entwickelten Paketmanager ein Paket erstellt und auf nuget\footnote{ermöglicht einfaches Einbinden in Visual Studio von \href{https://www.nuget.org/packages/WordCloudCalculator}{https://www.nuget.org/packages/WordCloudCalculator}} veröffentlicht.
 
 ### Verwendung
 
@@ -45,7 +45,7 @@ Um diese Komponente in einem neuen Projekt zu verwenden, musst das Paket per nug
 Install-Package WordCloudCalculator
 ```
 
-Nachdem das Paket erfolgreich installiert ist, folgt die Implementation des Interfaces `IWordCloudAppearenceArguments`, um die Rahmenbedingungen für die Darstellung festzulegen und als statische Ressource instanziert zu werden.
+Nachdem das Paket erfolgreich installiert ist, dolgt die Implementation des Interfaces `IWordCloudAppearenceArguments`, um die Rahmenbedingungen für die Darstellung festzulegen und als Statische Ressource instanziert werden.
 
 ```
 <Window.Resources>
@@ -87,7 +87,7 @@ Eine Neuerung im System ist die Nutzung einer Tag-Cloud (\autoref{abb:PpsnScreen
 
 ## Layout
 
-Die Benutzeroberfläche (\autoref{abb:PpsnLayout}, schematisch) besteht aus einer Objektliste, in der alle Datensätze der Datenbank angezeigt werden. Diese können mit Filtern, welche um dieser Liste platziert sind verkleinert werden. Anhand dieser Liste wird die Tag-Cloud berechnet. Durch die Auswahl eines Tags wird eine neue Filterbedingung hinzugefügt und sodass die Objektliste aktualisiert wird und so die Tag-Cloud neu berechnet. Durch diesen iterativen Prozess ist eine Suche anhand von Schlagworten möglich.
+Die Benutzeroberfläche (\autoref{abb:PpsnLayout}, schematisch) besteht aus einer Objektliste, in der alle Datensätze der Datenbank angezeigt werden. Diese können mit Filtern, welche um dieser List platziert sind verkleinert werden. Anhand dieser Liste wird die Tag-Cloud berechnet. Durch die Auswahl eines Tags wird eine neue Filterbedingung hinzugefügt und sodass die Objektliste aktualisiert wird und so die Tag-Cloud neu berechnet. Durch diesen iterativen Prozess ist eine Suche anhand von Schlagworten möglich.
 
 ![\label{abb:PpsnLayout} Layout von PPsn: Beeinflussungsübersicht. Dunkelgrau: Filterelemente; Hellgrau: Datenpräsentation](img/ppsn_layout.jpg)
 
