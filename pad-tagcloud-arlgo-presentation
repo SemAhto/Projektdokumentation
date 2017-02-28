@@ -1,0 +1,198 @@
+src:https://pad.fsfw-dresden.de/p/161018-tagcloud-arlgo-presentation
+
+https://trello.com/c/i4RVfME6/10-suche-algorithmus-sw-zur-position-anordnung-der-tags-in-der-tag-cloud
+
+[Markdown]-Viewer: http://markdownlivepreview.com/
+
+## Annahmen
+
+
+* Wir rotieren nicht um den Text lesbarer zu halten
+* Keine Schirften/Stile/Farben => Schwarz auf Weiß (bzw die Systemfarbe?), Helvetica
+* Schriftgröße: Max. 42, Min. 8
+
+Weiterhin wird eine Konfiguration vorgegeben sein, Min. Schriftgröße, Max. Schriftgröße, Min. Abstand...
+denkbare Nebenbedingungen:
+
+    * Darf rotieren, darf nur auf Winkel[] rotieren, (z.b. nur -30°,+30° und Wechselfrequenz der Orientierung); ...
+
+    * Font, Farben (mit oder ohne Bedeutung, ggf. Beachtung Barrierefreiheit)
+
+
+------ Folie -----
+
+## Algo
+
+0. Word word.readList(List list) - Ausgangssituation eine Liste von Worten ohne Stop-Worte mit ihrer Relevanz, ggf. Analyseergebnis wie Sprache und Themengebiet, z.B:
+
+    Lüge;3
+    Herr;2
+    Gabriel;1
+    Schäuble;1
+    Mäuse;1
+    Frau;1
+    Merkel;1
+    Politik;2
+    ...
+
+------ Folie -----
+
+1. "Streichungen" - Entfernen von nicht relevantem (z.B. "Mäuse")
+2. "Sort DESC" - Sortieren, häufigste zuerst
+3. "Canvas" - Bildfläche mit fester Größe (min. eine Dimension fest) erstellen; hier könnte ein Muster *Shape* zur "Schwärzung" von Bereichen beitragen
+4. "word.pop()" - erstes Wort nehmen 
+5. "word.getImage()" - in Max. Schriftgröße * Relevanz als ein Grafikobjekt erzeugen, sodass die geometrischen Dimensionen als Rechteck R bekannt sind: W, H
+6. ...
+
+------ Folie -----
+
+6. ...
+7. wenn keiner zu finden, Max. Schriftgröße verringern; Wenn Max. Schriftgröße < Min. Schirftgröße Abbruch
+8. (=> 5)
+9. (erstes Wort entweder zentral oder zufällig) plazieren
+A. nächstes Wort aus dem Stack nehmen
+B. (=> 5)
+
+------ Folie -----
+
+I
+6. "word.place( P(x,y) )" - Wort in aktueller Orientierung (Zeile/Spalte) plazieren, Inkrement wenn es nicht hineinpasst
+
+##### Eins
+#### Zwei
+### Drei
+
+![lineares Bild "einfachste Darstellungsart"] - Vorschlag f. erste Prototypen
+
+------ Folie -----
+
+II
+6. "word.place( P(x,y) )" - Freiraum + Min. Abstand => Punkt/Position P(x,y) suchen der groß genug ist für das erzeugte Rechteck R
+
+    I (nicht bei erstem Wort)
+
+    6.1 "Intersec I = True, Position P=False;" - Initalisierung  I: Intersektion: Wahr; Gültige Position G: Falsch
+
+    6.2 "( I.(  ) )" - Teste auf I = ( Intersektion von R auf B ) ? Wahr : Falsch ;
+
+    6.3 "" - Wenn ( -G ) inkrementiere Position P(x,y
+
+    6.4 Wenn ( G && I ) plazieren auf P-1 => R passt in B und stößt an
+
+    6.5 Abbruch wenn Bild erfolglos durchsucht
+
+
+------ Folie -----
+
+## Eins
+##### Zwei
+### Drei
+
+![](bildlink)
+
+------ Folie -----
+
+
+    II Als Spirale
+
+    6.1 Spiralpfad (Kurve) (vom Bildzentrum ausgehens, s.a. Muster) entlang
+
+    6.2 solange R nicht passt oder außerhalb der Bildfläche ist
+
+    6.3 Abbruch wenn 360° lang nicht auf Bildfläche
+
+    6.4 plaziere R
+
+
+![Kreisen](bildlink "Animation in Präsentation")
+
+------ Folie -----
+
+Hinweis auf Boxen-Ermittlung um vorhandenes Wort
+
+Den Ansatz haben wir noch nicht durchdrungen. s.a. [Ausführliche Beschreibung]
+
+------ Folie -----
+
+
+## Quellen
+
+* Java-Implementation
+* JavaScript-Implementation
+* Vortrag zur Vorgehensweise
+* Wordl-Paper
+
+------ Folie -----
+
+### [TagCloud by neopoly] in Java unter MIT
+
+"
+
+    This project bases on the impressive work of [Processing] and [WordCram]."
+
+
+Java bietet Library für:
+
+[Processing]: https://processing.org/
+[WordCram]: http://wordcram.org/
+
+Lösung am ehesten für Bachend geeignet
+
+------ Folie -----
+
+### [wordcloud2] in JavaScript unter X11-alike
+
+```js
+WordCloud(document.getElementById('my_canvas'), { list: list } );
+/* list = [['foo', 12], ['bar', 6]] */
+```
+
+------ Folie -----
+
+### [Vortrag zu Vorgehensweise bez. HTML]
+
+* Schrittweise Analyse
+* viele Quellen benannt
+* für den Anfang **nicht** gut verständlich
+
+### Theorie
+
+* Knuth-Plass Algorithmus
+* Weitere Paper etc. verlinkt
+
+------ Folie -----
+
+### Wordl-Paper
+
+In dem Repo zu c3-cloud fand sich eine [Ausführliche Beschreibung] zum Vorgehen
+unter Bezugnahme auf insb. Wordl.
+
+------ Folie -----
+
+## Was wir in C# brauchen (und in z.B. Java schon existiert)
+
+* Listen/Arrays
+* (Mit Font, Schriftgröße, Farbe) Schriftzüge auf Bildfläche"malen"
+* Intersections erkennen (Processing)
+* Dimensionen eines Wortes auf der Bildfläche ermitteln
+* XAML ?
+
+**Hinweis:** Wir können [Java Libs aus .Net heraus nutzen], s.a. [jni4net]
+
+------ Folie -----
+
+
+
+<!-- ENDE -->
+
+ Quellen
+
+[wordcloud2]: https://github.com/timdream/wordcloud2.js
+[TagCloud by neopoly]: https://github.com/neopoly/tagcloud
+[Algorithm explained]: http://de.slideshare.net/lemire/tagcloud-drawing-algorithms-for-cloud-visualization-presentation
+[Java Libs aus .Net heraus nutzen]: http://www.codeproject.com/Articles/13549/Using-Java-Classes-in-your-NET-Application
+[Vortrag zu Vorgehensweise bez. HTML]: http://de.slideshare.net/lemire/tagcloud-drawing-algorithms-for-cloud-visualization-presentation
+[jni4net]: http://jni4net.com/
+[Ausführliche Beschreibung]: http://static.mrfeinberg.com/bv_ch03.pdf
+[Fundort]: https://github.com/jasondavies/d3-cloud/blob/master/index.js
+[Markdown]: https://daringfireball.net/projects/markdown/syntax
