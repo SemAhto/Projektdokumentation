@@ -42,7 +42,7 @@ Zum besseren Verständnis haben die Studenten den Porter-Stemmmer-Algorithmus (s
 
 \pagebreak
 
-## Lemmatisierung
+## Lemmatisierung \label{sec:Lemmatisierung}
 
 Im Bereich Lemmatisierung wurde festgestellt, dass ein Wörterbuch im Hintergrund zum Abgleichen benötigt wird. Folgende Möglichkeiten wurden dabei näher betrachtet:
 
