@@ -42,7 +42,7 @@ Zum besseren Verständnis haben die Studenten den Porter-Stemmmer-Algorithmus (s
 
 \pagebreak
 
-## Lemmatisierung
+## Lemmatisierung \label{sec:Lemmatisierung}
 
 Im Bereich Lemmatisierung wurde festgestellt, dass ein Wörterbuch im Hintergrund zum Abgleichen benötigt wird. Folgende Möglichkeiten wurden dabei näher betrachtet:
 
@@ -135,7 +135,7 @@ Da das Ziel aus der Ermittlung der Lemmata der Worte des Beschreibungsfeldes bes
 Die Universität Leipzig stellt u.a. einige SOAP-Webservices (\cite{onl:WortschatzWebservices}) zur Verfügung, mit denen ein direkter Datenzugriff sowie gezielte Abfragen möglich sind. Zu jedem Webservice wird ein Beispielclient mit Quellen zur Verfügung gestellt. Dies ermöglicht die Kombination sowie das Einbauen der Webservices in eigene Programme.
 Die Zugriffsvoraussetzungen unterscheiden sich je nach Abfrageumfang.
 Für einfache Abfragen kann das login \enquote{anonymous} mit dem Passwort \enquote{anonymous} verwendet werden. Eine Registrierung ist für komplexere Abfragen allerdings erforderlich, um bei Problemen kontaktiert werden zu können. Massendatenabfragen sind lediglich Kooperationspartnern vorbehalten.
-Da der Verwendung des Wortschatzprojektes vorerst lediglich ein \enquote{Versuch} durchgeführt werden sollte, wurde sich auf das allgemeine Login für einfache Abfragen beschränkt. Nach einigen Recherchen mit dem Ziel einen bereits bestehenden und benutzbaren Code zur Abfrage des Lemmata zu erhalten, sind die Studenten auf eine C#-API zur Abfrage des Thesaurus gestoßen. Diese API wurde von Raffael Herrmann im Juli 2013 entwickelt.
+Da vor der Verwendung des Wortschatzprojektes lediglich ein \enquote{Versuch} durchgeführt werden sollte, wurde sich auf das allgemeine Login für einfache Abfragen beschränkt. Nach einigen Recherchen mit dem Ziel einen bereits bestehenden und benutzbaren Code zur Abfrage des Lemmata zu erhalten, sind die Studenten auf eine C#-API zur Abfrage des Thesaurus gestoßen. Diese API wurde von Raffael Herrmann im Juli 2013 entwickelt.
 
 *Die Funktionsweise und der Aufbau des Codes wurde in (\cite{onl:herrmann}) ausführlich erklärt, so dass hier nicht weiter darauf eingegangen wird.*
 

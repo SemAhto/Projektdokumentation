@@ -1,7 +1,7 @@
 
-Aufgrund des sehr frühen Entwicklungsstandes von der echten Laufzeitumgebung für die WordCloud wurde beschlossen zunächst eine ähnlichen Prototyp zu erstellen mit dem Ziel, die komplexen Abläufe des realen Systems einfacher darzustellen, um ungewollte und für das Projektteam nicht nachvollziehbare Nebeneffekte während der Entwicklungsphase stark zu reduzieren. Anhand des Prototyp wurde die Berechnung von Folksonomien und die Möglichkeiten der Tageingabe erforscht.
+Aufgrund des sehr frühen Entwicklungsstandes von der echten Laufzeitumgebung für die WordCloud wurde beschlossen zunächst einen ähnlichen Prototyp zu erstellen mit dem Ziel, die komplexen Abläufe des realen Systems einfacher darzustellen, um ungewollte und für das Projektteam nicht nachvollziehbare Nebeneffekte während der Entwicklungsphase stark zu reduzieren. Anhand des Prototyp wurde die Berechnung von Folksonomien und die Möglichkeiten der Tageingabe erforscht.
 
-Um eine einfache Datenbasis zum Testen zu erstellen wurde die freie Datenbank Terra\footnote{\cite{TN_libero_mab2337570} via \href{https://www.sachsen.schule/~terra2014/index.php}{https://www.sachsen.schule/~terra2014/index.php} \label{foot:terra} } ausgewählt. Sie enthält geografische Daten wie Städte, Flüsse und Berge mit Relation untereinander, was sich als sehr nützlich erwies, da sich diese einfach in Tags übertragen ließen.
+Um eine einfache Datenbasis zum Testen zu erstellen wurde die freie Datenbank Terra\footnote{\cite{TN_libero_mab2337570} via \href{https://www.sachsen.schule/~terra2014/index.php}{https://www.sachsen.schule/~terra2014/index.php} \label{foot:terra} } ausgewählt. Sie enthält geografische Daten wie Städte, Flüsse und Berge mit Relation untereinander, was sich als sehr nützlich erwies, da sich diese einfach in Tags übertragen ließen. 
 
 # Aufbau
 
@@ -24,20 +24,20 @@ Datenbank leeren
 
 ## Darstellung
 
-Die ausführlichste Erläuterung zum Thema Visualisierung von WordClouds war Wordle (\cite{misc:worlde}). Das Prinzip der Gewichtung von Worten und spiralförmigen Darstellung beginnend mit dem höchstgewichteten in der Bildmitte wurde aus den Beispielen entlehnt. Die Funktionsweise ist nachvollziehbar im Vortrag zur Visulaisierung von Tag-Clouds (\cite{misc:TagCloudDrawing}) dargelegt. Zusätzlich half uns der Code des Projektes WordCloud (\cite{misc:WordCloudTalbot}) nicht den Fehler zu begehen eine Positionierung über Bitmaps zu versuchen. Die Performance mit mehreren Sekunden zur Generierung eines einzelnen Bildes ist hier ausreichend abschrecken. Deshalb weerden die Elemnte unserer Tag-Cloud ohne Bitmap in Rechtecken mit Positionsangabe sowie den Dimensionen Höhe und Breite versehen.
+Die ausführlichste Erläuterung zum Thema Visualisierung von WordClouds war Wordle (\cite{misc:worlde}). Das Prinzip der Gewichtung von Worten und spiralförmigen Darstellung beginnend mit dem höchstgewichteten in der Bildmitte wurde aus den Beispielen entlehnt. Die Funktionsweise ist nachvollziehbar im Vortrag zur Visulaisierung von Tag-Clouds (\cite{misc:TagCloudDrawing}) dargelegt. Zusätzlich half uns der Code des Projektes WordCloud (\cite{misc:WordCloudTalbot}) nicht den Fehler zu begehen eine Positionierung über Bitmaps zu versuchen. Die Performance mit mehreren Sekunden zur Generierung eines einzelnen Bildes ist hier ausreichend abschreckend. Deshalb werden die Elemnte unserer Tag-Cloud ohne Bitmap in Rechtecken mit Positionsangabe sowie den Dimensionen Höhe und Breite versehen.
 Wir haben unsere Worte (Tags) weiterhin mit einem Gewicht versehen definiert. Dieses kann u.a. aus der Häufigkeit oder später einmal aus der Verknüpfungshäufigkeit in Wortenetzen (s.a. \autoref{sec:wortschatzprojekt}) ermittelt werden. Für die Testdaten wird dies schlicht inkrementell oder zufällig auf die Tags verteilt.
 Die Bildmitte kann aus den vorgegebenen Dimensionen des Bildes ermittelt werden. Weitere Parameter der Spirale sollen experimentiell in Verbindung mit Tests zur Performance (\autoref{sec:AussehenTagCloud}) ermittelt werden. Zu vermuten ist hier als Abstand zwischen zwei Linienzügen die Höhe der kleinsten Schriftdarstellung.
-Wie in den Anforderungen bereits vorgegeben werden in der Zieldarstellung keine farblichen 
+Wie in den Anforderungen bereits vorgegeben werden in der Zieldarstellung keine farblichen Tags gefordert.
 
 ### Daten
 
-Die folgenden Funktionen dienen Import und Export von gespeicherten Daten von bzw. in andere Systeme und deren manuellen Modifikation.
+Die folgenden Funktionen dienen dem Import und Export von gespeicherten Daten in andere Systeme und deren manuellen Modifikation.
 
 TerraDB XML in SQLite Datenbank konvertieren \label{Abschn:TerraDBXML}
 :	Im Prototyp ist es möglich die XML-Export-Datei der Terra Datenbank in eine SQLite Datenbank umzuwandeln, damit weitere Transformationen einfacher mit SQL umgesetzt werden können. Dafür wird zunächst die XML Datei ausgewählt und anschließend der Speicherort der SQLiteDatenbank. Danach wird für jeden Tag-Typen eine Tabelle mit allen Attributen erstellt und anschließend die XML Datei eingelesen und die Datensätze entsprechend eingefügt. Fremdschlüssel werden nicht beachtet. Am Ende entsteht eine SQLite Datenbank die das gleiche Schema wie die XML Datei ausweist mit dem Vorteil, dass dieses mit SQL abgefragt werden kann.
 
 TerraDB SQLite Datenbank importieren
-:	Die bei \autoref{Abschn:TerraDBXML} erstellte SQLite Datenbank muss jetzt wieder geladen werden und mit Hilfe von SQL Abfragen werden die BusinessObjects und Tags erstellt. Dabei wurde statische Tags, d.h. diejenigen die bei allen BusinessObject des ElementTyps gleich sind, und Dynamische Tags, d.h. diejenigen die aus Attributen oder Verknüpfungstabellen des Elements gewonnen wurden und für jedes Business Object unterschiedlich sein können.
+:	Die bei \autoref{Abschn:TerraDBXML} erstellte SQLite Datenbank muss jetzt wieder geladen werden und mit Hilfe von SQL Abfragen werden die BusinessObjects und Tags erstellt. Dabei wurde statische Tags, d.h. diejenigen die bei allen BusinessObject des ElementTyps gleich sind, und Dynamische Tags, d.h. diejenigen die aus Attributen oder Verknüpfungstabellen des Elements gewonnen werden und für jedes Business Object unterschiedlich sein können.
 
 +-------------+-------------------+-------------------------------------------------------------+
 | Element Typ | Statistische Tags | Dynamische Tags                                             |
@@ -84,7 +84,9 @@ Entfernen
 
 ## Komponenten
 
-In diesem Teilabschnitt werden die Komponenten zur Funktionsbereitstellung technisch beschrieben und deren Modellierung erläutert. Es wurde darauf geachtet die Funktionalität, die Daten und die Benutzer
+In diesem Teilabschnitt werden die Komponenten zur Funktionsbereitstellung technisch
+beschrieben und deren Modellierung erläutert. Es wurde darauf geachtet die Funktionalität,
+die Daten und die Benutzeroberfläche voneinander zu trennen.
 
 ### Model \label{abschn:Model}
 
@@ -162,7 +164,7 @@ Das Model-View-ViewModel (MVVM) Pattern ist zentraler Bestandteil der Windows Pr
 
 ## Benutzeroberfläche
 
-Die Benutzeroberfläche ist wie für einen Prototyp (\autoref{abb:InitialzustandPrototyp}) typisch schlicht gehalten. Zur besseren Benutzbarkeit sind die Grenzen rechts und unterhalb der Gefundenen BusinessObjects frei verschiebbar.
+Die Benutzeroberfläche ist wie für einen Prototyp (\autoref{abb:InitialzustandPrototyp}) typisch schlicht gehalten. Zur besseren Benutzbarkeit sind die Grenzen rechts und unterhalb der gefundenen BusinessObjects frei verschiebbar.
 
 ![\label{abb:InitialzustandPrototyp} Initialzustand des Prototyps (Datenbank geladen)](img/InitialzustandPrototyp.jpg)
 
@@ -170,7 +172,7 @@ Die Benutzeroberfläche ist wie für einen Prototyp (\autoref{abb:Initialzustand
 
 # Konstruktion eines nachvollziehbaren Beispiels zur Präsentation
 
-Da geographische Daten für die Präsentation für das Publikum einer Präsentation eher uninteressant und nicht unbedingt nachvollziehbar sind wurde beschlossen, unser erworbenes Verständnis einer guten Folksonomie zu anzuwenden und ein eingängigeres Beispiel zu erstellen, sodass die Zuhörer das Interesse während der Präsentation nicht verliert. Dabei wurde sich auf den Themenbereich Disney geeinigt, da davon ausgegangen wurde, dass jeder zumindest einen Teil dieser Figuren kennt und so die Beziehungen deutlicher und somit verständlicher werden. Durch die emotionale Wirkung der Marke Disney ist auch mit anhaltender Aufmerksamkeit zu rechnen.
+Da geographische Daten für die Präsentation für das Publikum einer Präsentation eher uninteressant und nicht unbedingt nachvollziehbar sind wurde beschlossen, unser erworbenes Verständnis einer guten Folksonomie anzuwenden und ein eingängigeres Beispiel zu erstellen, sodass der Zuhörer das Interesse während der Präsentation nicht verliert. Dabei wurde sich auf den Themenbereich Disney geeinigt, da davon ausgegangen wurde, dass jeder zumindest einen Teil dieser Figuren kennt und so die Beziehungen deutlicher und somit verständlicher werden. Durch die emotionale Wirkung der Marke Disney ist auch mit anhaltender Aufmerksamkeit zu rechnen.
 
 **Beispielhafter Filter-/Suchprozess**
 
@@ -280,7 +282,7 @@ Als Resultat wird die WordCloud analog zum Schritt 1 entsprechend des neuen Filt
 
 ## Ergebnis
 
-Die Auswahl führte im 4. Schritt mit \autoref{abb:WordCloudFilterung4} zu einem eindeutigen Treffer. Eine weitere Selektion von Tags kann die GEnauigkeit nicht mehr erhöhen.
+Die Auswahl führte im 4. Schritt mit \autoref{abb:WordCloudFilterung4} zu einem eindeutigen Treffer. Eine weitere Selektion von Tags kann die Genauigkeit nicht mehr erhöhen.
 
 <!--
 ![\label{abb:FilterergebnisFinalGesamt}Gesamtbild Endresultat](img/FilterergebnisFinal.jpg)

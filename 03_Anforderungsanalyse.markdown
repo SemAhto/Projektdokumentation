@@ -3,7 +3,7 @@
 
 Während den ersten zwei Gruppenmeetings wurden der Entwurf von Anwendungsfällen für Folksonomien, Social
 Tagging und Tag-Clouds im ERP-System ausgearbeitet. Dabei wurde sich an der Satzschablone von Chris Rupp (vgl. \cite{Sophist:Schablonen})
-orientiert. Anhand dessen wurden folgende Prinzipsskizzen erstellt, wie auch Anforderungen schriftlich formuliert. Folgene Ergebnisse wurden dabei erzielt:
+orientiert. Anhand dessen wurden folgende Prinzipskizzen erstellt, wie auch Anforderungen schriftlich formuliert. Folgene Ergebnisse wurden dabei erzielt:
 
 ## Prinzipskizzen
 
@@ -11,7 +11,7 @@ Die Oberfläche von PPsn wurde im Groben nachempfunden (\autoref{abb:Prinzipskiz
 
 ![\label{abb:Prinzipskizze1} 1. Prinzipskizze](img/01Prinzipienskizze.png)
 
-Durch Auswahl von Kathegoien soll die Tag-Cloud beeinflusst werden (\autoref{abb:Prinzipskizze2}) können.
+Durch Auswahl von Kategoien soll die Tag-Cloud beeinflusst werden (\autoref{abb:Prinzipskizze2}) können.
 
 ![\label{abb:Prinzipskizze2} 2. Prinzipskizze](img/02Prinzipienskizze.png)
 
@@ -80,7 +80,7 @@ Es wurde außerdem in \autoref{abb:Inline-vs-PopupEditor} ein Inline-Editor gege
 
 \newpage
 
-Die Aufgabe der Studenten bestand darin, sich eine Form der Eingabemöglichkeit für Tags zu überlegen, wobei auch neue Dialoge entstehen können. Dabei Wurden sowohl eine \nameref{abb:BeispielmaskeOhneTagEingabe} als auch  eine \nameref{abb:BeispielmaskeMitTagEingabe} entworfen.
+Die Aufgabe der Studenten bestand darin, sich eine Form der Eingabemöglichkeit für Tags zu überlegen, wobei auch neue Dialoge entstehen können. Dabei wurden sowohl eine \nameref{abb:BeispielmaskeOhneTagEingabe} als auch  eine \nameref{abb:BeispielmaskeMitTagEingabe} entworfen.
 
 ![\label{abb:BeispielmaskeOhneTagEingabe} Beispielmaske ohne Tag Eingabe](img/BeispielMaskeOhneTE.png)
 
@@ -132,7 +132,7 @@ Diese eingegebenen Tags werden in einer Datentabelle (\autoref{abb:FB_Daten}) er
 ![\label{abb:FB_Daten} Fallbeispiel Szenario](img/FB_Daten.png)
 
 In einer weiteren Tabelle, werden die eingegebenen Tags sowohl aufgelistet als auch festgehalten, wie oft ein Tag eingegeben
-wurde. An der in \autoref{abb:FB_Rahmenbedingungen} abgebilteten Formel, wird außerdem seine Größe, mit der
+wurde. Mit der in \autoref{abb:FB_Rahmenbedingungen} abgebildeten Formel, wird außerdem seine Größe, mit der
 er letztendlich in der Tag-Cloud abgebildet werden soll bestimmt.
 
 ![\label{abb:FB_Rahmenbedingungen} Fallbeispiel Szenario](img/FB_Rahmenbedingungen.png)
@@ -156,12 +156,12 @@ Diese Nutzer können miteinander interagieren und die Aktionen der anderen Nutze
 
 ### User
 
-Ein User oder auch Nutzer ist ein Mitglied eines sozialen Netzwerkes. Dieser kann mit anderen Nutzern in dem social Network interagieren und verschiedene Aktionen ausführen. Nutzer können in verschiedene Nutzergruppen mit unterschiedlichen Berechtigungen unterteilt werden. So kann es zum Bespiel die normale Nutzer geben, Moderatoren und Administratoren. Dabei wären die Moderatoren verantwortlich die Inhalte der Nutzer auf ihre Kon­for­mi­tät mit den Regeln des Netzwerks zu prüfen und zum Beispiel Spam zu verhindern. Der Administrator hat in einem solchen Netzwerk meist eine eher technische Aufgabe.
+Ein User oder auch Nutzer ist ein Mitglied eines sozialen Netzwerkes. Dieser kann mit anderen Nutzern in dem social Network interagieren und verschiedene Aktionen ausführen. Nutzer können in verschiedene Nutzergruppen mit unterschiedlichen Berechtigungen unterteilt werden. So kann es zum Bespiel die normalen Nutzer geben, Moderatoren und Administratoren. Dabei wären die Moderatoren verantwortlich für die Inhalte der Nutzer auf ihre Kon­for­mi­tät mit den Regeln des Netzwerks zu prüfen und zum Beispiel Spam zu verhindern. Der Administrator hat in einem solchen Netzwerk meist eine eher technische Aufgabe.
 Ein User verfügt immer über ein bestimmtes Vokabular, welches durch sein Umfeld, sein intellektuelles Niveau und seine Kultur etc., geprägt ist.
 
 ### Ressource
 
-In Social Networks werden verschiedene Objekte/Ressourcen miteinander geteilt und gemeinsam bearbeitet oder verwendet. Solche Ressourcen können zum Beispiel Bilder, Musikdateien, aber auch Baupläne oder Lebensläufe sein. Meist sind die Inhalte auf bestimmte Ressourcen, welche mit dem Ziel des Social Networks zusammenhängt, beschränkt.
+In Social Networks werden verschiedene Objekte/Ressourcen miteinander geteilt und gemeinsam bearbeitet oder verwendet. Solche Ressourcen können zum Beispiel Bilder, Musikdateien, aber auch Baupläne oder Lebensläufe sein. Meist sind die Inhalte auf bestimmte Ressourcen, welche mit dem Ziel des Social Networks zusammenhängen, beschränkt.
 
 ### Tag
 
@@ -190,7 +190,7 @@ Bei der Folksonomie (\cite{onl:folksonomiesccc}) handelt es sich also, um die Be
 
 Die einzelnen Beziehungen zwischen Objekten, Nutzern und Tags können auf verschiedene Arten entstehen. Dabei unterscheidet man zwischen den Formen der Engen (Narrow) und der Breiten (Broad) Folksonomie.
 
-### Narrow Folkyonomy / Enge Folksonomie
+### Narrow Folksyonomy / Enge Folksonomie
 
 Die enge Folksonomie (\autoref{abb:narrowfolksonomy}, \cite{onl:unibielefeldfolksonomie}) wird heute am häufigsten verwendet, zum Beispiel bei Social Networks wie *Twitter* und *Instagram*. Hier wird ein Objekt von einem Nutzer erstellt und in das Netzwerk gestellt. Er versieht das Objekt mit initialen Tags über welche es von anderen Nutzern mit verschiedenen Vokabularen gefunden werden kann. Diese können nun weitere Tags an das Objekt anhängen und ermöglichen es nun eventuell weiteren Nutzern dieses Objekt zufinden und zu *betaggen*. Dabei ist das besondere, dass Tags nur einmalig an ein Objekt vergeben werden können. In der nachfolgenden Abbildung wird dies noch einmal verdeutlicht.
 
@@ -225,12 +225,12 @@ Entweder fehlt dem Suchenden die genaue Bezeichnung oder er hat nur eine wage Ri
 Deshalb gibt es in vielen Systemen Klassifikationen oder ähnliches um den Nutzer bei seiner Suche zu unterstützen. Mittels Folksonomien und dem Social Tagging ist es möglich dem Nutzer eine unscharfe Suche zu ermöglichen. Dies bietet den Vorteil das der Nutzer sich *stöbernd* durch die Objekte bewegen kann und seine Auswahl immer mehr eingrenzt, bis er nur noch eine überschaubare Menge an Ressourcen übrig hat und in dieser sich sein gesuchtes Objekt befindet.
 
 Dabei wird er auch sensibilisiert auf den Inhalt oder die thematischen Verbindungen der Ressource, da er die Tags liest und mit dem Objekt verbindet.
-Je mehr User die Tags *betaggen*, desto authentischer wird die Folksonomie.Doch dadurch entstehen auch die Probleme mit Folksonomien denn durch die fehlende Kontrolle und durch fehlende Regeln können schlechte oder irritierende  Tags das Ergebnis verfälschen. Zum Beispiel können Tags mit der gleichen Bedeutung in verschiedenen Zeitformen oder Wortbeugungen an die Ressource angehangen werden oder es können Spam- oder auch *Troll-* Tags angehangen werden. Und das natürlich auch in allen erdenklichen Sprachen.
+Je mehr User die Tags *betaggen*, desto authentischer wird die Folksonomie. Doch dadurch entstehen auch die Probleme mit Folksonomien denn durch die fehlende Kontrolle und durch fehlende Regeln können schlechte oder irritierende  Tags das Ergebnis verfälschen. Zum Beispiel können Tags mit der gleichen Bedeutung in verschiedenen Zeitformen oder Wortbeugungen an die Ressource angehangen werden oder es können Spam- oder auch *Troll-* Tags angehangen werden. Und das natürlich auch in allen erdenklichen Sprachen.
 Das alles ist auf ein fehlendes Vokabular und die fehlenden Standards zurückzuführen.
-Möglichkeiten zur Ausbesserung dieser Nachteile wäre zum Beispiel eine automatische Suchvervollständigung, welche schon vorhandene Tags vorschlägt. Eine weitere Verbesserung wäre die Wortstammfindung, welche in Kapitel \label{Lemmatisierung}  näher beschrieben wird.
+Möglichkeiten zur Ausbesserung dieser Nachteile wäre zum Beispiel eine automatische Suchvervollständigung, welche schon vorhandene Tags vorschlägt. Eine weitere Verbesserung wäre die Wortstammfindung, welche in Kapitel \autoref{sec:Lemmatisierung}  näher beschrieben wird.
 
 ## Tag-Clouds
 
-Die Darstellung der zueinander gehörigen Tag nach einer Visualisierung in Form einer Wolke (z.B. \autoref{abb:TagCloud}) ist vielfältig denkbar. Uns wurde für unsere Umsetzug vorgegeben zunächst keine Rotation, Farben oder Schriftarten einzusetzen. Stattdessen sollen wir uns auf einen Gewichtungsfaktor der auf die Positionierung Einfluss nimmt konzentrieren.
+Die Darstellung der zueinander gehörigen Tags nach einer Visualisierung in Form einer Wolke (z.B. \autoref{abb:TagCloud}) ist vielfältig denkbar. Für die Umsetzug wurde den Studenten vorgegeben, zunächst keine Rotation, Farben oder Schriftarten einzusetzen. Stattdessen sollen sie sich auf einen Gewichtungsfaktor der auf die Positionierung Einfluss nimmt konzentrieren.
 
 ![\label{abb:TagCloud} Tag-Cloud](img/tagCloud.png)
