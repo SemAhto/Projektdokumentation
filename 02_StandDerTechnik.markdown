@@ -16,16 +16,18 @@ Um an dem ERP-System arbeiten zu können, sind folgende Voraussetzungen für die
 * Microsoft Visual Studio 2015
 * Microsoft SQL Server 2016 -- LocalDB
 * Microsoft SQL Server Managementstudio 2016
-* TortoiseGit (oder ein Git-Client der Wahl, muss Externals/Submodules unterstützen)
+* TortoiseGit (oder ein Git-Client der Wahl, \mbox{muss Externals/Submodules unterstützen})
 * SQLite Datenbank Viewer (z.B. [DB Browser for SQLite](http://sqlitebrowser.org/))  
 
-# Arbeitsmittel
+\newpage
+
+# Gewählte Arbeitsmittel
 
 Zur Verwaltung des Quellcodes wird aufgrund des bestehenden Projektes der Firma TecWare *Git* und als Hoster für die Repositories *GitHub*\footnote{Projekt-Repository: \href{https://github.com/SemAhto/Projektdokumentation}{https://github.com/SemAhto/Projektdokumentation}} verwendet.
 
 Zur Verwaltung der Aufgaben wurde am ersten Termin *Trello*\footnote{\href{https://trello.com/}{https://trello.com/}} festgelegt. Damit sind Notizen für alle Teilnehmer auch mobil erreichbar und auch für Ungeübte im Umgang mit Git zugänglich.
 
-Im Raum A111 stand uns ein Rechner mit Möglichkeit zur Installation des ERP neben der Entwicklungsumgebung bereit. Dieser wurde insb. durch die Aufgaben zum Textmining auch via Remote Desktop (RDP) genutzt, die Entwicklung in C# auf lokalen Maschinen u.a. im Laborbereich oder dem eigenen Notebook leichter zu handhaben ist.
+Im Raum A111 der HTW stand uns ein Rechner mit Möglichkeit zur Installation des ERP neben der Entwicklungsumgebung bereit. Dieser wurde insb. durch die Aufgaben zum Textmining auch via Remote Desktop (RDP) genutzt, die Entwicklung in C# auf lokalen Maschinen u.a. im Laborbereich oder dem eigenen Notebook leichter zu handhaben ist.
 
 <!--
 

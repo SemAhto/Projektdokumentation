@@ -29,12 +29,12 @@ Systemtags
 :	Tags, die bei Erstellung eines Objekts vom System generiert werden.
 
 Usertags
-:	Tags, die vom User selbst erstellt und an das Objekt angehangen werden. 
+:	Tags, die vom User selbst erstellt und an das Objekt angehangen werden.
 
 Tags
 :	Menge aller System- und Usertags.
 
-Klassifikation: 
+Klassifikation:
 
 	0 = Text
 	1 = Datum
@@ -43,12 +43,11 @@ Klassifikation:
 **System**:
 
 1. Das System muss in der Lage sein, eine Vielzahl von Tags anzuzeigen.
-2. Das System muss in der Lage sein, nach bestimmten Tags zu filtern
-3. Das System muss in der Lage sein, eine Liste von Objekten (Bestellnummer, Artikel, Artikelnummer, Kundennummer) z
-verkleinern, nachdem nach einem bestimmten Tag gefiltert wurde.
+2. Das System muss in der Lage sein, nach bestimmten Tags zu filtern.
+3. Das System muss in der Lage sein, eine Liste von Objekten (Bestellnummer, Artikel, Artikelnummer, Kundennummer) zu verkleinern, nachdem nach einem bestimmten Tag gefiltert wurde.
 4. Das System muss in der Lage sein, einem Objekt Systemtags anzuhängen.
 5. Das System muss in der Lage sein, aus den in der Liste angezeigten Tags, eine WordCloud zu generieren und anzuzeigen.
-6. Das System muss in der Lage sein, Systemtags zu klassifizieren. 
+6. Das System muss in der Lage sein, Systemtags zu klassifizieren.
 7. Das System muss in der Lage sein, zu einem einzelnen Objekt eine WordCloud zu generieren.
 8. Das System muss in der Lage sein, in der Eingabemaske eine alphabetische Sortierung vorzunehemen.
 9. Das System muss in der Lage sein, eine Filterliste in der Suchleiste zu generieren.
@@ -67,53 +66,53 @@ verkleinern, nachdem nach einem bestimmten Tag gefiltert wurde.
 
 **Administrator**:
 
-1. Der Administrator muss in der Lage sein, Tags zu ändern / löschen.
+1. Der Administrator muss in der Lage sein, Tags zu ändern/löschen.
+
+\newpage
 
 # Entwurf der GUIs zur Eingabe von Tags
 
-Um eine Vorstellung von der zukünftigen Eingabe von Tags im ERP-System zu bekommen, wurden von den Studenten grafisch fünf GUIs
-entworfen. Diese sollten der Eingabe von Tags für sogenannte Datenobjekte dienen.
-Die Aufgabe der Studenten bestand darin, sich eine Form der Eingabemöglichkeit für Tags zu überlegen, wobei auch neue
-Dialoge entstehen können. Dabei Wurden sowohl eine \nameref{abb:BeispielmaskeOhneTagEingabe} als auch  eine \nameref{abb:BeispielmaskeMitTagEingabe} entworfen. Es wurde außerdem in \autoref{abb:Inline-vs-PopupEditor} ein Inline-Editor gegenüber einen Popup-Editor gestellt und eine \nameref{abb:BeispielmaskeMitPopupTagEingabe} vorgestellt. Des Weiteren kümmerten sich die Studenten um Benutzereingabemöglichkeiten, wie eine \nameref{abb:Twitter-likeTextbox},einen \nameref{abb:IDE-likeEditor} und eine \nameref{abb:Evernote-likeTagbox}. Eine Klassische Ansicht, wie in \autoref{abb:ClassicListbox} wurde ebenfalls entworfen. Die Ergebnisse wurden im Gruppenmeeting präsentiert und deren Verwendung, im Austausch mit Herrn
-Stein  diskutiert. 
-
-
+Um eine Vorstellung von der zukünftigen Eingabe von Tags im ERP-System zu bekommen, wurden von den Studenten grafisch fünf GUIs entworfen.
+Diese sollten der Eingabe von Tags für sogenannte Datenobjekte dienen.
+Es wurde außerdem in \autoref{abb:Inline-vs-PopupEditor} ein Inline-Editor gegenüber einen Popup-Editor gestellt und eine \nameref{abb:BeispielmaskeMitPopupTagEingabe} vorgestellt.
 
 ![\label{abb:Inline-vs-PopupEditor} Inline vs. Popup-Editor](img/InlVSPopup.png)
 
+\newpage
 
+Die Aufgabe der Studenten bestand darin, sich eine Form der Eingabemöglichkeit für Tags zu überlegen, wobei auch neue Dialoge entstehen können. Dabei Wurden sowohl eine \nameref{abb:BeispielmaskeOhneTagEingabe} als auch  eine \nameref{abb:BeispielmaskeMitTagEingabe} entworfen.
 
 ![\label{abb:BeispielmaskeOhneTagEingabe} Beispielmaske ohne Tag Eingabe](img/BeispielMaskeOhneTE.png)
 
-
-
 ![\label{abb:BeispielmaskeMitTagEingabe} Beispielmaske mit Inline-Tag Eingabe](img/SAPmitInline.png)
 
-
+\newpage
 
 ![\label{abb:BeispielmaskeMitPopupTagEingabe} Beispielmaske mit Popup – Tag Eingabe](img/SAPmitPopUpPNG.png)
 
-
+Des Weiteren kümmerten sich die Studenten um Benutzereingabemöglichkeiten, wie eine \nameref{abb:Twitter-likeTextbox}, einen \nameref{abb:IDE-likeEditor} und eine \nameref{abb:Evernote-likeTagbox}.
 
 ![\label{abb:Twitter-likeTextbox} Twitter-like Textbox (Inline)](img/TwitterLIke.png)
 
-
-
 ![\label{abb:IDE-likeEditor} IDE-like Editor (Inline)](img/IDELike.png)
 
-
+\newpage
 
 ![\label{abb:Evernote-likeTagbox} Evernote-like Tagbox (Inline)](img/EvernoteLike.png)
 
-
+Eine Klassische Ansicht, wie in \autoref{abb:ClassicListbox} wurde ebenfalls entworfen.
 
 ![\label{abb:ClassicListbox} Classic Listbox (Popup)](img/ClassikListBox.png)
+
+Die Ergebnisse wurden im Gruppenmeeting präsentiert und deren Verwendung, im Austausch mit neolithos  diskutiert.
+
+\newpage
 
 # Algorithmus Pseudocode
 
 Zur visuellen Anordnung der unterschiedlich großen Tags/Worte in Tag-Clouds, recherchierten die Studenten nach verschiedenen
 Algorithmen. Ein Algorithmus wurde anhand eines \nameref{abb:Pseudocode}s präsentiert. Anhand eines kleinen
-Beispiels wurde die Arbeitsweise des Algorithmus erläutert. 
+Beispiels wurde die Arbeitsweise des Algorithmus erläutert.
 
 ![\label{abb:Pseudocode} Pseudocode](img/16002232756924747189.jpg)
 
@@ -142,7 +141,9 @@ In \autoref{abb:FB_Ergebnis} wurde der Tag `#Süß` am häufigsten eingegeben, w
 
 ![\label{abb:FB_Ergebnis} Fallbeispiel Szenario](img/FB_Ergebnis.png)
 
-# Folksonomie, Social Tagging und Tag-Clouds 
+\newpage
+
+# Folksonomie, Social Tagging und Tag-Clouds
 
 ## Begriffsklärung
 
@@ -179,7 +180,6 @@ Dadurch ist die Grundlage für eine unscharfe Suche geschaffen.
 
 ![\label{abb:socialtagging} Social Tagging](img/socialtagging.png)
 
-
 Beispiele für Social Networks welche das Social Tagging unterstützen gibt es viele, wie z.B. *Instagram*, *Youtube*, *del.icio.us*, etc..
 
 ## Folksonomie
@@ -204,29 +204,27 @@ Anders als bei der engen Folksonomie besteht bei der breiten Folksonomie (\autor
 
 ![\label{abb:broadfolksonomy} Broad Folksonomy](img/broadfolksonomy.png)
 
-\newpage
-
 ### Vorteile und Nachteile von Folksonomien
 
 Es wurden die Vor- und Nachteile gegenübergestellt.
 
 +------------------------------------------------+---------------------------------------------+
-| Vorteile                                       | Nachteile                                   | 
+| Vorteile                                       | Nachteile                                   |
 +================================================+=============================================+
 | Stöbern / unscharfe Suche wird ermöglicht      | Fehlende Kontrolle / Regeln                 |
 +------------------------------------------------+---------------------------------------------+
 | Authentisch                                    | Spam / Troll-Tags                           |
 +------------------------------------------------+---------------------------------------------+
-| Masseninformation können gesammelt werden	     | Datenschutz / Erfassung von Nutzerverhalten | 
+| Masseninformation können gesammelt werden	     | Datenschutz / Erfassung von Nutzerverhalten |
 +------------------------------------------------+---------------------------------------------+
 | Sensibilisieren Nutzer für Inhaltserschließung | Keine Eindeutigkeit / fehlendes Vokabular   |
 +------------------------------------------------+---------------------------------------------+
 
+\newpage
+
 Das Suchen von Objekten und Ressourcen ist kein triviales Phänomen in der Informatik oder in Social Networks. Das Problem dabei ist, dass der Suchende meist nicht ganz exakt weis wonach er eigentlich sucht.
 Entweder fehlt dem Suchenden die genaue Bezeichnung oder er hat nur eine wage Richtung in welcher die Ressource vermutet wird.
-Deshalb gibt es in vielen Systemen Klassifikationen oder ähnliches um den Nutzer bei seiner Suche zu unterstützen. Mittels Folksonomien und dem Social Tagging ist es möglich dem Nutzer eine unscharfe Suche zu ermöglichen. Dies bietet den Vorteil das der Nutzer sich *stöbernd* durch die Objekte bewegen kann und seine Auswahl immer mehr eingrenzt, bis er nur noch eine überschaubare Menge an Ressourcen übrig hat und in dieser sich sein gesuchtes Objekt befindet. 
-
-\newpage
+Deshalb gibt es in vielen Systemen Klassifikationen oder ähnliches um den Nutzer bei seiner Suche zu unterstützen. Mittels Folksonomien und dem Social Tagging ist es möglich dem Nutzer eine unscharfe Suche zu ermöglichen. Dies bietet den Vorteil das der Nutzer sich *stöbernd* durch die Objekte bewegen kann und seine Auswahl immer mehr eingrenzt, bis er nur noch eine überschaubare Menge an Ressourcen übrig hat und in dieser sich sein gesuchtes Objekt befindet.
 
 Dabei wird er auch sensibilisiert auf den Inhalt oder die thematischen Verbindungen der Ressource, da er die Tags liest und mit dem Objekt verbindet.
 Je mehr User die Tags *betaggen*, desto authentischer wird die Folksonomie.Doch dadurch entstehen auch die Probleme mit Folksonomien denn durch die fehlende Kontrolle und durch fehlende Regeln können schlechte oder irritierende  Tags das Ergebnis verfälschen. Zum Beispiel können Tags mit der gleichen Bedeutung in verschiedenen Zeitformen oder Wortbeugungen an die Ressource angehangen werden oder es können Spam- oder auch *Troll-* Tags angehangen werden. Und das natürlich auch in allen erdenklichen Sprachen.
