@@ -83,6 +83,6 @@ Hierbei beträgt die Einfügesektor-Größe 30 Grad und der Wachstumsfaktor 0,9.
 # Entscheidung zur Performance
 
 Für die Erstellung einer Tag-Cloud mit Hilfe des Spiralform-Verfahrens wurde anhand der optischen Erscheinung und festgestellten Performance als optimale Parameter für die Einfügesektor-Größe 30 Grad und für den Wachstumsfaktor 0,9 ohne Nutzung des Halbierungsverfahrens ausgewählt.
-Das liegt zum einen an der noch nicht fertiggestellten Umsetzung des Halbierungsverfahrens. Dieses sollte zum einen bei einer sauberen Implementierung bessere Durchschnittserstellungszeiten liefern. Zum anderen benötigt das normale Spiralform-Verfahren wesentlich weniger Positionierungsversuche, auf die wir ein größeres Gewicht gelegt haben. Unserer Ansicht nach sind die ungefähren 50 Millisekunden Unterschied in der Erstellungszeit vernachlässigbar. 122 Millisekunden sind für die Erstellung einer Tag-Cloud annehmbar.
+Das liegt zum einen an der noch nicht fertiggestellten Umsetzung des Halbierungsverfahrens. Dieses sollte zum einen bei einer sauberen Implementierung bessere Durchschnittserstellungszeiten liefert. Zum anderen benötigt das normale Spiralform-Verfahren wesentlich weniger Positionierungsversuche, auf die wir ein größeres Gewicht gelegt haben. Unserer Ansicht nach sind die ungefähren 50 Millisekunden Unterschied in der Erstellungszeit vernachlässigbar. 122 Millisekunden sind für die Erstellung einer Tag-Cloud annehmbar.
 
 <!-- todo: Wiederspruch?!, klingt nicht logisch; weniger Berechenung (ohne Halbierungsverfahren) dauert länger? -->

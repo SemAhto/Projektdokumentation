@@ -42,7 +42,7 @@ Zum besseren Verständnis haben die Studenten den Porter-Stemmmer-Algorithmus (s
 
 \pagebreak
 
-## Lemmatisierung \label{sec:Lemmatisierung}
+## Lemmatisierung
 
 Im Bereich Lemmatisierung wurde festgestellt, dass ein Wörterbuch im Hintergrund zum Abgleichen benötigt wird. Folgende Möglichkeiten wurden dabei näher betrachtet:
 
@@ -121,7 +121,7 @@ Würden die Studenten den TreeTagger für ihre o.g. Aufgabe einsetzen wollen, m�
 
 ## Wortschatzprojekt Uni Leipzig \label{sec:wortschatzprojekt}
 
-Das Wortschatzprojekt der Universität Leipzig (\cite{onl:WortschatzLeipzigAPI)beinhaltet korpusbasierte monolinguale Wörterbücher für unter anderem die deutsche Sprache. Es wird seit 1998 von Gerhard Heyer und Uwe Quasthoff an der Universität Leipzig entwickelt.
+Das Wortschatzprojekt der Universität Leipzig (\cite{onl:WortschatzLeipzigAPI})beinhaltet korpusbasierte monolinguale Wörterbücher für unter anderem die deutsche Sprache. Es wird seit 1998 von Gerhard Heyer und Uwe Quasthoff an der Universität Leipzig entwickelt.
 Es wurde ein umfassender Korpus des deutschen Wortschatzes als Vollformlexikon erstellt. Die über Jahre aufgebaute Lexikondatenbank wurde über das Internet zur Nutzung verfügbar gemacht und zur Bearbeitung und Ergänzung zur Verfügung gestellt. Seitdem wurde es beständig erweitert.
 Das Lexikon umfasst aktuell ca. 35 Millionen Beispielsätze mit 500 Millionen laufenden Wörtern.
 Der Zweck des Projektes soll vor allem der Sprachverarbeitung und Texttechnologie dienen.
@@ -135,7 +135,7 @@ Da das Ziel aus der Ermittlung der Lemmata der Worte des Beschreibungsfeldes bes
 Die Universität Leipzig stellt u.a. einige SOAP-Webservices (\cite{onl:WortschatzWebservices}) zur Verfügung, mit denen ein direkter Datenzugriff sowie gezielte Abfragen möglich sind. Zu jedem Webservice wird ein Beispielclient mit Quellen zur Verfügung gestellt. Dies ermöglicht die Kombination sowie das Einbauen der Webservices in eigene Programme.
 Die Zugriffsvoraussetzungen unterscheiden sich je nach Abfrageumfang.
 Für einfache Abfragen kann das login \enquote{anonymous} mit dem Passwort \enquote{anonymous} verwendet werden. Eine Registrierung ist für komplexere Abfragen allerdings erforderlich, um bei Problemen kontaktiert werden zu können. Massendatenabfragen sind lediglich Kooperationspartnern vorbehalten.
-Da vor der Verwendung des Wortschatzprojektes lediglich ein \enquote{Versuch} durchgeführt werden sollte, wurde sich auf das allgemeine Login für einfache Abfragen beschränkt. Nach einigen Recherchen mit dem Ziel einen bereits bestehenden und benutzbaren Code zur Abfrage des Lemmata zu erhalten, sind die Studenten auf eine C#-API zur Abfrage des Thesaurus gestoßen. Diese API wurde von Raffael Herrmann im Juli 2013 entwickelt.
+Da der Verwendung des Wortschatzprojektes vorerst lediglich ein \enquote{Versuch} durchgeführt werden sollte, wurde sich auf das allgemeine Login für einfache Abfragen beschränkt. Nach einigen Recherchen mit dem Ziel einen bereits bestehenden und benutzbaren Code zur Abfrage des Lemmata zu erhalten, sind die Studenten auf eine C#-API zur Abfrage des Thesaurus gestoßen. Diese API wurde von Raffael Herrmann im Juli 2013 entwickelt.
 
 *Die Funktionsweise und der Aufbau des Codes wurde in (\cite{onl:herrmann}) ausführlich erklärt, so dass hier nicht weiter darauf eingegangen wird.*
 
