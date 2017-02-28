@@ -7,7 +7,7 @@ Bei der Erstellung einer Spirale sind zwei Parameter sehr wichtig, Wachstumsfakt
 
 ![\label{abb:Spirale} Spirale, a: Wachstumsfaktor, b: Größe des Einfügesektors](img/Spirale.png)
 
-# Aussehen einer optimalen Tag-Cloud
+# Aussehen einer optimalen Tag-Cloud \label{sec:AussehenTagCloud}
 
 Ein optimales Aussehen der Tag-Cloud (\autoref{abb:AussehenEinerOptCloud}) zeichnet sich durch eine gute Platzausnutzung bei möglichst wenig Löchern aus. Der Abstand zwischen den einzelnen Tags sollte minimal, jedoch noch deutlich erkennbar sein. Ein gutes Beispiel zeigt die folgende Abbildung.
 

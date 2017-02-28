@@ -5,8 +5,8 @@ Gedacht sind diese Verfahren für die Verarbeitung und Durchsuchen großer Textm
 # Aufgabe
 
 Zu Beginn des Projektseminars kam schnell die Frage auf, wie die Tags angelegt werden sollen. Die Eingabefelder der Artikel könnten automatisch zu Tags transformiert werden.
-Aber wie wird dann das Beschreibungsfeld behandelt. Ein Beispiel hierzu wäre ein Nutzer, der einen neuen Artikel anlegt und das Beschreibungsfeld mit folgendem Text füllt:
-\enquote{Kotflügel für großes Auto}. Folgende Tags sollten automatisch gesetzt werden: Kotflügel, groß und Auto. Doch wie ist es möglich, das Wort \enquote{großes} zu dem Wort \enquote{groß} als Tag umzuwandeln. Durch diese Fragestellung sind die Studenten auf das Thema Text Mining aufmerksam geworden.
+Aber wie wird dann das Beschreibungsfeld behandelt. Ein Beispiel hierzu wäre ein Nutzer, der einen neuen Artikel anlegt und das Beschreibungsfeld mit folgendem Text füllt: \enquote{Kotflügel für großes Auto}.
+Folgende Tags sollten automatisch gesetzt werden: Kotflügel, groß und Auto. Doch wie ist es möglich, das Wort \enquote{großes} zu dem Wort \enquote{groß} als Tag umzuwandeln. Durch diese Fragestellung sind die Studenten auf das Thema Text Mining aufmerksam geworden.
 
 # Vorgehen
 
@@ -18,9 +18,12 @@ Bei der Lemmatisierung wird das Wort auf seiner lexikalischen Grundform reduzier
 Als Part-of-Speach Tagging (\cite{wiki:PartOfSpeechTagging}) bezeichnet man die Zuordnung von Wörtern und Satzzeichen eines Textes zu Wortarten. Hierzu werden sowohl die Definition des Wortes als auch der Kontext
 berücksichtigt.
 
+\newpage
+
 # Mögliche Lösungsansätze
 
 ## Stammformreduktion
+
 Im Bereich der Stammformreduktion haben die Studenten sich mit dem Porter-Stemmer-Algorithmus auseinandergesetzt.
 Der Porter-Stemmer-Algorithmus (\cite{wiki:porterStemmerAlgorithmus}) ist ein verbreiteter Algorithmus der Computerlinguistik zum automatischen Zurückführen von Wörtern auf ihren Wortstamm (Stemming). Der Algorithmus basiert auf einer Menge von Verkürzungsregeln, die so lange auf ein Wort angewandt werden, bis dieses eine Minimalanzahl von Silben aufweist. Der ursprünglich für Wörter der englischen Sprache entwickelte Algorithmus kann relativ leicht für andere Sprachen portiert werden.
 
@@ -32,10 +35,12 @@ Beispiele:
 - `tr-ee (m=0)`
 
 Nach der Bestimmung der Silben werden die vorher festgelegten Verkürzungsregeln abgearbeitet. Die Verkürzungsregeln bestehen aus Paaren von Bedingungen und Ableitungen für verschiedene Suffixe (Wortendungen). Die Verkürzungsregeln werden in Gruppen zusammengefasst. Aus jeder Gruppe darf nur eine Regel angewendet werden.
-Beispiel:  Die erste Gruppe beinhaltet die Suffix-Verkürzungsregeln \enquote{sses} $\rightarrow$ \enquote{s}, \enquote{ies} $\rightarrow$ \enquote{i} und \enquote{s}  \enquote{~}, die beispielsweise zu den Ableitungen \enquote{libraries} $\rightarrow$ \enquote{librari} und \enquote{Wikis} $\rightarrow$ \enquote{Wiki} führen. Eine später folgende Gruppe besteht aus der Regel \enquote{y} $\rightarrow$ \enquote{i}, so dass beispielsweise das Wort \enquote{library} auf den gleichen Stamm (\enquote{library} $\rightarrow$ \enquote{librari}) zurückgeführt wird.
+Beispiel: Die erste Gruppe beinhaltet die Suffix-Verkürzungsregeln \enquote{sses} $\rightarrow$ \enquote{s}, \enquote{ies} $\rightarrow$ \enquote{i} und \enquote{s} \enquote{~}, die beispielsweise zu den Ableitungen \enquote{libraries} $\rightarrow$ \enquote{librari} und \enquote{Wikis} $\rightarrow$ \enquote{Wiki} führen. Eine später folgende Gruppe besteht aus der Regel \enquote{y} $\rightarrow$ \enquote{i}, so dass beispielsweise das Wort \enquote{library} auf den gleichen Stamm (\enquote{library} $\rightarrow$ \enquote{librari}) zurückgeführt wird.
 Zum besseren Verständnis haben die Studenten den Porter-Stemmmer-Algorithmus (s. Abb. \ref{abb:PorterStemmerAlgorithmus}) zusätzlich für die deutsche Sprache ausprobiert.
 
 ![\label{abb:PorterStemmerAlgorithmus} Porter-Stemmer-Algorithmus](img/PorterStemmerAlgorithmus.png)
+
+\pagebreak
 
 ## Lemmatisierung
 
@@ -47,7 +52,7 @@ Im Bereich Lemmatisierung wurde festgestellt, dass ein Wörterbuch im Hintergrun
 
 ### Elasticsearch
 
-Elasticsearch (\cite{wiki:Elasticsearch},  \cite{onl:elasticSearch}) ist eine Suchmaschine, die mit indizierten Dokumenten arbeitet. Die kleinste Einheit bilden dabei die Dokumente. Diese werden indiziert, um sie durchsuchen zu können. Mehrere Dokumente bilden einen Typ und mehrere Typen werden als Index bezeichnet. Vergleicht man diesen Aufbau mit einer SQL-Datenbank, wäre ein Dokument eine Zeile, der Typ die Tabelle und der Index die Datenbank.
+Elasticsearch (\cite{wiki:Elasticsearch}, \cite{onl:elasticSearch}) ist eine Suchmaschine, die mit indizierten Dokumenten arbeitet. Die kleinste Einheit bilden dabei die Dokumente. Diese werden indiziert, um sie durchsuchen zu können. Mehrere Dokumente bilden einen Typ und mehrere Typen werden als Index bezeichnet. Vergleicht man diesen Aufbau mit einer SQL-Datenbank, wäre ein Dokument eine Zeile, der Typ die Tabelle und der Index die Datenbank.
 
 
 **Funktionsweise:**
@@ -61,8 +66,7 @@ Da die Studenten für die gestellte Aufgabe die Lemmata eines Wortes ermitteln w
 
 ### GermaNet
 
-GermaNet (\cite{wiki:germaNet},  \cite{onl:germanetstructure}) ist eine elektronische, lexikographische Referenzdatenbank für den deutschen Wortsinn. Es stammt von der Universität Tübingen. Für GermaNet wurde eine Nutzungslizenz über 
-die HTW Dresden erworben. Die Möglichkeit für ein eingegebenes Wort, das Lemma zurück zu erhalten, wurde von den Studenten getestet. Da GermaNet für den semantischen Zusammenhang von Worten gedacht ist, war es nicht möglich nur das Lemma für ein Wort zu erfragen.
+GermaNet (\cite{wiki:germaNet}, \cite{onl:germanetstructure}) ist eine elektronische, lexikographische Referenzdatenbank für den deutschen Wortsinn. Es stammt von der Universität Tübingen. Für GermaNet wurde eine Nutzungslizenz über die HTW Dresden erworben. Die Möglichkeit für ein eingegebenes Wort, das Lemma zurück zu erhalten, wurde von den Studenten getestet. Da GermaNet für den semantischen Zusammenhang von Worten gedacht ist, war es nicht möglich nur das Lemma für ein Wort zu erfragen.
 
 ### Sketch Engine
 
@@ -115,40 +119,41 @@ Anhand der umliegenden Wörter kann der TreeTagger genauere Zuordnungen treffen.
 Das erste Problem ist, dass der TreeTagger besser mit ganzen Sätzen arbeitet. Der weiteren bedeutetet Wahrscheinlichkeit nicht Sicherheit. Bei 20.000 Wörtern ordnet der TreeTagger zu 97,53% die richtige Wortart zum jeweiligen Wort zu. Die größte Schwachstelle, die die Studenten im TreeTagger sahen, war die Tatsache, dass er nicht hauptsächlich zur Findung der Lemmata dient, sondern Wortarten zuordnen soll. Das der TreeTagger zusätzlich anhand seines Korpus auch Lemmata ausgeben kann, ist nur ein schöner Zusatz.
 Würden die Studenten den TreeTagger für ihre o.g. Aufgabe einsetzen wollen, müssten sie den Textkorpus mittels des Trainingsprogrammes erweitern, d.h. händisch Wortarten und Lemmata zuordnen. Daraus wurde geschlossen, dass die Tagliste für das ERP-System händisch geführt werden kann. Der Aufwand wäre der Gleiche.
 
-\pagebreak
+## Wortschatzprojekt Uni Leipzig \label{sec:wortschatzprojekt}
 
-## Wortschatzprojekt Uni Leipzig
-
-Das Wortschatzprojekt der Universität Leipzig (\cite{onl:wortschatzLeipzigApi)beinhaltet korpusbasierte monolinguale Wörterbücher für unter anderem die deutsche Sprache. Es wird seit 1998 von Gerhard Heyer und Uwe Quasthoff an der Universität Leipzig entwickelt.
+Das Wortschatzprojekt der Universität Leipzig (\cite{onl:WortschatzLeipzigAPI)beinhaltet korpusbasierte monolinguale Wörterbücher für unter anderem die deutsche Sprache. Es wird seit 1998 von Gerhard Heyer und Uwe Quasthoff an der Universität Leipzig entwickelt.
 Es wurde ein umfassender Korpus des deutschen Wortschatzes als Vollformlexikon erstellt. Die über Jahre aufgebaute Lexikondatenbank wurde über das Internet zur Nutzung verfügbar gemacht und zur Bearbeitung und Ergänzung zur Verfügung gestellt. Seitdem wurde es beständig erweitert.
 Das Lexikon umfasst aktuell ca. 35 Millionen Beispielsätze mit 500 Millionen laufenden Wörtern.
 Der Zweck des Projektes soll vor allem der Sprachverarbeitung und Texttechnologie dienen.
 Die Annotation der Token umfasst das Sachgebiet Beispielsätze sowie die Grammatik.
 Da das Ziel aus der Ermittlung der Lemmata der Worte des Beschreibungsfeldes bestand, schien das Wortschatzprojekt eine geeignete Lösung darzustellen.
 
+\newpage
+
 **Umsetzung**
 
-Die Universität Leipzig stellt u.a. einige SOAP-Webservices zur Verfügung, mit denen ein direkter Datenzugriff sowie gezielte Abfragen möglich sind. Zu jedem Webservice wird ein Beispielclient mit Quellen zur Verfügung gestellt. Dies ermöglicht die Kombination sowie das Einbauen der Webservices in eigene Programme.
+Die Universität Leipzig stellt u.a. einige SOAP-Webservices (\cite{onl:WortschatzWebservices}) zur Verfügung, mit denen ein direkter Datenzugriff sowie gezielte Abfragen möglich sind. Zu jedem Webservice wird ein Beispielclient mit Quellen zur Verfügung gestellt. Dies ermöglicht die Kombination sowie das Einbauen der Webservices in eigene Programme.
 Die Zugriffsvoraussetzungen unterscheiden sich je nach Abfrageumfang.
 Für einfache Abfragen kann das login \enquote{anonymous} mit dem Passwort \enquote{anonymous} verwendet werden. Eine Registrierung ist für komplexere Abfragen allerdings erforderlich, um bei Problemen kontaktiert werden zu können. Massendatenabfragen sind lediglich Kooperationspartnern vorbehalten.
-Da der Verwendung des Wortschatzprojektes vorerst lediglich ein \enquote{Versuch} durchgeführt werden sollte, wurde sich auf das allgemeine Login für einfache Abfragen beschränkt. Nach einigen Recherchen mit dem Ziel einen bereits bestehenden und benutzbaren Code zur Abfrage des Lemmata zu erhalten, sind die Studenten auf eine C#-API zur Abfrage des Thesaurus  gestoßen. Diese API wurde von Raffael Herrmann im Juli 2013 entwickelt.
+Da der Verwendung des Wortschatzprojektes vorerst lediglich ein \enquote{Versuch} durchgeführt werden sollte, wurde sich auf das allgemeine Login für einfache Abfragen beschränkt. Nach einigen Recherchen mit dem Ziel einen bereits bestehenden und benutzbaren Code zur Abfrage des Lemmata zu erhalten, sind die Studenten auf eine C#-API zur Abfrage des Thesaurus gestoßen. Diese API wurde von Raffael Herrmann im Juli 2013 entwickelt.
 
 *Die Funktionsweise und der Aufbau des Codes wurde in (\cite{onl:herrmann}) ausführlich erklärt, so dass hier nicht weiter darauf eingegangen wird.*
 
 Nach Start der API öffnet sich ein Konsolenfenster (\autoref{abb:EingabeCSharpAPIThesaurus}). Nun ist es möglich ein Wort einzugeben von welchem man den zugehörigen Thesaurus als Rückgabewert erhalten möchte.
 
-![\label{abb:EingabeCSharpAPIThesaurus} Eingabe C# - API Thesaurus](img/EingabeCAPIThesaurus.jpg)
+![\label{abb:EingabeCSharpAPIThesaurus} Eingabe C# - API Thesaurus](img/EingabeCAPIThesaurus.png)
 
 Als Rückgabe (\autoref{abb:RueckgabeCSharpAPIThesaurus}) erhält man alle gefundenen Thesauri, sowie die Anzahl der Synonyme.
 
-![\label{abb:RueckgabeCSharpAPIThesaurus} Rückgabe C# - API Thesaurus](img/RueckgabeCAPIThesaurus.jpg)
+![\label{abb:RueckgabeCSharpAPIThesaurus} Rückgabe C# - API Thesaurus](img/RueckgabeCAPIThesaurus.png)
 
+\newpage
 
 Das Ziel bestand daraus, statt des Thesaurus die Lemmata des Eingabewortes zu erhalten. Darüber hinaus sollte es möglich sein mehrere Worte nacheinander abzufragen. Die Eingabe sollte außerdem über einlesen einer Liste aus einem Textdokument erfolgen. Folgende Codeabschnitte wurden daher geändert:
 
 Änderungen der Funktion `GetSynonyms()` sind in \autoref{abb:CSharp-FunktionGetBaseform} erkennbar.
 
-![\label{abb:CSharp-FunktionGetBaseform} C# - Funktion `GetBaseform`](img/CFunktionGetBaseform.jpg)
+![\label{abb:CSharp-FunktionGetBaseform} C# - Funktion `GetBaseform`](img/CFunktionGetBaseform.png)
 
 Zeile 23 bis 25
 	Änderung der Servicereferenz zur Abfrage der Lemmata.
@@ -164,9 +169,11 @@ Zeile 34 bis 45
 	Es sind 2 Parameter erforderlich, zum Einen das Wort zu welchem das Lemmata zurück 	gegeben werden soll sowie das Wörterbuch in dem gesucht werden soll. Das Wörterbuch
 	wurde bereits im Funktionskopf übergeben (`string corpus = "de"`). Die Parameter können nicht als \enquote{String} übergeben werden, sondern erfordern obige Datenstruktur.
 
+\newpage
+
 Die Funktion `Main()` mit Änderungen ist in \autoref{abb:CSharp-FunktionMain} zu finden.
 
-![\label{abb:CSharp-FunktionMain} C# - FunktionMain](img/CFunktionMain.jpg)
+![\label{abb:CSharp-FunktionMain} C# - FunktionMain](img/CFunktionMain.png)
 
 Zeile 16 bis 17
 	Anlegen der Hilfsparameter.
@@ -182,17 +189,17 @@ Zeile 23 bis 31
 
 Bei der Eingabe der Worte \enquote{guter}, \enquote{Katzen} und \enquote{schneller} erfolgt nun folgende Rückgabe (\autoref{abb:RückgabeCSharp-APIBaseform}).
 
-![\label{abb:RückgabeCSharp-APIBaseform} Rückgabe C# - APIBaseform](img/RueckgabeCAPIBaseform.jpg)
+![\label{abb:RückgabeCSharp-APIBaseform} Rückgabe C# - APIBaseform](img/RueckgabeCAPIBaseform.png)
 
 Zu jedem Wort wird das Lemma sowie die Wortart zurückgegeben. Bei obigem Beispiel also:
 
 | Wort      | Lemma   | Wortart      |
-| :---      | :---    | :----------  |
+| :-------- | :------ | :----------- |
 | Guter     | Gut     | A (Adjektiv) |
 | Katzen    | Katze   | N (Nomen)    |
 | Schneller | Schnell | A (Adjektiv) |
 
-\pagebreak
+\newpage
 
 **Auswertung:**
 
@@ -201,7 +208,5 @@ der Wortart eines Wortes. Bei einer Eingabe von 263 Wörtern aus einem Buchabsch
 
 Da es sich um sehr fachspezifische Daten handelt, welche als Eingabe erfolgen würden, ist das Wortschatzprojekt nicht geeignet. Bei unbekannten Wörtern erfolgt keine Rückgabe.
 Bei einer Eingabe von 199 Wörtern aus einem Abschnitt eines Zahnmedizinischen Katalogs lag die Genauigkeit nunmehr bei 62%. Darüber hinaus führt die Eingabe von Zahlen zu einer Überflutung an Rückgaben.
-
-\pagebreak
 
 ![\label{abb:TreeTaggerWortschatzprojekt} TreeTagger vs. Wortschatzprojekt](img/TreeTaggerWortschatzprojekt.png)

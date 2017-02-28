@@ -20,6 +20,15 @@ Datenbank anlegen oder laden
 Datenbank leeren
 :	Über den Reiter \enquote{Datenbank} $\rightarrow$ \enquote{Leeren} kann man in einer zuvor geladenen Datenbank alle Datensätze löschen.
 
+\newpage
+
+## Darstellung
+
+Die ausführlichste Erläuterung zum Thema Visualisierung von WordClouds war Wordle (\cite{misc:worlde}). Das Prinzip der Gewichtung von Worten und spiralförmigen Darstellung beginnend mit dem höchstgewichteten in der Bildmitte wurde aus den Beispielen entlehnt. Die Funktionsweise ist nachvollziehbar im Vortrag zur Visulaisierung von TagClouds (\cite{misc:TagCloudDrawing}) dargelegt. Zusätzlich half uns der Code des Projektes WordCloud (\cite{misc:WordCloudTalbot}) nicht den Fehler zu begehen eine Positionierung über Bitmaps zu versuchen. Die Performance mit mehreren Sekunden zur Generierung eines einzelnen Bildes ist hier ausreichend abschrecken. Deshalb weerden die Elemnte unserer TagsCloud ohne Bitmap in Rechtecken mit Positionsangabe sowie den Dimensionen Höhe und Breite versehen.
+Wir haben unsere Worte (Tags) weiterhin mit einem Gewicht versehen definiert. Dieses kann u.a. aus der Häufigkeit oder später einmal aus der Verknüpfungshäufigkeit in Wortenetzen (s.a. \autoref{sec:wortschatzprojekt}) ermittelt werden. Für die Testdaten wird dies schlicht inkrementell oder zufällig auf die Tags verteilt.
+Die Bildmitte kann aus den vorgegebenen Dimensionen des Bildes ermittelt werden. Weitere Parameter der Spirale sollen experimentiell in Verbindung mit Tests zur Performance (\autoref{sec:AussehenTagCloud}) ermittelt werden. Zu vermuten ist hier als Abstand zwischen zwei Linienzügen die Höhe der kleinsten Schriftdarstellung.
+Wie in den Anforderungen bereits vorgegeben werden in der Zieldarstellung keine farblichen 
+
 ### Daten
 
 Die folgenden Funktionen dienen Import und Export von gespeicherten Daten von bzw. in andere Systeme und deren manuellen Modifikation.
@@ -157,15 +166,15 @@ Die Benutzeroberfläche ist wie für einen Prototyp (\autoref{abb:Initialzustand
 
 ![\label{abb:InitialzustandPrototyp} Initialzustand des Prototyps (Datenbank geladen)](img/InitialzustandPrototyp.jpg)
 
+\newpage
+
 # Konstruktion eines nachvollziehbaren Beispiels zur Präsentation
 
-Da geographische Daten für die Präsentation für den Zuhörer eher uninteressant und nicht unbedingt nachvollziehbar sind wurde beschlossen, unser erworbenes Verständnis einer guten Folksonomie zu anzuwenden und ein simples Beispiel zu erstellen, sodass der Zuhörer das Interesse während der Präsentation nicht verliert. Dabei wurde sich auf den Themenbereich Disney geeinigt, da davon ausgegangen wurde, dass jeder einen Großteil dieser Figuren kennt und so die Beziehungen deutlicher und somit verständlicher werden.
+Da geographische Daten für die Präsentation für das Publikum einer Präsentation eher uninteressant und nicht unbedingt nachvollziehbar sind wurde beschlossen, unser erworbenes Verständnis einer guten Folksonomie zu anzuwenden und ein eingängigeres Beispiel zu erstellen, sodass die Zuhörer das Interesse während der Präsentation nicht verliert. Dabei wurde sich auf den Themenbereich Disney geeinigt, da davon ausgegangen wurde, dass jeder zumindest einen Teil dieser Figuren kennt und so die Beziehungen deutlicher und somit verständlicher werden. Durch die emotionale Wirkung der Marke Disney ist auch mit anhaltender Aufmerksamkeit zu rechnen.
 
 **Beispielhafter Filter-/Suchprozess**
 
 Um ein Verständnis für den Ablauf einer Such- bzw. Filteraktion durch den Nutzer und den Zusammenhang zwischen WordCloud, Ergebnisliste und Datenbankabfrage zu erlangen, wird der Prozess exemplarisch anhand der selbst erstellten Datenbank beschrieben.
-
-\newpage
 
 ## Ausgangslage
 
@@ -173,17 +182,17 @@ Ein Benutzer sucht nach einem Objekt, was er nicht genau kennt. Ihm sind ledigli
 
 Tags | Auswahl (mit Ziel \enquote{Munkelt})
 ----:|:-------------------------------------
-1    | Stark
-2    | Mutig
-3    | Clever
+1    | stark
+2    | mutig
+3    | clever
 
-## Schritt 1: Benutzer klickt auf das Tag \enquote{stark} in der WordCloud.
+## Schritt 1: Benutzer klickt auf das Tag \enquote{stark}
 
 Dadurch wird im Hintergrund das SQL Query gem. \autoref{abb:sql1} generiert und ausgeführt.
 
 \begin{figure}
 
-\lstinputlisting[basicstyle=\ttfamily, numbers=none, caption={}, title={}, label={}, language=]{04_SQL1.sql}
+\lstinputlisting[basicstyle=\ttfamily\footnotesize, numbers=none, caption={}, title={}, label={}, language=]{04_SQL1.sql}
 
 \caption{\label{abb:sql1} 1. Abfrage}
 \end{figure}
@@ -198,13 +207,15 @@ Als Resultat wird ebenfalls die WordCloud entsprechend des neuen Filterergebnis 
 
 ![\label{abb:WordCloudFilterung1} WordCloud nach 1. Filterung](img/WordCloudFilterung1.jpg)
 
-## Schritt 2: Benutzer klickt auf das Tag \enquote{mutig} in der WordCloud.
+\pagebreak
+
+## Schritt 2: Benutzer klickt auf das Tag \enquote{mutig}
 
 Dadurch wird im Hintergrund das SQL Query gem. \autoref{abb:sql2} ausgeführt.
 
 \begin{figure}
 
-\lstinputlisting[basicstyle=\ttfamily, numbers=none, caption={}, title={}, label={}, language=]{04_SQL2.sql}
+\lstinputlisting[basicstyle=\ttfamily\footnotesize, numbers=none, caption={}, title={}, label={}, language=]{04_SQL2.sql}
 
 \caption{\label{abb:sql2} 2. Abfrage}
 \end{figure}
@@ -217,13 +228,15 @@ Als Resultat wird die WordCloud analog zum Schritt 1 entsprechend des neuen Filt
 
 ![\label{abb:WordCloudFilterung2} WordCloud nach 2. Filterung](img/WordCloudFilterung2.jpg)
 
-## Schritt 3: Benutzer klickt auf das Tag \enquote{clever} in der WordCloud.
+\pagebreak
+
+## Schritt 3: Benutzer klickt auf das Tag \enquote{clever}
 
 Dadurch wird im Hintergrund das SQL Query gem \autoref{abb:sql3} ausgeführt.
 
 \begin{figure}
 
-\lstinputlisting[basicstyle=\ttfamily, numbers=none, caption={}, title={}, label={}, language=]{04_SQL3.sql}
+\lstinputlisting[basicstyle=\ttfamily\footnotesize, numbers=none, caption={}, title={}, label={}, language=]{04_SQL3.sql}
 
 \caption{\label{abb:sql3} 3. Abfrage}
 \end{figure}
@@ -242,13 +255,15 @@ Die WordCloud wird analog zum Schritt 1 entsprechend des neuen Filterergebnis ne
 
 ![\label{abb:WordCloudFilterung3} WordCloud nach 3. Filterung](img/WordCloudFilterung3.jpg)
 
+\pagebreak
+
 ## Schritt 4: Benutzer sucht nach dem Begriff \enquote{Munkelt}.
 
 Dadurch wird im Hintergrund das SQL Query gem. \autoref{abb:sql4} ausgeführt.
 
 \begin{figure}
 
-\lstinputlisting[basicstyle=\ttfamily, numbers=none, caption={}, title={}, label={}, language=]{04_SQL4.sql}
+\lstinputlisting[basicstyle=\ttfamily\footnotesize, numbers=none, caption={}, title={}, label={}, language=]{04_SQL4.sql}
 
 \caption{\label{abb:sql4} 4. Abfrage}
 \end{figure}
@@ -261,10 +276,12 @@ Als Resultat wird die WordCloud analog zum Schritt 1 entsprechend des neuen Filt
 
 ![\label{abb:WordCloudFilterung4} WordCloud nach 4. Filterung](img/WordCloudFilterung4.jpg)
 
-\newpage
+\pagebreak
 
 ## Ergebnis
 
-Die finale Auswhal ist in \autoref{abb:FilterergebnisFinalGesamt} zu sehen.
+Die Auswahl führte im 4. Schritt mit \autoref{abb:WordCloudFilterung4} zu einem eindeutigen Treffer. Eine weitere Selektion von Tags kann die GEnauigkeit nicht mehr erhöhen.
 
+<!--
 ![\label{abb:FilterergebnisFinalGesamt}Gesamtbild Endresultat](img/FilterergebnisFinal.jpg)
+-->

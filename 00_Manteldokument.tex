@@ -172,12 +172,12 @@
 
 \newlength{\imgwidth}
 \newlength{\imgwidthmax}
-\setlength{\imgwidthmax}{0.5\paperheight}
+\setlength{\imgwidthmax}{0.4\paperheight}
 
 \newcommand\scalegraphics[1]{%
     \settowidth{\imgwidth}{\includegraphics{#1}}%
-    \setlength{\imgwidth}{\minof{\imgwidthmax}{\minof{\imgwidth}{\textwidth}}}%
-    \includegraphics[width=0.8\imgwidth]{#1}%
+    \setlength{\imgwidth}{\minof{\imgwidthmax}{\minof{\imgwidth}{0.9\textwidth}}}%
+    \includegraphics[width=\imgwidth]{#1}%
 }
 
 % include icon like graphics on the line

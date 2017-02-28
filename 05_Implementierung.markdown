@@ -167,6 +167,8 @@ Im Diagramm (\autoref{abb:AblaufPpsEnvironment}) wird beschrieben wie die Daten 
 
 Durch den Aufruf der zentralen Datenladefunktion `RefreshDataAsync` werden die Daten in die Objektliste geladen. Dabei wird der Tagfilter anhand der ausgewählten Tags generiert (3) und mit den bereits existierenden Filter mit `und` verknüpft. Die daraus entstehenden `DataSource` wird genutzt, um die in Relation stehenden Tags zu laden. Dafür wird im `PpsEnvironment` die `CreateTagCloudFilter` Methode gerufen, welche ein `WordCloudObjectGenerator`-Objekt erstellt und das daraus resultierende `IEnumerable` zurückgibt (5-8). Anschließend werden mit LINQ die benötigten Tagdaten aus dem `IEnumerable` Ergebnis extrahiert und der `Tags`-Property zugewiesen (9). Dadurch wird die WordCloud neu erstellt.
 
+\newpage
+
 Zusätzlich zu den bereits vorhandenen Aufrufen von `RefreshDataAsync`, wird diese Method nun auch ausgeführt, wenn ein Tag dem Filter hinzugefügt (\autoref{abb:Pps_SelectTag}) oder vom Filter entfernt (\autoref{abb:Pps_UnselectTag}) wird. 
 
 ![\label{abb:Pps_SelectTag} Ablauf: Tag auswählen](img/image18.jpg)
