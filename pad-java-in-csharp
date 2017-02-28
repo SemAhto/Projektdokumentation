@@ -1,0 +1,69 @@
+src:https://pad.fsfw-dresden.de/p/java-in-csharp
+
+Frage: Wie kann ein z.B. Java-Programm in C# genutzt werden um die Implementation der Algorithmen zu umgehen?
+
+s.a.
+
+* Process class http://stackoverflow.com/questions/10997915/starting-a-jar-file-using-system-diagnostics-process
+* any cli command in c# http://stackoverflow.com/questions/206323/how-to-execute-command-line-in-c-get-std-out-results
+* or http://jni4net.com/ for fancy
+
+tl;dr: Als Prozess aufrufen und IO abfangen. Aber aufgrund Umgebung nicht erstrebenswert. Daher abgelehnt.
+
+Antwort: 
+
+Die Einbringung der Java-Implementation ist denkbar aber nicht erstrebenswert. Deshalb bestehen im Wesentlichen die Varianten Lua und C# fort.
+Die Einbringung von Java als weitere Plattform  birgt erhöhte Risiken für die Softwareverteilung und Konfliktpotential auf dem Client. Eine Anbindung an einen Webservice kann u.U. zu schlecht sein als das dies performant genug wäre. Weiterhin sind die Datepools für die Visualisierung bereits lokal als SQLite vorhanden und müssen nicht jedesmal vom Server abgefragt werden und der Kunde Herr Stein wäre hinsichtlich der Komplexität der Architektur glücklicher mit einer Beschränkung auf die bestehenden Sprachen.
+
+```Java
+package echo;
+
+public class echo {//Bsp. kann auch ein JSON zurückgeben mit Sortierten Listen von Arrays mit Lemmata, Position, Dimensionen, Größe, Schriftart und -Stil aufgrund einer Liste von Worten
+        public static void main (String[] args) {
+            for (String s: args) {
+                System.out.println(s);
+            }
+        }
+}
+```
+
+```C#
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Diagnostics;
+using System.Collections.Specialized;
+
+namespace ConsoleApplication1
+{
+    class echo {
+        static void Main(string[] args)
+        {//Pfade sollten noch parametrisiert werde etc.
+            ProcessStartInfo psi = new ProcessStartInfo("C:\\Program Files\\SQLDeveloper\\sqldeveloper\\jdk\\jre\\bin\\java.exe", " -jar \"C:\\Users\\s72785\\ws\\echo.jar\" testen wir mal"){
+                WorkingDirectory = "C:\\Users\\s72785\\ws", // Do not miss this line so you awesome Swing app will show default java icon and no images
+                CreateNoWindow = false,
+                UseShellExecute = false,
+                RedirectStandardOutput = true
+            };
+                  
+            Process p = new Process();
+            p.StartInfo = psi;
+            p.Start();
+
+            StringCollection values = new StringCollection();
+            while (!p.StandardOutput.EndOfStream )
+            {
+                string line = p.StandardOutput.ReadLine();
+                values.Add(line);
+            }
+            foreach (string sline in values)
+                Console.WriteLine(sline);
+
+            Console.ReadKey();
+        }
+    }
+}
+```
+
