@@ -132,7 +132,7 @@ Diese eingegebenen Tags werden in einer Datentabelle (\autoref{abb:FB_Daten}) er
 ![\label{abb:FB_Daten} Fallbeispiel Szenario](img/FB_Daten.png)
 
 In einer weiteren Tabelle, werden die eingegebenen Tags sowohl aufgelistet als auch festgehalten, wie oft ein Tag eingegeben
-wurde. An der in \autoref{abb:FB_Rahmenbedingungen} abgebildeten Formel, wird außerdem seine Größe, mit der
+wurde. Mit der in \autoref{abb:FB_Rahmenbedingungen} abgebildeten Formel, wird außerdem seine Größe, mit der
 er letztendlich in der Tag-Cloud abgebildet werden soll bestimmt.
 
 ![\label{abb:FB_Rahmenbedingungen} Fallbeispiel Szenario](img/FB_Rahmenbedingungen.png)
