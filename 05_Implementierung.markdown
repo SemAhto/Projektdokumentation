@@ -19,13 +19,13 @@ Der `WordCloudCalculator` wandelt die übergebenen, gewichteten Wörter des Typs
 Die Schnittstelle für die Rahmenbedingungen ist in `IWordCloudAppearenceArguments` festgelegt. Die Schnittstelle für die Implementierung eines WordCloudCalculators ist in `IWordCloudCalculator` festgelegt.
 
 Eine Möglichkeit wurde in `ExtractingWordCloudCalculator` implementiet.
-Dieser besitzt eine weitere Methode vom Typ `IWordAppearenceCalculationMethod`, die ein gewichtetes Wort als Eingabe bekommt und dieses in eine visualisiertes Wort umwandelt. Der Calculator an sich sortiert die Gewichte der übergeben gewichteten Wörter zuerst absteigend und übergibt dann jedes einzelne Wort solange der Umwandlungsmethode bis diese signalisiert, dass kein Wort mehr auf den anzeigbaren Bereich passt. Zum Schluss werden die anzeigbaren visualisierten Wörter zurückgegeben.
+Dieser besitzt eine weitere Methode vom Typ `IWordAppearenceCalculationMethod`, die ein gewichtetes Wort als Eingabe bekommt und dieses in eine visualisiertes Wort umwandelt. Der Calculator an sich sortiert die Gewichte der übergeben, gewichteten Wörter zuerst absteigend und übergibt dann jedes einzelne Wort solange der Umwandlungsmethode bis diese signalisiert, dass kein Wort mehr auf den anzeigbaren Bereich passt. Zum Schluss werden die anzeigbaren visualisierten Wörter zurückgegeben.
 
 Mit Hilfe dieser Klasse war es Möglich verschiede Methoden der Anordnung auszuprobieren. Die `SimpleAppearenceCalculationMethod` ordenet die ersten 5 Wörter diagonal untereinander an und dient als Einstieg für die Erforschung neuer Methoden. Die `SpiralAppearenceCalculationMethod` ordnet die Wörter in der bereits beschriebenen Spiralform an. 
 
 ### WordCloudControl
 
-Das WordCloudControl hat die Aufgabe, die von dem WordCloudCalculator berechneten Wortvisualisierungen in einem Benutzersteuerelement auf dem Bildschirm darzustellen. Die `WordCloud`-Klasse ist dabei das zentrale Element der Komponete. Sie wird im Layout der Software an der gewünschten Stelle platziert. Die Klasse enthält Definitionen für die Übergabe der gewichteten Wortliste, die Rahmenbedingungen für die Visualisierung, eines Kommandos, das Ausgeführt wird wenn ein Wort ausgewählt wird und den Positionierungsmethodentyp für den ExtractingWordCloudCalculator. In der `WordCloudGui.xaml` befindet sich die Viewdefinition der WordCloud. Die WordCloud besteht aus einem ItemsControl, welches die Möglichkeit bietet eine Liste mit Datenobjekten zu binden und anzuzeigen. Dabei wurde ein sogenanntes MultiBinding eingesetzt, um auch bei Veränderung der Größe der Anzeigefläche die WordCloud neu zu berechnen. Durch das Überschreiben des ItemTemplates wurde die visuelle Darstellung eines Wortes als Button-Steuerelement definiert, woran die berechneten Freiheitsgradparameter und das Klickkommando angebunden wurden. Desweiteren wurde das ItemsPanel mit dem neu erstellten WordCloudPanel überschrieben, welches die Größe und Position der einzelnen Wörter auf der Anzeigefläche festlegt.
+Das WordCloudControl hat die Aufgabe, die von dem WordCloudCalculator berechneten Wortvisualisierungen in einem Benutzersteuerelement auf dem Bildschirm darzustellen. Die `WordCloud`-Klasse ist dabei das zentrale Element der Komponete. Sie wird im Layout der Software an der gewünschten Stelle platziert. Die Klasse enthält Definitionen für die Übergabe der gewichteten Wortliste, die Rahmenbedingungen für die Visualisierung, eines Kommandos, das ausgeführt wird wenn ein Wort ausgewählt wird und den Positionierungsmethodentyp für den ExtractingWordCloudCalculator. In der `WordCloudGui.xaml` befindet sich die Viewdefinition der WordCloud. Die WordCloud besteht aus einem ItemsControl, welches die Möglichkeit bietet eine Liste mit Datenobjekten zu binden und anzuzeigen. Dabei wurde ein sogenanntes MultiBinding eingesetzt, um auch bei Veränderung der Größe der Anzeigefläche die WordCloud neu zu berechnen. Durch das Überschreiben des ItemTemplates wurde die visuelle Darstellung eines Wortes als Button-Steuerelement definiert, woran die berechneten Freiheitsgradparameter und das Klickkommando angebunden wurden. Desweiteren wurde das ItemsPanel mit dem neu erstellten WordCloudPanel überschrieben, welches die Größe und Position der einzelnen Wörter auf der Anzeigefläche festlegt.
 
 Zur Unterstützung wurden die Helferklasse `CommandProxy` implementiert, welche die Übergabe einer Kommandoinstanz von den Datenkontext des Muttercontrols an den Datenkontext eines Kindcontrols ermöglicht.
 
@@ -35,7 +35,7 @@ Desweiteren wurde in der `WordSizeCalculatorFactory` eine statische Methode entw
 
 ### Nuget
 
-Da diese Komponente wie bereuts ewähnt wiederverwendbar ist, wurde für den für C# entwickelten Paketmanager ein Paket erstellt und auf nuget\footnote{ermöglicht einfaches Einbinden in Visual Studio von \href{https://www.nuget.org/packages/WordCloudCalculator}{https://www.nuget.org/packages/WordCloudCalculator}} veröffentlicht.
+Da diese Komponente wie bereits ewähnt wiederverwendbar ist, wurde für den für C# entwickelten Paketmanager ein Paket erstellt und auf nuget\footnote{ermöglicht einfaches Einbinden in Visual Studio von \href{https://www.nuget.org/packages/WordCloudCalculator}{https://www.nuget.org/packages/WordCloudCalculator}} veröffentlicht.
 
 ### Verwendung
 
@@ -45,7 +45,7 @@ Um diese Komponente in einem neuen Projekt zu verwenden, musst das Paket per nug
 Install-Package WordCloudCalculator
 ```
 
-Nachdem das Paket erfolgreich installiert ist, dolgt die Implementation des Interfaces `IWordCloudAppearenceArguments`, um die Rahmenbedingungen für die Darstellung festzulegen und als Statische Ressource instanziert werden.
+Nachdem das Paket erfolgreich installiert ist, folgt die Implementation des Interfaces `IWordCloudAppearenceArguments`, um die Rahmenbedingungen für die Darstellung festzulegen und als statische Ressource instanziert werden.
 
 ```
 <Window.Resources>
@@ -87,7 +87,7 @@ Eine Neuerung im System ist die Nutzung einer Tag-Cloud (\autoref{abb:PpsnScreen
 
 ## Layout
 
-Die Benutzeroberfläche (\autoref{abb:PpsnLayout}, schematisch) besteht aus einer Objektliste, in der alle Datensätze der Datenbank angezeigt werden. Diese können mit Filtern, welche um dieser List platziert sind verkleinert werden. Anhand dieser Liste wird die Tag-Cloud berechnet. Durch die Auswahl eines Tags wird eine neue Filterbedingung hinzugefügt und sodass die Objektliste aktualisiert wird und so die Tag-Cloud neu berechnet. Durch diesen iterativen Prozess ist eine Suche anhand von Schlagworten möglich.
+Die Benutzeroberfläche (\autoref{abb:PpsnLayout}, schematisch) besteht aus einer Objektliste, in der alle Datensätze der Datenbank angezeigt werden. Diese können mit Filtern, welche um dieser Liste platziert sind verkleinert werden. Anhand dieser Liste wird die Tag-Cloud berechnet. Durch die Auswahl eines Tags wird eine neue Filterbedingung hinzugefügt und sodass die Objektliste aktualisiert wird und so die Tag-Cloud neu berechnet. Durch diesen iterativen Prozess ist eine Suche anhand von Schlagworten möglich.
 
 ![\label{abb:PpsnLayout} Layout von PPsn: Beeinflussungsübersicht. Dunkelgrau: Filterelemente; Hellgrau: Datenpräsentation](img/ppsn_layout.jpg)
 
@@ -99,7 +99,7 @@ Aufgrund der sehr komplexen Systemarchitektur, wird im Folgenden nur auf die Tei
 
 ### Komponenten
 
-Das `PPsEnvironment` (\autoref{abb:PpsObjectGenerator}) enthält den `PpsObjectGenerator`, welcher in der Lage ist SQL zu erzeugen und das Ergebnis als `IEnumerable` bereitzustellen, sodass es mit LINQ weiter verarbeitet werden kann. Da allerdings der bestehende Generator nicht in der Lage war Tags abzufragen und deren Gewichte zu berechnen, musste ein weiterer entwickelt werden. Um die Basisfunktionalität aber beizubehalten, wurde dieser zu `AbstractPpsObjectGenerator` abstrahiert und ohne Änderung wieder von `PpsObjectGenerator` abgeleitet um das Interface zu äbhängigen Komponenten nicht zu ändern. Die `AbstractPpsObjectGenerator` Klasse wurde um zwei virtuelle Methoden erweitert. `ExtendCommand` dient dazu, dass abgeleitete Klassen das Kommando über die Factory erweitern können. Durch Implementierung von `GenerateCommandSql` hingegen muss das gesamte Kommando als String neu implementiert werden.
+Das `PPsEnvironment` (\autoref{abb:PpsObjectGenerator}) enthält den `PpsObjectGenerator`, welcher in der Lage ist SQL Code zu erzeugen und das Ergebnis als `IEnumerable` bereitzustellen, sodass es mit LINQ weiter verarbeitet werden kann. Da allerdings der bestehende Generator nicht in der Lage war Tags abzufragen und deren Gewichte zu berechnen, musste ein weiterer entwickelt werden. Um die Basisfunktionalität aber beizubehalten, wurde dieser zu `AbstractPpsObjectGenerator` abstrahiert und ohne Änderung wieder von `PpsObjectGenerator` abgeleitet um das Interface zu äbhängigen Komponenten nicht zu ändern. Die `AbstractPpsObjectGenerator` Klasse wurde um zwei virtuelle Methoden erweitert. `ExtendCommand` dient dazu, dass abgeleitete Klassen das Kommando über die Factory erweitern können. Durch Implementierung von `GenerateCommandSql` hingegen muss das gesamte Kommando als String neu implementiert werden.
 
 Für die Tag-Cloud wurde dann der neue `WordCloudObjectGenerator` eingeführt, welcher die in Relastion stehenden Tags und deren Gewichte wie im Prototypen berechnet und abfragt.
 
