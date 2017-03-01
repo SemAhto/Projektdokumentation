@@ -5,7 +5,7 @@
 
 ## Anforderungen / Grundlagen vor der Tag-Cloud-Erstellung
 
-In Vorbereitung auf die Tag-Cloud-Erstellung sollte eine bereits gefilterte Liste mit Angaben zu den jeweiligen Worthäufigkeiten vorliegen. Das Teilprojekt \enquote{Wortstammfindung} sollte als Grundlage diese gefilterte Liste erstellen. Da das Wortstammfindungs-Projekt parallel zur Implementierung startete, mussten die Studenten sich für Testzwecke eine eigene Liste schreiben. Um der Realität einer echten Tag-Cloud näherzukommen, wurde folgender Quellcode zufällige Wortausgaben generiert.
+In Vorbereitung auf die Tag-Cloud-Erstellung sollte eine bereits gefilterte Liste mit Angaben zu den jeweiligen Worthäufigkeiten vorliegen. Das Teilprojekt \enquote{Wortstammfindung} sollte als Grundlage diese gefilterte Liste erstellen. Da das Wortstammfindungs-Projekt parallel zur Implementierung startete, mussten die Studenten sich für Testzwecke eine eigene Liste schreiben. Um der Realität einer echten Tag-Cloud näherzukommen, wurde folgender Quellcode zufälliger Wortausgaben generiert.
 Das Tag, beziehungsweise das Wort mit der größten Häufigkeit, ist zuerst zu platzieren. Eine absteigende Sortierung nach Häufigkeit der Tags muss somit zwingend erfolgen. 
 Die virtuelle Erstellung der vorgegebenen Positionierungsfläche für die Tag-Cloud folgt als nächster Schritt. Die anschließenden Schritte unterscheiden sich bei Spiralform-verfahren und \enquote{Hierarchical Bounding Boxes}-Verfahren. 
 
